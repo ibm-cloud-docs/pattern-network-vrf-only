@@ -62,7 +62,7 @@ After the introduction, include a summary of the typical use case for the archit
 
 <!--Include the architecture diagram SVG file that was created by using drawio and the IBM2 library.
 
-![Enter image alt text here.](example-architecture-diagram.svg "Title text that shows on hover here"){: caption="Figure 1. A description that prints on the page" caption-side="bottom"}
+![Enter image alt text here.](example-architecture-diagram.svg "Title text that shows on hover here"){: caption="Figure 1. Pattern-name solution architecture" caption-side="bottom"}
 
 If you have a list or text to describe the diagram, include it here.you may have more than one diagram -->
 
@@ -71,7 +71,7 @@ Figure 1 illustrates...overview text here
 ![A diagram of a computer network Description automatically
 generated](./image1.png)
 
-Figure 1 <!-- this is the diagram caption -->
+Figure 1 Pattern-name solution architecture<!-- this is the diagram caption -->
 
 Figure 1 detailed description goes here
 
@@ -81,14 +81,14 @@ Figure 2 illustrates ....overview text here.
 ![A diagram of a computer network Description automatically
 generated](./image2.png)
 
-Figure 2
+Figure 2 Pattern-name solution architecture
 
 figure 2 detailed diagram description here
 
 ## Design scope <!-- H2 -->
 {: #design-scope}
 
-Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-taxonomy), SAP on VPC covers design considerations and architecture decisions for the following aspects and domains:
+Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-taxonomy), pattern-name covers design considerations and architecture decisions for the following aspects and domains:
 
 <!-- include all aspectsand domains relavant to the pattern below -->
 - **Compute:** Bare Metal and Virtual infrastructure
@@ -111,7 +111,7 @@ The Figure 3 shows the domains that are covered in this solution.
 ![A diagram of a computer network Description automatically
 generated](./image3.png)
 
-Figure 3
+Figure 3 design scope
 
 ## Requirements <!-- H2 -->
 {: #requirements}
@@ -145,7 +145,7 @@ The following represents a baseline set of requirements which we believe are app
 | | Cloud infrastructure for the proposed IAAS solution must be SAP Certified |
 | | IBM Cloud IaaS will be deployed to support SAP and surrounding non-SAP workloads|
 | | Customer does not want to adopt [RISE](https://www.ibm.com/consulting/rise-with-sap?utm_content=SRCWW&p1=Search&p4=43700077624079785&p5=e&gclid=EAIaIQobChMIr9bRlt7LgQMVJdHCBB0cewwcEAAYASAAEgIVgfD_BwE&gclsrc=aw.ds) at this time but wants to consider Cloud deployment solution that would facilitate a future RISE transformation|
-{: caption="Table 1. Requirements" caption-side="bottom"}  <!-- each table MUST have a caption attribute>
+{: caption="Table 1. Pattern requirements" caption-side="bottom"}  <!-- each table MUST have a caption attribute>
 
 ## Components <!-- H2 -->
 {: #components}
@@ -179,6 +179,6 @@ The following represents a baseline set of requirements which we believe are app
 | | [Veeam](https://cloud.ibm.com/docs/vpc?topic=vpc-about-veeam) | Controls both the backups and restores of all VSIs or BMs. Veeam Backup & Replication 12 |
 | Service Management (Observability) | [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-about-monitor)| Apps and operational monitoring|
 | | [IBM Log Analysis](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-getting-started)| Apps and operational logs|
-{: caption="Table 2. Components" caption-side="bottom"} <!-- each table MUST have a caption attribute>
+{: caption="Table 2. Pattern components" caption-side="bottom"} <!-- each table MUST have a caption attribute>
 
 As mentioned earlier, the Architecture Framework is used to guide and determine the applicable aspects and domains for which architecture decisions need to be made. The following sections contain the considerations, and architecture decisions for the aspects and domains that are in play in this solution pattern.
