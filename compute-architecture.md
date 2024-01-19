@@ -17,7 +17,7 @@ keywords:
 <!-- below is a placeholder for all compute domain decisions  Remove the domains that are not in scope.  If there are decisions
 that need to be added (e.g. platform dependent) add additional rows-->
 
-| Architecture decision| Requirement| Options |Decision| Rationale|
+| Architecture decision| Requirement| Option |Decision| Rationale|
 |-|-|-|-|-|
 |Bare Metal Servers| text | text | text | text |
 |Virtual Servers| text | text | text | text |
