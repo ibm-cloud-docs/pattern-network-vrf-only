@@ -11,47 +11,23 @@ keywords:
 # The release that the reference architecture describes
 
 authors:
-- name: Vickie Hooper
+  - name: Vickie Hooper
 
 version: 1.0
 
-# Use if the reference architecture has deployable code.
-# Value is the URL to land the user in the IBM Cloud catalog details page for the deployable architecture.
-# See https://test.cloud.ibm.com/docs/get-coding?topic=get-coding-deploy-button
 deployment-url:
 
 docs: https://cloud.ibm.com/docs/pattern-network-vrf-only
 
 content-type: reference-architecture
 ---
-<!--
-The following line inserts all the attribute definitions. Don't delete.
--->
+
 {{site.data.keyword.attribute-definition-list}}
 
-<!--
-Don't include "reference architecture" in the following title.
-Specify a title based on a use case. If the architecture has a module
-or tile in the IBM Cloud catalog, match the title to the catalog. See
-https://test.cloud.ibm.com/docs/solution-as-code?topic=solution-as-code-naming-guidance.
--->
-
 # Network architecture for data centers <!-- H1 -->
-{: #Network-architecture-for-data-centers-without-a-Transit-Gateway-service}
+{: #network-vrf-only}
 {: toc-content-type="reference-architecture"}
 {: toc-version="1.0"}
-
-<!--
-The IDs, such as {: #title-id} are required for publishing this reference architecture in IBM Cloud Docs. Set unique IDs for each heading. Also include
-the toc attributes on the H1, repeating the values from the YAML header.
- -->
-
-<!-->:information_source: **Tip:** For more information about this template, see [Creating reference architectures](https://test.cloud.ibm.com/docs/writing?topic=writing-reference-architectures).-->
-
-Include a short description, summary, or overview in a single paragraph that follows the title.
-
-After the introduction, include a summary of the typical use case for the architecture. The use case might include the motivation for the architecture composition, business challenge, or target cloud environments.
-
 
 # Reference Architecture
 {: #Reference Architecture}
