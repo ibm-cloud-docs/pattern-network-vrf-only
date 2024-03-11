@@ -88,6 +88,8 @@ Enterprise connectivity considerations include:
 
 **To avoid IP address conflicts for classic connections to a direct link, avoid IP address ranges in the 10.0.0.0/14, 10.200.0.0/14, 10.198.0.0/15, and 10.254.0.0/16 blocks for on-prem networks. On-prem routes that overlap are dropped.**
 
+### Direct Link Dedicated
+
 Direct Link Dedicated is ideal for:
 
 -   Organizations with colocation facilities near IBM Cloud PoPs or data centers.
@@ -104,6 +106,8 @@ Direct Link Dedicated use cases include:
 -   Media and entertainment: Streaming high-quality video content or managing large media files with low latency and high bandwidth.
 
 Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locations#dedicated-locations).
+
+### Direct Link Connect
 
 Direct Link Connect is ideal for:
 
