@@ -14,14 +14,14 @@ keywords:
 
 # Architecture decisions for compute
 {: #compute-decisions}
-<!-- below is a placeholder for all compute domain decisions  Remove the domains that are not in scope.  If there are decisions
-that need to be added (e.g. platform dependent) add additional rows-->
 
-| Architecture decision| Requirement| Option |Decision| Rationale|
-|-|-|-|-|-|
-|Bare Metal Servers| text | text | text | text |
-|Virtual Servers| text | text | text | text |
-|Virtualization| text | text | text | text |
-|Containers| text | text | text | text |
-|Serverless| text | text | text | text |
-{: caption="Table 1. Architecture decisions for compute" caption-side="bottom"}
+## Architecture decisions for compute
+
+The following are compute architecture decisions for the Network architecture for data centers without a Transit Gateway service pattern.
+
+| **Architecture decision**        | **Requirement**                                                            | **Options**                                 | **Decision**   | **Rationale**                                    |
+|----------------------------------|----------------------------------------------------------------------------|---------------------------------------------|----------------|--------------------------------------------------|
+| Compute (Jump Host)              | Secure connection to manage internal systems and centralize access control | \*\*·\*\*Bare Metal \*\*·\*\*Virtual Server | Virtual Server | flexible compute resources to meet compute needs |
+| Compute (Proxy or Baston Server) | Provide access to Service Endpoints from non-IBM Cloud IPs                 | \*\*·\*\*Bare Metal \*\*·\*\*Virtual Server | Virtual Server | flexible compute resources to meet compute needs |
+
+Table 6. non-TGW Compute architecture decisions

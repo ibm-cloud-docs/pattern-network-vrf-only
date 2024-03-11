@@ -1,0 +1,155 @@
+---
+
+copyright:
+years: 2024
+lastupdated: "2024-03-11"
+
+keywords: # Not typically populated
+
+subcollection: # Use the subcollection value from your toc.yaml file. e.g. pattern-sap-on-vpc
+
+subcollection: pattern-Network-architecture-for-data-centers
+-without-a-Transit-Gateway-service
+
+keywords:
+# The release that the reference architecture describes
+
+authors:
+- name: Vickie Hooper
+
+version: 1.0
+
+# Use if the reference architecture has deployable code.
+# Value is the URL to land the user in the IBM Cloud catalog details page for the deployable architecture.
+# See https://test.cloud.ibm.com/docs/get-coding?topic=get-coding-deploy-button
+deployment-url:
+
+docs: https://cloud.ibm.com/docs/pattern-Network-architecture-for-data-centers
+-without-a-Transit-Gateway-service
+
+content-type: reference-architecture
+
+---
+<!--
+The following line inserts all the attribute definitions. Don't delete.
+-->
+{{site.data.keyword.attribute-definition-list}}
+
+<!--
+Don't include "reference architecture" in the following title.
+Specify a title based on a use case. If the architecture has a module
+or tile in the IBM Cloud catalog, match the title to the catalog. See
+https://test.cloud.ibm.com/docs/solution-as-code?topic=solution-as-code-naming-guidance.
+-->
+
+# Network architecture for data centers <!-- H1 -->
+{: #sap-on-vpc}
+{: toc-content-type="reference-architecture"}
+{: toc-version="1.0"}
+
+<!--
+The IDs, such as {: #title-id} are required for publishing this reference architecture in IBM Cloud Docs. Set unique IDs for each heading. Also include
+the toc attributes on the H1, repeating the values from the YAML header.
+ -->
+
+<!-->:information_source: **Tip:** For more information about this template, see [Creating reference architectures](https://test.cloud.ibm.com/docs/writing?topic=writing-reference-architectures).-->
+
+Include a short description, summary, or overview in a single paragraph that follows the title.
+
+After the introduction, include a summary of the typical use case for the architecture. The use case might include the motivation for the architecture composition, business challenge, or target cloud environments.
+
+
+# Reference Architecture
+
+This reference architecture is leveraged in data centers that currently do not have VPC and Transit Gateway (TGW) services available, as of Q12023, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
+
+For an updated list of those DCs which have TGW, see [transit gateway locations](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
+
+We will refer to this approach from now on as “non-TGW” since there is no VPC and TGW connectivity utilized.
+
+Please note that it is a common approach to complement classic environments in these non-TGW locations with VPC services hosted in another location. This allows additional functionality that is only available with VPC services. This document will reference this approach as “complementary VPC services” and it will be highlighted in the multi-region deployment in the Resiliency section below.
+
+## Architecture diagram
+
+This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and Power Virtual Server using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
+
+![](image/84a49a80d8d5d70b07a564177a1ce963.png)
+
+Figure 1. non-TGW solution architecture
+
+1.  Client network connectivity from on-premises using redundant Direct Links.
+2.  Gateway provides routing and security functions.
+3.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
+4.  Power Virtual Server workspace, subnets, and resources
+5.  GREa tunnel allows BYOIP to be advertised between Classic and on-premises.
+6.  GREb tunnel allows BYOIP to be advertised between Classic environments in separate regions.
+7.  GREc tunnel allows BYOIP to be advertised between Classic and PowerVS.
+8.  Virtual jump server for remote administrative access.
+9.  Custom DNS services virtual server
+10. Proxy Server as an intermediary between on-prem and cloud services.
+11. Private Service Endpoints (SE) allow access to cloud services over the private network.
+12. Cloud Internet Services (CIS) to enhance the security, performance, and reliability of internet-facing applications and websites.
+13. Compute Instance in PowerVS and Classic
+
+## Design scope
+
+Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
+
+-   **Compute:** Virtual Servers, Bare Metal Servers
+-   **Networking:** Enterprise Connectivity, BYOIP/Edge Gateways, Network Segmentation, Cloud Native Connectivity, Load Balancing, and DNS
+-   **Security:** Identity and Access Management (IAM)
+-   **Resiliency:** High Availability, Disaster Recovery
+-   **Service management:** Monitoring, Logging, Auditing, Alerting, Event Management
+
+![](image/37b9c586adbe228b621ba0265004cc7a.png)
+
+Figure 2. non-TGW design scope
+
+The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-intro) for more details.
+
+## Requirements
+
+The following represents a baseline set of requirements that are applicable to most clients and critical to successful non-TGW network deployment. The pattern assumes the client will have a requirement of geolocation, data residency, or low latency that requires resource deployment in a data center that does not have transit gateway technology.
+
+| **Aspect**         | **Requirement**                                                                                                                                                                                                                                                                                                    |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Compute            | Secure remote administrative support of all devices within the IBM Cloud environment.                                                                                                                                                                                                                              |
+| Network            | Private enterprise connectivity from customer data centers to IBM Cloud for access to applications, data, and services.                                                                                                                                                                                            |
+|                    | Private administrative and management connectivity                                                                                                                                                                                                                                                                 |
+|                    | Provide network isolation with the ability to separate applications based on attributes such as data classification, public versus private traffic flows, and internal application function.                                                                                                                       |
+|                    | Provide the ability to use Bring Your Own IP (BYOIP)                                                                                                                                                                                                                                                               |
+| Security           | Firewalls must be restrictively configured to provide advanced security features and prevent all traffic, both inbound and outbound, except that which is specifically required, documented, and approved and (optionally) include Intrusion Protection System (IPS) and Intrusion Detection System (IDS) services |
+|                    | Distributed Denial of Service (DDoS) and Web Application Firewall (WAF) security capabilities required                                                                                                                                                                                                             |
+|                    | Secure access for administration and management of the environment                                                                                                                                                                                                                                                 |
+| Resiliency         | Multi-Region capability to support a disaster recovery strategy and solution that allows all production applications to be included by using cloud infrastructure DR strategies.                                                                                                                                   |
+| Service management | Provide health and system monitoring with ability to monitor and correlate performance metrics and events and provide alerting across applications and infrastructure                                                                                                                                              |
+|                    | Ability to diagnose issues and exceptions and identify error source                                                                                                                                                                                                                                                |
+
+Table 1. non-TGW requirements
+
+##
+
+## Components
+
+| **Aspect**             | **Component**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **How the component is used**                                                                                                                                            |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Compute                | Virtual Server, Bare Metal, containers or VMware solution on Classic, Power Virtual Servers – Workload Hosts                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Hosting the workloads running in the classic or Power environment                                                                                                        |
+|                        | [Virtual Server on Classic](https://cloud.ibm.com/docs/virtual-servers?topic=virtual-servers-about-virtual-servers) - Jump Server or Bastion Host                                                                                                                                                                                                                                                                                                                                                                                                                                                | Jump Server is deployed on a virtual server instance within classic and will be used for remote administrative support                                                   |
+|                        | [Virtual Server on Classic](https://cloud.ibm.com/docs/virtual-servers?topic=virtual-servers-about-virtual-servers) - Proxy Server                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Acts as a gateway using the private network between on-prem network and cloud services                                                                                   |
+| Networking             | Virtual Private Network (VPN)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Provides a secured connection into IBM Cloud over the Internet. This could be used for migrations, administrative access, and backup connectivity of private networking. |
+|                        | [**Gateway Appliance in Classic**](https://cloud.ibm.com/docs/gateway-appliance?topic=gateway-appliance-getting-started-ga) [Juniper vSRX](https://cloud.ibm.com/docs/vsrx?topic=vsrx-getting-started) [Virtual Router Appliance](https://cloud.ibm.com/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra) [FortiGate](https://cloud.ibm.com/docs/fortigate-10g?topic=fortigate-10g-getting-started) Bring Your Own Gateway ([BYOG](https://cloud.ibm.com/docs/gateway-appliance?topic=gateway-appliance-order-byoa)) BM or VSI (Checkpoint, Fortinet, Palo Alto) | Provides router, firewall, and VPN gateway functions for secure and reliable connectivity to cloud resources.                                                            |
+|                        | Generic Routing Encapsulation (GRE) tunnels                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Supports Bring Your Own IP (BYOIP) communication between on-premise, Classic Infrastructure, and PowerVS.                                                                |
+|                        | [Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) Direct Link Dedicated Direct Link Connect                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Connect on-premise networks to the IBM Cloud using physical telco connections or virtual exchange services.                                                              |
+|                        | [Load Balancers](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) Cloud Load Balancer Citrix NetScaler VPX                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Application Load Balancing for web servers, app servers, and database servers                                                                                            |
+|                        | [Private Service Endpoints](https://cloud.ibm.com/docs/account?topic=account-vrf-service-endpoint&interface=ui#use-service-endpoint)                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Connect directly to cloud services without using the public network                                                                                                      |
+|                        | [Cloud Internet Services (CIS)](https://test.cloud.ibm.com/docs-draft/cis?topic=cis-getting-started)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Public Load balancing of web server traffic across regions                                                                                                               |
+|                        | [DNS Services](https://test.cloud.ibm.com/docs-draft/dns-svcs?topic=dns-svcs-about-dns-services)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | The Domain Name System (DNS) to associate human-friendly domain names with IP addresses                                                                                  |
+| **Security**           | [IAM](https://test.cloud.ibm.com/docs-draft/account?topic=account-cloudaccess)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | IBM Cloud Identity & Access Management                                                                                                                                   |
+|                        | [Cloud Internet Services (CIS)](https://test.cloud.ibm.com/docs-draft/cis?topic=cis-getting-started)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | DDoS protection and Web Application Firewall (WAF) for public connectivity                                                                                               |
+|                        | [Gateway Appliance in Classic](https://cloud.ibm.com/docs/gateway-appliance?topic=gateway-appliance-getting-started-ga)                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Advanced firewall capability such as Intrusion Detection System (IDS) and Intrusion Protection System (IPS) services                                                     |
+|                        | Jump Server or Bastion Host                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Jump Server is deployed on a virtual server instance within classic and will be used for remote administrative support                                                   |
+| **Resiliency**         | Multi-Region Deployment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Allows for disaster recovery in secondary region                                                                                                                         |
+|                        | Multiple Direct Link connections                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Allows for network resiliency for failover & recovery                                                                                                                    |
+| **Service management** | Health Dashboard                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Apps and operational monitoring                                                                                                                                          |
+
+Table 2. non-TGW solution components

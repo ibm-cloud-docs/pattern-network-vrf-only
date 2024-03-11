@@ -14,84 +14,70 @@ keywords:
 
 # Architecture decisions for networking
 {: #networking-architecture}
-<!-- Below is a placeholder for all compute domain decisions.  Remove the domains that are not in scope.  If there are decisions
-that need to be added (e.g. platform dependent) add additional rows-->
 
-The following tables summarize the networking architecture decisions for the web app multi-zone resiliency pattern.
+The following are network architecture decisions for the Network architecture for data centers without a Transit Gateway service pattern.
 
-## Architecture decisions for enterprise connectivity
-{: #enterprise-connectivity}
+###
 
-The following are architecture decisions for enterprise connectivity for this design.
+### Architecture decisions for enterprise connectivity
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Management connectivity | Provide secure, encrypted connectivity to the cloud’s private network for management purposes. | text | text | text. |
-| Enterprise connectivity | Provide connectivity between client enterprise and IBM Cloud. | text | text | text. |
-{: caption="Table 1. Architecture decisions for enterprise connectivity" caption-side="bottom"}
+| **Architecture decision** | **Requirement**                                                                                | **Options**                                                                                   | **Decision**                                     | **Rationale**                                                         |
+|---------------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------|
+| Management connectivity   | Provide secure, encrypted connectivity to the cloud’s private network for management purposes. | \*\*·\*\*SSL VPN \*\*·\*\*IPsec VPN \*\*·\*\*Site-to-Site VPN on Gateway appliance in Classic | Site-to-Site VPN on Gateway appliance in Classic | Secure and suitable for production-level performance                  |
+| Enterprise connectivity   | Provide connectivity between client enterprise and IBM Cloud.                                  | \*\*·\*\*Direct Link Connect \*\*·\*\*Direct Link Dedicated                                   | Direct Link Connect                              | Lower cost, quicker deployment time, SDN provides layer of resiliency |
 
-## Architecture decisions for BYOIP and Edge Gateways
-{: #byoip-edge-gateways}
+Table 7. non-TGW network enterprise connectivity architecture decisions
 
-The following are network BYOIP and edge gateay architecture decisions for this design.
+###
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| BYOIP approach | Provide capability for bring your own IP (BYOIP) to IBM Cloud. | text | text | text |
-| Edge Gateways | Capability to provide edge routing services and possible tunnel termination. | text | text | text |
-{: caption="Table 2. Architecture decisions for bring your own IP and edge gateways" caption-side="bottom"}
+### Architecture decisions for BYOIP and Edge Gateways
 
-## Architecture decisions for network segmentation and isolation
-{: #network-segmentation-isolation}
+| **Architecture decision** | **Requirement**                                                                          | **Options**                                                                                                                 | **Decision**                                                                                                               | **Rationale**                        |
+|---------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| BYOIP approach            | Provide capability for bring your own IP (BYOIP) to IBM Cloud.                           | GRE (Generic Routing Encapsulation) Tunnel                                                                                  | GRE (Generic Routing Encapsulation) Tunnel                                                                                 | Allows BYOIP routes to be advertised |
+| Edge Gateways             | Capability to provide edge routing services, firewall and tunnel (VPN, GRE) termination. | **Gateway Appliance in Classic** ·Juniper vSRX ·Virtual Router Appliance ·FortiGate ·BYOG (Checkpoint, Fortinet, Palo Alto) | Select based on required [features](https://cloud.ibm.com/docs/vsrx?topic=vsrx-exploring-firewalls) and client preferences | Client preference                    |
 
-The following are network segmentation and isolation architecture decisions for this design.
+Table 8. non-TGW network BYOIP and Edge Gateway architecture decisions
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Network segmentation and isolation | Ability to provide network isolation across workloads. | text | text | text |
-{: caption="Table 3. Architecture decisions for network segmentation and isolation" caption-side="bottom"}
+##
 
-## Architecture decisions for cloud native connectivity
-{: #cloud-native-connectivity}
+### Architecture decisions for network segmentation and isolation
 
-The following are cloud native connectivity architecture decisions for this design.
+| **Architecture decision**          | **Requirement**                                        | **Options**                       | **Decision**                      | **Rationale**                                 |
+|------------------------------------|--------------------------------------------------------|-----------------------------------|-----------------------------------|-----------------------------------------------|
+| Network segmentation and isolation | Ability to provide network isolation across workloads. | VLANs, Subnets, & Security Groups | VLANs, Subnets, & Security Groups | Allows for segmentation and network isolation |
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Cloud Native Connectivity (to cloud services) | Provide secure connection to Cloud Services | * VPC Gateway + Virtual Private Endpoints (VPE) \n * Private Cloud Service endpoints \n * Public Cloud Service Endpoints | text | text |
-| Multi-landing zone connectivity | Connect two or more VPCs over a private network /n Connectectivity between classic, VPCs and/or Power Virutal Server| * Global Transit Gateway \n * Local Transit Gateway (TGW) | text | text |
-{: caption="Table 4. Architecture decisions for cloud native connectivity" caption-side="bottom"}
+Table 9. non-TGW network segmentation and isolation architecture decisions
 
-## Architecture decisions for load balancing
-{: #network-load-balancing}
+###
 
-The following are load balancing architecture decisions for this design.
+### Architecture decisions for cloud native connectivity
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Global Load balancing | Load balancing over the public network across two regions in the event of an outage (DR) for failover to the other region. | text | text |text|
-| Load balancing (public) | Load balancing workloads across multiple workload instances or zones over the public network. | text | text |text|
-| Load balancing (private) | Load balancing workloads across multiple workload instances or zones over the private network. | text | text |text|
-{: caption="Table 5. Architecture decisions for load balancing" caption-side="bottom"}
+| **Architecture decision**                     | **Requirement**                             | **Options**                                                                      | **Decision**                    | **Rationale**                                                                                  |
+|-----------------------------------------------|---------------------------------------------|----------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------|
+| Cloud Native Connectivity (to cloud services) | Provide secure connection to Cloud Services | \*\*·\*\*Private Cloud Service endpoints \*\*·\*\*Public Cloud Service Endpoints | Private Cloud Service endpoints | Provides private connectivity to cloud services offering enhanced security and cost efficiency |
 
-## Architecture decisions for content delivery network
-{: #network-content delivery network}
+Table 10. non-TGW network cloud native connectivity architecture decisions
 
-The following are content delivery network architecture decisions for this design.
+##
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Content delivery network | Provide ability to cache frequently accessed content at location nearest to the user | text | text | text |
-{: caption="Table 6. Architecture decisions for content delivery network" caption-side="bottom"}
+### Architecture decisions for load balancing
 
+| **Architecture decision** | **Requirement**                                                                                                            | **Options**                                                                      | **Decision**                  | **Rationale**                                                                                                                                           |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Global Load balancing     | Load balancing over the public network across two regions in the event of an outage (DR) for failover to the other region. | \*\*·\*\*Cloud Internet Service (CIS) \*\*·\*\*Citrix Netscaler VPX \*\*·\*\*DNS | Cloud internet Services (CIS) | Provides a cost-effective solution while offering additional security features                                                                          |
+| Load balancing (public)   | Load balancing workloads across multiple workload instances or zones over the public network.                              | \*\*·\*\*IBM Cloud Load Balancer \*\*·\*\*Citrix Netscaler VPX                   | IBM Cloud Load Balancer       | Provides wide range of load balancing function for both public and private traffic cost effectively                                                     |
+| Load balancing (private)  | Load balancing workloads across multiple workload instances or zones over the private network.                             | \*\*·\*\*IBM Cloud Load Balancer \*\*·\*\*Citrix Netscaler VPX                   | IBM Cloud Load Balancer       | \*\*·\*\*Cloud Load Balancer meets small to mid-size, low complexity requirement. \*\*·\*\*Citrix Netscaler VPX meets large complex load balancer needs |
 
-## Architecture decisions for domain name system
-{: #dns}
+Table 11. non-TGW network load balancing architecture decisions
 
-The following are domain name system (DNS) architecture decisions for this design.
+##
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Public DNS | Provide DNS resolution to support the use of hostnames instead of IP addresses for applications | text | text | text |
-| Private DNS | Provide DNS resolution within IBM Cloud's private network | text| text | text |
-{: caption="Table 7. Architecture decisions for domain name system" caption-side="bottom"}
+### Architecture decisions for domain name system
+
+| **Architecture decision** | **Requirement**                                                                                 | **Options**                                                                                                                | **Decision**         | **Rationale**                                                                                                                         |
+|---------------------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Public DNS                | Provide DNS resolution to support the use of hostnames instead of IP addresses for applications | **·** DNS via cloud portal \*\*·\*\*Cloud Internet Services (CIS) \*\*·\*\*Third Party provider \*\*·\*\*Custom DNS on VSI | DNS via Cloud portal | Cost effective and reliable                                                                                                           |
+| Private DNS               | Provide DNS resolution within IBM Cloud's private network                                       | \*\*·\*\*Custom DNS on VSI \*\*·\*\*DNS on Gateway appliance \*\*·\*\*DNS services in VPC                                  | Custom DNS on VSI    | \*\*·\*\*Can handle the most complex DNS needs \*\*·\*\*When VPC service is available, the preferred approach is DNS services in VPC. |
+
+Table 12. non-TGW network Domain Name System architecture decisions

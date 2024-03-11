@@ -11,37 +11,25 @@ keywords:
 ---
 
 # Architecture decisions for resiliency
-{: #resiliency-architecture}
 
-The following sections summarize the resiliency architecture decisions for workloads deployed on IBM Cloud VPC infrastructure.
+The following are resiliency architecture decisions for the Network architecture for data centers without a Transit Gateway service pattern.
 
-## Architecture decisions for high availability
-{: #high-availability}
+## Architecture decisions for Network Resiliency
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| High Availability Deployment | * Ensure availability of resources if outages occur. \n * Support SLA targets for availability. | - Single zone, single region \n - Multi zone, single region \n - Multi-zone, multi region | text | text|
-| High Availability Infrastructure | * Ensure availability of infrastructure resources if outages occur. \n * Support SLA targets for infrastructure availability. | text | text | text|
-| High Availability Application and Database | * Ensure availability of application resources if outages occur. \n * Support SLA targets for application availability. | text | text | text|
-{: caption="Table 1. High availability architecture decisions" caption-side="bottom"}
+| **Architecture decision**           | **Requirement**                                                                                                       | **Options**                                                                                                                                   | **Decision**                                      | **Rationale**                                                                                                                   |
+|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| High Availability Network path      | Ensure availability of resources if outages occurs. Support SLA targets for availability                              | \*\*·\*\*Single Direct Link Dedicated \*\*·\*\*Single Direct Link Connect \*\*·\*\*Two Direct Link Dedicated \*\*·\*\*Two Direct Link Connect | Two Direct Link Connect                           | Two Direct Link Connect provides a layer of resiliency with SDN over physical hardware while being cost effective and flexible. |
+| High Availability Gateway Appliance | Ensure availability of infrastructure resources if outages occur. Support SLA targets for infrastructure availability | \*\*·\*\*Deploy Gateway Appliance of choice in HA Pair                                                                                        | Deploy Gateway Appliance of choice in HA Pair     | Ensures if one appliance unavailable access is still available through remaining gateway appliance.                             |
+| High Availability Path Detection    | Ensure the quickest traffic path recovery                                                                             | \*\*·\*\*Bidirectional Forwarding Detection (BFD)                                                                                             | \*\*·\*\*Bidirectional Forwarding Detection (BFD) | provides a much faster way of detecting link failures compared to the built-in mechanisms within routing protocols              |
 
-## Architecture decisions for backup and restore
-{: #backup-and-restore}
+Table 14. non-TGW resiliency architecture decisions
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Infrastructure backup  | Backup images to enable recovery. | text | text | text |
-| Database backup | Create transaction-consistent database backups to enable recovery of database tier if unplanned outages occur. |text | text | text |
-| File Backup | Create file system backups |text | text | text |
-| Backup Automation | Schedule regular database backups based on RPO requirements to enable data recovery if unplanned outages occur. |text | text | text |
-{: caption="Table 2. Backup and restore architecture decisions" caption-side="bottom"}
+##
 
 ## Architecture decisions for disaster recovery
-{: #disaster recovery}
 
-| Architecture decision | Requirement | Option | Decision | Rationale |
-| -------------- | -------------- | -------------- | -------------- | -------------- |
-| Disaster Recovery - application | Application disaster recovery capability in secondary region to meet RTO/RPO requirements| text | text | text |
-| Disaster Recovery - database                        | Database recovery capability in secondary region | text | Continuous replication of data from a primary to a secondary system in a separate region, including in-memory loading, system replication facilitates rapid failover in the event of a disaster|
-| Disaster Recovery - infrastructure | Infrastructure disaster recovery capability in secondary region to meet RTO/RPO requirements| text | text | text |
-{: caption="Table 2. Disaster recovery architecture decisions" caption-side="bottom"}
+| **Architecture decision** | **Requirement**                                                                       | **Options**                                                                                                                                   | **Decision**               | **Rationale**                                                                                                       |
+|---------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------|
+| Disaster Recovery Network | Network disaster recovery capability in secondary region to meet RTO/RPO requirements | \*\*·\*\*Single Direct Link Dedicated \*\*·\*\*Single Direct Link Connect \*\*·\*\*Two Direct Link Dedicated \*\*·\*\*Two Direct Link Connect | Single Direct Link Connect | provides a cost effective and flexible connection into a second region, with metered and unmetered billing options. |
+
+Table 15. non-TGW disaster recovery architecture decisions
