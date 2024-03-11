@@ -92,7 +92,7 @@ Figure 1. non-TGW solution architecture
 ## Design scope
 {: ##Design scope}
 
-Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
+Following the [Architecture Framework](/docs/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
 
 -   **Compute:** Virtual Servers, Bare Metal Servers
 -   **Networking:** Enterprise Connectivity, BYOIP/Edge Gateways, Network Segmentation, Cloud Native Connectivity, Load Balancing, and DNS
@@ -104,7 +104,7 @@ Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/arc
 
 Figure 2. non-TGW design scope
 
-The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-intro) for more details.
+The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
 ## Requirements
 {: ##Requirements}
