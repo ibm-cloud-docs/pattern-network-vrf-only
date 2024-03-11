@@ -6,8 +6,6 @@ lastupdated: "2024-03-11"
 
 keywords: # Not typically populated
 
-subcollection: # Use the subcollection value from your toc.yaml file. e.g. pattern-sap-on-vpc
-
 subcollection: /docs/Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
 keywords:
@@ -109,6 +107,7 @@ Figure 2. non-TGW design scope
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-intro) for more details.
 
 ## Requirements
+{: ##Requirements}
 
 The following represents a baseline set of requirements that are applicable to most clients and critical to successful non-TGW network deployment. The pattern assumes the client will have a requirement of geolocation, data residency, or low latency that requires resource deployment in a data center that does not have transit gateway technology.
 
