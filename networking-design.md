@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-26"
+  years: 2024
+lastupdated: "2024-03-11"
 
 subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
@@ -51,15 +51,13 @@ Choosing the right firewall is crucial for safeguarding your network. Here are s
 -   **Virtual Appliance vs. Hardware Firewalls:** Evaluate cloud-based options for flexibility and scalability but consider throughput and port sizes for latency and bottlenecks.
 -   **Single vs. High Availability:** Consider single points of failure and service level requirements.
 
-Explore and compare [gateway options](https://cloud.ibm.com/docs/vsrx?topic=vsrx-exploring-firewalls) available in IBM Cloud.
+Explore and compare [gateway options](/docs/vsrx?topic=vsrx-exploring-firewalls) available in IBM Cloud.
 
 ## Generic Routing Encapsulation (GRE) tunnels
 
 GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 
-![](image/1b8db80bf49e684e0617a22d64767e9b.png)
-
-Figure 3. non-TGW GRE Encapsulation
+![illustrates the details of GRE for a non-TGW solution architecture](GRE.svg){: caption="Figure 3. non-TGW GRE Encapsulation" caption-side="bottom"}
 
 1.  Client network connectivity from on-premises is accomplished through Direct Link access.
 2.  A gateway is deployed in Classic which provides routing and security functions.
@@ -74,7 +72,7 @@ For Gateways in separate regions, a third GRE is used to share non-assigned IBM 
 
 **When resiliency is required, GREs can be configured on two devices in an HA pair to eliminate single points of failure.**
 
-Explore IBM Cloud public & private IP ranges [**here**](https://cloud.ibm.com/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges)**.**
+Explore IBM Cloud public & private IP ranges [here](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
 ## Enterprise Connectivity
 
@@ -82,9 +80,9 @@ There are two Direct Link options available: Direct Link Dedicated and Direct Li
 
 Enterprise connectivity considerations include:
 
--   Bandwidth requirements: There are a variety of bandwidth options available in [Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). Direct Link Dedicated offers higher bandwidth potential.
+-   Bandwidth requirements: There are a variety of bandwidth options available in [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). Direct Link Dedicated offers higher bandwidth potential.
 -   Security needs: If isolation is needed, Direct Link Dedicated provides the highest isolation for sensitive data.
--   Location and existing infrastructure: Dedicated requires colocation or dedicated circuits. [Provider location](https://cloud.ibm.com/docs/dl?topic=dl-locations#connect-locations) will also need to be considered.
+-   Location and existing infrastructure: Dedicated requires colocation or dedicated circuits. [Provider location](/docs/dl?topic=dl-locations#connect-locations) will also need to be considered.
 -   Cost: Direct Link Connect is generally more cost effective, especially for lower bandwidth needs.
 -   Deployment time: Direct Link Connect can be deployed faster due to pre-established connections.
 
@@ -105,7 +103,7 @@ Direct Link Dedicated use cases include:
 -   Research and development: Transferring large datasets for research or running high-performance computing (HPC) workloads.
 -   Media and entertainment: Streaming high-quality video content or managing large media files with low latency and high bandwidth.
 
-For Direct Link Dedicated locations please visit: [https://cloud.ibm.com/docs/dl?topic=dl-locations\#dedicated-locations](https://cloud.ibm.com/docs/dl?topic=dl-locations#dedicated-locations)
+Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locations#dedicated-locations).
 
 Direct Link Connect is ideal for:
 
@@ -121,7 +119,7 @@ Direct Link Connect use cases include:
 -   Remote branch offices: Connecting geographically dispersed offices to IBM Cloud for centralized applications and data access.
 -   Software-as-a-Service (SaaS) applications: Accessing SaaS applications hosted on IBM Cloud with improved performance and security.
 
-For Direct Link Connect location and providers please visit: [https://cloud.ibm.com/docs/dl?topic=dl-locations\#connect-locations](https://cloud.ibm.com/docs/dl?topic=dl-locations#connect-locations)
+Review available Direct Link Connect location and providers [here](/docs/dl?topic=dl-locations#connect-locations).
 
 ## Load Balancing
 
@@ -141,17 +139,17 @@ Considerations Include:
 
 IBM Cloud offers two Load balancer options for classic which include: IBM Cloud Load Balancer and Citrix NetScaler VPX appliance.
 
-Explore load balancer feature options [here](https://cloud.ibm.com/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-explore).
+Explore load balancer feature options [here](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-explore).
 
-Learn more about IBM Cloud Load Balancer [here](https://cloud.ibm.com/docs/loadbalancer-service?topic=loadbalancer-service-about-ibm-cloud-load-balancer)
+Learn more about IBM Cloud Load Balancer [here](/docs/loadbalancer-service?topic=loadbalancer-service-about-ibm-cloud-load-balancer)
 
-Learn more about Citrix NetScaler VPX Load Balancer [here](https://cloud.ibm.com/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-about-citrix-netscaler-vpx)
+Learn more about Citrix NetScaler VPX Load Balancer [here](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-about-citrix-netscaler-vpx)
 
 ### Third party Load Balancer Appliance
 
-If you have a specific need not offered by any of the load balancer options within the IBM Cloud Catalog, or have an existing relationship established with a third-party vendor, such as F5, you can deploy it within IBM Cloud as a bring your own appliance.
+If there is a specific need or function not offered by any of the load balancer options within the IBM Cloud Catalog, or an existing relationship is established with a third-party vendor, such as F5, you can deploy it within IBM Cloud as a bring your own appliance.
 
-### Global Load Balancing
+## Global Load Balancing
 
 Global Server Load Balancing (GSLB) is a technique for distributing internet traffic across geographically dispersed servers. It aims to optimize user experience and application performance by directing users to the nearest or most appropriate server based on various factors like latency, server load, and user location and is a valuable component of a disaster recovery strategy.
 
@@ -166,7 +164,7 @@ When a user tries to access a website or application, the request goes to the GS
 -   **Server health:** Avoiding unresponsive or overloaded servers.
 -   **Application-specific criteria:** Specific services might require routing based on user type, content availability, etc.
 
-Explore Global Server Load Balancing and other features of IBM Cloud Internet Service [here](https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis).
+Explore Global Server Load Balancing and other features of IBM Cloud Internet Service [here](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 
 ## Private Service Endpoints & Proxy Server
 
@@ -179,27 +177,25 @@ Moving these workloads from the public network to the private network offers two
 
 In IBM Cloud Classic, Virtual route forwarding (VRF) must be enabled on the account to move routing to a dedicated routing table. With VRF enabled, Private Service Endpoints can be enabled, and Cloud service resources can be provisioned and accessible to the IBM Cloud private network from an IBM assigned IP address in the Classic Account.
 
-Click to learn more on [IBM Cloud VRF](https://cloud.ibm.com/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+Click to learn more on [IBM Cloud VRF](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
 When the source address is not an IBM assigned IP address a proxy server in classic is used as an intermediary allowing access to cloud services over the Direct Link.
 
-Verify Private Service endpoints are available for your cloud services [here](https://cloud.ibm.com/docs/account?topic=account-vrf-service-endpoint&interface=ui).
+Verify Private Service endpoints are available for your cloud services [here](/docs/account?topic=account-vrf-service-endpoint&interface=ui).
 
-Getting started with Service Endpoints [here](https://cloud.ibm.com/docs/account?topic=account-vrf-service-endpoint&interface=ui).
+Getting started with Service Endpoints [here](/docs/account?topic=account-vrf-service-endpoint&interface=ui).
 
 In a multi-region deployment, which is described later in this document, for non-transit gateway locations, often a secondary region which does have transit gateway enabled may be chosen. In these situations, as an alternative to Private Service Endpoints and a proxy server in Classic, configuring a Virtual Private Endpoint (VPE) (complementary VPC Service in the 2nd region) can provide access to IBM Cloud Service over the private network.
 
-Verify cloud services are VPE enabled [here](https://cloud.ibm.com/docs/vpc?topic=vpc-vpe-supported-services).
+Verify cloud services are VPE enabled [here](/docs/vpc?topic=vpc-vpe-supported-services).
 
-![](image/c6bb939df68977f16aad7a6f5b2e2f40.png)
-
-Figure 4. non-TGW Service Endpoint access
+![illustrates the details of SE vs VPE for a non-TGW solution architecture](SE-vs-VPE.svg){: caption="Figure 4. non-TGW Service Endpoint access" caption-side="bottom"}
 
 ## Cloud Internet Services (CIS)
 
 Cloud Internet Services (CIS) provides global server load balancing, public domain name services, and public network security features.
 
-Learn more about CIS [here](https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)
+Learn more about CIS [here](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)
 
 ## Domain Name Services (DNS)
 
@@ -213,11 +209,11 @@ Key considerations are:
 IBM Cloud provides a flexible approach to DNS name resolution for systems hosted in classic environments.
 
 -   **Public DNS name resolution**: translates human-friendly names into computer-readable addresses.
-    -   Use the [DNS interface](https://cloud.ibm.com/docs/dns?topic=dns-how-to-use-the-dns-interface) in the IBM Cloud Portal to manage your zones and records. The domain can be hosted by any 3rd party provider. Set the Nameserver (NS) record to the provided IBM Name servers.
+    -   Use the [DNS interface](/docs/dns?topic=dns-how-to-use-the-dns-interface) in the IBM Cloud Portal to manage your zones and records. The domain can be hosted by any 3rd party provider. Set the Nameserver (NS) record to the provided IBM Name servers.
     -   Use the DNS function provided with Cloud Internet Services. Domain name control must be delegated to Cloud Internet Service (CIS).
 -   **Private DNS name resolution**: allows integration with your on-premises DNS server over private connectivity.
     -   Configure your own DNS services in the classic environment, typical options are:
         -   Install your own custom DNS service on a virtual server.
         -   Configure DNS on your gateway device.
     -   Utilize IBM Cloud DNS Services (complementary VPC Service).
-        This Service allows you to provide versatile private name resolution between classic, on-premises and VPC resources by deploying [Custom Resolvers](https://cloud.ibm.com/docs/dns-svcs?topic=dns-svcs-custom-resolver). Learn more about [IBM Cloud DNS Services](https://cloud.ibm.com/docs/dns-svcs?topic=dns-svcs-getting-started).
+        This Service allows you to provide versatile private name resolution between classic, on-premises and VPC resources by deploying [Custom Resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver). Learn more about [IBM Cloud DNS Services](/docs/dns-svcs?topic=dns-svcs-getting-started).
