@@ -26,9 +26,6 @@ content-type: reference-architecture
 {: toc-content-type="reference-architecture"}
 {: toc-version="1.0"}
 
-# Reference Architecture
-{: #Reference Architecture}
-
 This reference architecture is leveraged in data centers that currently do not have VPC and Transit Gateway (TGW) services available, as of Q12023, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
 
 For an updated list of those DCs which have TGW, see [transit gateway locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
