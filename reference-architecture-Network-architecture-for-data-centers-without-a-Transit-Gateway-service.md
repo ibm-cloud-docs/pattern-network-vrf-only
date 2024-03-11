@@ -3,8 +3,6 @@ copyright:
   years: 2024
 lastupdated: "2024-03-11"
 
-keywords: # Not typically populated
-
 subcollection: pattern-network-vrf-only
 
 keywords:
@@ -21,10 +19,9 @@ docs: https://cloud.ibm.com/docs/pattern-network-vrf-only
 
 content-type: reference-architecture
 ---
-
 {{site.data.keyword.attribute-definition-list}}
 
-# Network architecture for data centers <!-- H1 -->
+# Network architecture for data centers
 {: #network-vrf-only}
 {: toc-content-type="reference-architecture"}
 {: toc-version="1.0"}
