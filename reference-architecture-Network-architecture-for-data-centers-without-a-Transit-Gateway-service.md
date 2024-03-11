@@ -8,7 +8,7 @@ keywords: # Not typically populated
 
 subcollection: # Use the subcollection value from your toc.yaml file. e.g. pattern-sap-on-vpc
 
-subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+subcollection: /docs/Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
 keywords:
 # The release that the reference architecture describes
@@ -58,6 +58,7 @@ After the introduction, include a summary of the typical use case for the archit
 
 
 # Reference Architecture
+{: #Reference Architecture}
 
 This reference architecture is leveraged in data centers that currently do not have VPC and Transit Gateway (TGW) services available, as of Q12023, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
 
@@ -68,10 +69,11 @@ We will refer to this approach from now on as “non-TGW” since there is no VP
 Please note that it is a common approach to complement classic environments in these non-TGW locations with VPC services hosted in another location. This allows additional functionality that is only available with VPC services. This document will reference this approach as “complementary VPC services” and it will be highlighted in the multi-region deployment in the Resiliency section below.
 
 ## Architecture diagram
+{: ##Architecture diagram}
 
 This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and Power Virtual Server using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
 
-![](image/84a49a80d8d5d70b07a564177a1ce963.png)
+!{: caption= "Figure 1. non-TGW solution architecture"}(./classic%20VRF.svg)
 
 Figure 1. non-TGW solution architecture
 
@@ -90,6 +92,7 @@ Figure 1. non-TGW solution architecture
 13. Compute Instance in PowerVS and Classic
 
 ## Design scope
+{: ##Design scope}
 
 Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
 
@@ -99,7 +102,7 @@ Following the [Architecture Framework](https://test.cloud.ibm.com/docs-draft/arc
 -   **Resiliency:** High Availability, Disaster Recovery
 -   **Service management:** Monitoring, Logging, Auditing, Alerting, Event Management
 
-![](image/37b9c586adbe228b621ba0265004cc7a.png)
+!{: caption= "Figure 2. non-TGW design scope}(./heat_map.svg)
 
 Figure 2. non-TGW design scope
 
