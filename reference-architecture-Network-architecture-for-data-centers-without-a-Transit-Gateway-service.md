@@ -1,12 +1,12 @@
 ---
 
 copyright:
-years: 2024
+  years: 2024
 lastupdated: "2024-03-11"
 
 keywords: # Not typically populated
 
-subcollection: /docs/Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+subcollection: pattern-network-vrf-only
 
 keywords:
 # The release that the reference architecture describes
@@ -21,7 +21,7 @@ version: 1.0
 # See https://test.cloud.ibm.com/docs/get-coding?topic=get-coding-deploy-button
 deployment-url:
 
-docs: https://cloud.ibm.com/docs/pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+docs: https://cloud.ibm.com/docs/pattern-network-vrf-only
 
 content-type: reference-architecture
 
@@ -71,10 +71,8 @@ Please note that it is a common approach to complement classic environments in t
 
 This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and Power Virtual Server using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
 
-!{: caption= "Figure 1. non-TGW solution architecture"}(./classic%20VRF.svg)
-
-Figure 1. non-TGW solution architecture
-
+![illustrates a detailed network and component architecture for a
+non-TGW solution architecture](classic VRF.svg){: caption="Figure 1. non-TGW solution architecture" caption-side="bottom"}
 1.  Client network connectivity from on-premises using redundant Direct Links.
 2.  Gateway provides routing and security functions.
 3.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
