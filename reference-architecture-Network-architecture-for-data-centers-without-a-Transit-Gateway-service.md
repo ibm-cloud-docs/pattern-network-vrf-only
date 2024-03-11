@@ -41,7 +41,7 @@ https://test.cloud.ibm.com/docs/solution-as-code?topic=solution-as-code-naming-g
 -->
 
 # Network architecture for data centers <!-- H1 -->
-{: #sap-on-vpc}
+{: #Network-architecture-for-data-centers-without-a-Transit-Gateway-service}
 {: toc-content-type="reference-architecture"}
 {: toc-version="1.0"}
 
@@ -61,7 +61,7 @@ After the introduction, include a summary of the typical use case for the archit
 
 This reference architecture is leveraged in data centers that currently do not have VPC and Transit Gateway (TGW) services available, as of Q12023, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
 
-For an updated list of those DCs which have TGW, see [transit gateway locations](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
+For an updated list of those DCs which have TGW, see [transit gateway locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
 
 We will refer to this approach from now on as “non-TGW” since there is no VPC and TGW connectivity utilized.
 

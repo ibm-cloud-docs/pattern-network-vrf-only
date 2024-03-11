@@ -10,8 +10,8 @@ toc:
     # compliance: compliance-value
     audience: solution
     content-type: deployment
-    href: /docs/Network-architecture-for-data-centers-without-a-Transit-Gateway-service
-    path: Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+    href: /docs/pattern-network-vrf-only
+    path: pattern-network-vrf-only
     description: Network architecture for data centers without a Transit Gateway service
     label: Network architecture for data centers without a Transit Gateway service
 

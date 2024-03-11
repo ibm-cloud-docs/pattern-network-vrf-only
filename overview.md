@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-28"
+  years: 2024
+lastupdated: "2024-03-11"
 
 subcollection: /docs/Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
@@ -23,5 +23,5 @@ IBM Cloud contains three main environments known as Classic, Virtual Private Clo
 
 This pattern is intended to:
 
--   Accelerate and simplify solution design by providing a standard IBM Cloud deployment architecture reference following the [IBM Architecture Framework](https://cloud.ibm.com/docs/architecture-framework).
+-   Accelerate and simplify solution design by providing a standard IBM Cloud deployment architecture reference following the [IBM Architecture Framework](/docs/architecture-framework).
 -   Provide a prescriptive, end-2-end enterprise-class solution design, with diagrams, component architecture decisions along with rationale for cloud component selection to meet enterprise requirements.
