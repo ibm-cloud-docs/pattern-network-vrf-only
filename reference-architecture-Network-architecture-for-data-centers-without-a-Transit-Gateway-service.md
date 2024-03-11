@@ -35,7 +35,7 @@ We will refer to this approach from now on as “non-TGW” since there is no VP
 Please note that it is a common approach to complement classic environments in these non-TGW locations with VPC services hosted in another location. This allows additional functionality that is only available with VPC services. This document will reference this approach as “complementary VPC services” and it will be highlighted in the multi-region deployment in the Resiliency section below.
 
 ## Architecture diagram
-{: ##Architecture diagram}
+{: ##Architecture diagram_ID}
 
 This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and Power Virtual Server using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
 
@@ -57,7 +57,7 @@ non-TGW solution architecture](classic-VRF.svg){: caption="Figure 1. non-TGW sol
 13. Compute Instance in PowerVS and Classic
 
 ## Design scope
-{: ##Design scope}
+{: ##Design scope_ID}
 
 Following the [Architecture Framework](/docs/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
 
@@ -73,6 +73,7 @@ non-TGW solution architecture](heat_map.svg){: caption="Figure 2. non-TGW design
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
 ## Requirements
+{: ##Requirements_ID}
 
 The following represents a baseline set of requirements that are applicable to most clients and critical to successful non-TGW network deployment. The pattern assumes the client will have a requirement of geolocation, data residency, or low latency that requires resource deployment in a data center that does not have transit gateway technology.
 
@@ -89,8 +90,7 @@ The following represents a baseline set of requirements that are applicable to m
 | Resiliency         | Multi-Region capability to support a disaster recovery strategy and solution that allows all production applications to be included by using cloud infrastructure DR strategies.                                                                                                                                   |
 | Service management | Provide health and system monitoring with ability to monitor and correlate performance metrics and events and provide alerting across applications and infrastructure                                                                                                                                              |
 |                    | Ability to diagnose issues and exceptions and identify error source                                                                                                                                                                                                                                                |
-
-Table 1. non-TGW requirements
+{: caption="Table 1. non-TGW requirements" caption-side="bottom"}
 
 ## Components
 {: ##Components_ID}
