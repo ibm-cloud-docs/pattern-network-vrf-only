@@ -4,7 +4,7 @@
 ---
 toc:
   properties:
-    subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+    subcollection: pattern-network-vrf-only
     # industry: industry-value
     use-case: Network
     # compliance: compliance-value
@@ -57,17 +57,6 @@ toc:
             navtitle: Service management
 
   - navgroup:
-      id: deploy
-      topics:
-      - topic-7.md
-      - topic-8.md
-
-  - navgroup:
       id: reference
       topics:
       - references.md
-
-  - navgroup:
-      id: help
-      topics:
-      - topic: topic-10.md
