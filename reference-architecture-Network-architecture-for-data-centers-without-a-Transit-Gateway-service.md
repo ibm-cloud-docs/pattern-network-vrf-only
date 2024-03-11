@@ -1,5 +1,4 @@
 ---
-
 copyright:
   years: 2024
 lastupdated: "2024-03-11"
@@ -24,7 +23,6 @@ deployment-url:
 docs: https://cloud.ibm.com/docs/pattern-network-vrf-only
 
 content-type: reference-architecture
-
 ---
 <!--
 The following line inserts all the attribute definitions. Don't delete.
