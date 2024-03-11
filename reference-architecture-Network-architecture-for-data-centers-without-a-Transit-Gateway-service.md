@@ -8,8 +8,7 @@ keywords: # Not typically populated
 
 subcollection: # Use the subcollection value from your toc.yaml file. e.g. pattern-sap-on-vpc
 
-subcollection: pattern-Network-architecture-for-data-centers
--without-a-Transit-Gateway-service
+subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
 keywords:
 # The release that the reference architecture describes
@@ -24,8 +23,7 @@ version: 1.0
 # See https://test.cloud.ibm.com/docs/get-coding?topic=get-coding-deploy-button
 deployment-url:
 
-docs: https://cloud.ibm.com/docs/pattern-Network-architecture-for-data-centers
--without-a-Transit-Gateway-service
+docs: https://cloud.ibm.com/docs/pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
 content-type: reference-architecture
 

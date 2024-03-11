@@ -4,7 +4,7 @@ copyright:
   years: 2023
 lastupdated: "2023-11-28"
 
-subcollection: <repo-name>
+subcollection: /docs/Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
 keywords:
 
