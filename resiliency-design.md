@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-26"
+  years: 2024
+lastupdated: "2024-03-11"
 
 subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
@@ -58,10 +58,8 @@ The multi-region deployment:
 -   Provides a second location in a separate geographical region that is used as a disaster recovery location providing even more resiliency in the event of a regional failure.
 -   Choosing a region that has transit gateway and VPC services available also enables the use of additional “complimentary VPC services” such as Cloud DNS services, VPC Virtual Private Endpoint (VPE), IBM Cloud Monitoring, IBM Log Analysis, and IBM Activity Tracker to further enhance the cloud environment.
 
-![](image/ce9cb48144e74ea7416587ee47d839f0.png)
-
-Figure 5. Multi Region View
-
+![illustrates a detailed network and component architecture for a
+multi-region non-TGW solution architecture](cross-region-view.svg){: caption="Figure 5. Multi Region View" caption-side="bottom"}
 1.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
 2.  Client network connectivity from on-premises using Direct Link.
 3.  Gateway provides routing and security functions.

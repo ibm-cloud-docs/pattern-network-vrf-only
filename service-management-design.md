@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-26"
+  years: 2024
+lastupdated: "2024-30-11"
 
 subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
@@ -11,9 +11,6 @@ keywords:
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-# DevOps design
-{: #devops-design}
 
 # Service management design
 
@@ -27,7 +24,7 @@ More advanced monitoring capabilities such as troubleshooting, events and alerts
 
 Alternatively, third party monitoring software can be deployed within IBM Cloud Classic for more detailed monitoring.
 
-Learn more about IBM Cloud Monitoring [here](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started)
+Learn more about IBM Cloud Monitoring [here](/docs/monitoring?topic=monitoring-getting-started#getting-started)
 
 ## Log Analysis
 
@@ -37,7 +34,7 @@ Third party software can be implemented within IBM Cloud Classic to enable log a
 
 Alternatively, IBM Log Analysis (complementary VPC Service) can be used to manage operating system logs, application logs, and platform logs in the IBM Cloud. IBM Log Analysis offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs.
 
-Learn more about IBM Log Analysis [here](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-getting-started#getting-started)
+Learn more about IBM Log Analysis [here](/docs/log-analysis?topic=log-analysis-getting-started#getting-started)
 
 ## Activity Tracking
 
@@ -47,6 +44,6 @@ Third party software such as Splunk and Datadog can be integrated with IBM Cloud
 
 Alternatively, IBM Cloud Activity Tracker (complementary VPC Service) monitors and manages activities in the IBM Cloud. It provides a dashboard and notification for real-time monitoring.
 
-Learn more about IBM Activity Tracker [here](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-getting-started)
+Learn more about IBM Activity Tracker [here](/docs/activity-tracker?topic=activity-tracker-getting-started)
 
-Explore details on activity tracker events for virtual servers in Classic [here](https://cloud.ibm.com/docs/virtual-servers?topic=virtual-servers-at_events) and for bare metal in Classic [here](https://cloud.ibm.com/docs/bare-metal?topic=bare-metal-bm-at-events)
+Explore details on activity tracker events for virtual servers in Classic [here](/docs/virtual-servers?topic=virtual-servers-at_events) and for bare metal in Classic [here](/docs/bare-metal?topic=bare-metal-bm-at-events)

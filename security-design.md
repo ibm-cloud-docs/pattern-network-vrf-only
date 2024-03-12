@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-26"
+  years: 2024
+lastupdated: "2024-03-11"
 
 subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
@@ -15,15 +15,13 @@ keywords:
 # Security design
 {: #security-design}
 
-# Security design
-
 ## Identity and Access Management (IAM)
 
 Identity and Access Management provides role-based access controls (RBAC) and is part of the zero-trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. IBM Security Verify can be added to support multi-factor authentication.
 
-Click to learn more about [Identity and Access Management (IAM)](https://cloud.ibm.com/docs/account?topic=account-iamoverview).
+Click to learn more about [Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview).
 
-Click to learn more about [IAM Roles](https://cloud.ibm.com/docs/account?topic=account-userroles).
+Click to learn more about [IAM Roles](/docs/account?topic=account-userroles).
 
 Click to learn more about [IBM Security Verify](https://www.ibm.com/verify).
 
@@ -38,11 +36,11 @@ Consider leveraging Cloud Internet Services or other third-party products such a
 -   **Transport Layer Security (TLS):** Encrypts communication between your website and visitors, protecting sensitive data like passwords and credit card information.
 -   **Range**: non-HTTP and HTTPS port protection Secures ports on your server beyond the standard web traffic ports (HTTP and HTTPS), protecting against attacks targeting vulnerable services.
 
-Learn more about Cloud Internet Service feature [here](https://test.cloud.ibm.com/docs-draft/cis?topic=cis-about-ibm-cloud-internet-services-cis).
+Learn more about Cloud Internet Service feature [here](/docs-draft/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 
-Explore Cloud Internet Services [DDoS](https://cloud.ibm.com/docs/cis?topic=cis-distributed-denial-of-service-ddos-attack-concepts).
+Explore Cloud Internet Services [DDoS](/docs/cis?topic=cis-distributed-denial-of-service-ddos-attack-concepts).
 
-Explore Cloud Internet Services [WAF](https://cloud.ibm.com/docs/cis?topic=cis-waf-q-and-a).
+Explore Cloud Internet Services [WAF](/docs/cis?topic=cis-waf-q-and-a).
 
 ## Gateway Appliance – Firewall
 
@@ -93,14 +91,13 @@ Tier 5: Ultra-Secure Enterprise
 | Continuous Monitoring and Auditing                                       |            |            |            |            | ü          |
 | Integration with Advanced Threat Detection and Response (ATDR) Systems   |            |            |            |            | ü          |
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ü          |
+{: caption= "Table 4: Non-TGW Security features"}
 
-Table 4: Non-TGW Security features
+Explore Virtual Router Appliance (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
-Explore Virtual Router Appliance (vRA) [here](https://cloud.ibm.com/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
+Explore Juniper vSRX license features [here](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
 
-Explore Juniper vSRX license features [here](https://cloud.ibm.com/docs/vsrx?topic=vsrx-getting-started#choosing-license).
-
-Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Fortinet, and Palo Alto [here](https://cloud.ibm.com/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
+Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Fortinet, and Palo Alto [here](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 
 ## VPN Security
 
@@ -137,5 +134,4 @@ The table below will help determine if a bastion or jumper server is needed:
 | Purpose        | Manage internal systems                                               | Grant controlled access to specific internal systems for external users |
 | Security Focus | Centralized access control, simplified administration                 | Secure entry point, isolation of internal systems                       |
 | Attack Surface | Higher (internal systems directly exposed if jump server compromised) | Lower (internal systems protected even if bastion host compromised)     |
-
-Table 5. non-TGW Jump Server vs Bastion Host Matrix
+{: caption= "Table 5. non-TGW Jump Server vs Bastion Host Matrix"}
