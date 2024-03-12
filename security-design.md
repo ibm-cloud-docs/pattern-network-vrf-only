@@ -75,7 +75,7 @@ Tier 5: Ultra-Secure Enterprise
 
 | **Security Function**                                                    | **Tier 1** | **Tier 2** | **Tier 3** | **Tier 4** | **Tier 5** |
 |--------------------------------------------------------------------------|------------|------------|------------|------------|------------|
-| Network Firewall                                                         | "ü"          | ü          | ü          | ü          | ü          |
+| Network Firewall                                                         | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ü          | ü          | ü          | ü          |
 | Web Application Firewall (WAF)                                           | ü          | ü          | ü          | ü          | ü          |
 | Intrusion Detection System (IDS)                                         | ü          | ü          | ü          | ü          | ü          |
 | Antivirus/Antimalware Software                                           | ü          | ü          | ü          | ü          | ü          |
