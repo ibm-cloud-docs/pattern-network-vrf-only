@@ -17,6 +17,7 @@ keywords:
 
 
 ## Direct Link
+{: #direct-link}
 
 Direct Link resiliency can be designed into a deployment to ensure availability. Most network resiliency is enhanced by multiple paths and dynamic routing.
 
@@ -50,6 +51,7 @@ Considerations for resilience should also include gateway and firewall appliance
 Learn more about Direct Link diversity [here](https://cloud.ibm.com/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
 ## Multi-Region Deployment
+{: #multiregion-deployment}
 
 In the multi-region deployment pattern, a second region should be chosen that has transit gateway and VPC services available to highlight the complimentary services that can be leveraged to provide additional functionality from these locations.
 

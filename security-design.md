@@ -94,7 +94,7 @@ Tier 5: Ultra-Secure Enterprise
 | Continuous Monitoring and Auditing                                       |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 | Integration with Advanced Threat Detection and Response (ATDR) Systems   |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
-{: caption= "Table 4: Non-TGW Security features"}
+{: caption="Table 4: Non-TGW Security features"}
 
 Explore Virtual Router Appliance (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
