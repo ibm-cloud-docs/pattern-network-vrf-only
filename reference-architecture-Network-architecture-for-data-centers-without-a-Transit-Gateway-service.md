@@ -35,6 +35,7 @@ We will refer to this approach from now on as “non-TGW” since there is no VP
 Please note that it is a common approach to complement classic environments in these non-TGW locations with VPC services hosted in another location. This allows additional functionality that is only available with VPC services. This document will reference this approach as “complementary VPC services” and it will be highlighted in the multi-region deployment in the Resiliency section below.
 
 ## Architecture diagram
+{: ##architecture_diagram-id}
 
 This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and Power Virtual Server using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
 
