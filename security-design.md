@@ -75,25 +75,25 @@ Tier 5: Ultra-Secure Enterprise
 
 | **Security Function**                                                    | **Tier 1** | **Tier 2** | **Tier 3** | **Tier 4** | **Tier 5** |
 |--------------------------------------------------------------------------|------------|------------|------------|------------|------------|
-| Network Firewall                                                         | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ü          | ü          | ü          | ü          |
-| Web Application Firewall (WAF)                                           | ü          | ü          | ü          | ü          | ü          |
-| Intrusion Detection System (IDS)                                         | ü          | ü          | ü          | ü          | ü          |
-| Antivirus/Antimalware Software                                           | ü          | ü          | ü          | ü          | ü          |
-| Network Segmentation                                                     |            | ü          | ü          | ü          | ü          |
-| Administrative Role-Based Access Controls (RBAC)                         |            | ü          | ü          | ü          | ü          |
-| Virtual Private Network (VPN)                                            |            | ü          | ü          |            |            |
-| Advanced Firewall with Deep Packet Inspection                            |            |            | ü          | ü          | ü          |
-| Intrusion Prevention System (IPS)                                        |            |            | ü          | ü          | ü          |
-| Multifactor Authentication (MFA)                                         |            |            | ü          | ü          | ü          |
-| Integration with Security Incident and Event Management (SIEM) System    |            |            | ü          | ü          | ü          |
-| Network Segmentation with Strict Access Controls                         |            |            |            | ü          | ü          |
-| Administrative Privileged Access Management (PAM)                        |            |            |            | ü          | ü          |
-| Integration with Advanced Threat Intelligence and Threat Hunting systems |            |            |            | ü          | ü          |
-| Zero-Trust Architecture                                                  |            |            |            |            | ü          |
-| Micro-Segmentation                                                       |            |            |            |            | ü          |
-| Continuous Monitoring and Auditing                                       |            |            |            |            | ü          |
-| Integration with Advanced Threat Detection and Response (ATDR) Systems   |            |            |            |            | ü          |
-| Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ü          |
+| Network Firewall                                                         | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Web Application Firewall (WAF)                                           | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Intrusion Detection System (IDS)                                         | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Antivirus/Antimalware Software                                           | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Network Segmentation                                                     |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Administrative Role-Based Access Controls (RBAC)                         |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Virtual Private Network (VPN)                                            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |            |            |
+| Advanced Firewall with Deep Packet Inspection                            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Intrusion Prevention System (IPS)                                        |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Multifactor Authentication (MFA)                                         |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Integration with Security Incident and Event Management (SIEM) System    |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Network Segmentation with Strict Access Controls                         |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Administrative Privileged Access Management (PAM)                        |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Integration with Advanced Threat Intelligence and Threat Hunting systems |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Zero-Trust Architecture                                                  |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Micro-Segmentation                                                       |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Continuous Monitoring and Auditing                                       |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Integration with Advanced Threat Detection and Response (ATDR) Systems   |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
+| Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 {: caption= "Table 4: Non-TGW Security features"}
 
 Explore Virtual Router Appliance (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
