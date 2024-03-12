@@ -16,6 +16,7 @@ keywords:
 {: #network-design}
 
 ## Virtual Private Network (VPN)
+{: #vpn}
 
 Implementing a site-to-site VPN offers secure connectivity between your on-premises networks and remote locations but comes with important considerations before deployment.
 
@@ -31,6 +32,7 @@ Implementing a site-to-site VPN offers secure connectivity between your on-premi
 -   **Technical Expertise:** Implementing and maintaining a VPN may require technical expertise. Assess your internal IT capabilities or consider external support options.
 
 ## Gateway Appliance and Firewall
+{: #gateway-appliance}
 
 Choosing the right firewall is crucial for safeguarding your network. Here are some key considerations to guide you:
 
@@ -54,11 +56,11 @@ Choosing the right firewall is crucial for safeguarding your network. Here are s
 Explore and compare [gateway options](/docs/vsrx?topic=vsrx-exploring-firewalls) available in IBM Cloud.
 
 ## Generic Routing Encapsulation (GRE) tunnels
+{: #gre}
 
 GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 
 ![illustrates the details of GRE for a non-TGW solution architecture](GRE.svg){: caption="Figure 3. non-TGW GRE Encapsulation" caption-side="bottom"}
-
 1.  Client network connectivity from on-premises is accomplished through Direct Link access.
 2.  A gateway is deployed in Classic which provides routing and security functions.
 3.  GRE tunnel is created between the Gateway and a customer router.
@@ -75,20 +77,22 @@ For Gateways in separate regions, a third GRE is used to share non-assigned IBM 
 Explore IBM Cloud public & private IP ranges [here](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
 ## Enterprise Connectivity
+{: #entrerprise-connectivity}
 
 There are two Direct Link options available: Direct Link Dedicated and Direct Link Connect.
 
 Enterprise connectivity considerations include:
 
--   Bandwidth requirements: There are a variety of bandwidth options available in [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). Direct Link Dedicated offers higher bandwidth potential.
--   Security needs: If isolation is needed, Direct Link Dedicated provides the highest isolation for sensitive data.
--   Location and existing infrastructure: Dedicated requires colocation or dedicated circuits. [Provider location](/docs/dl?topic=dl-locations#connect-locations) will also need to be considered.
--   Cost: Direct Link Connect is generally more cost effective, especially for lower bandwidth needs.
--   Deployment time: Direct Link Connect can be deployed faster due to pre-established connections.
+-   **Bandwidth requirements:** There are a variety of bandwidth options available in [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl). Direct Link Dedicated offers higher bandwidth potential.
+-   **Security needs:** If isolation is needed, Direct Link Dedicated provides the highest isolation for sensitive data.
+-   **Location and existing infrastructure:** Dedicated requires colocation or dedicated circuits. [Provider location](/docs/dl?topic=dl-locations#connect-locations) will also need to be considered.
+-   **Cost:** Direct Link Connect is generally more cost effective, especially for lower bandwidth needs.
+-   **Deployment time:** Direct Link Connect can be deployed faster due to pre-established connections.
 
 **To avoid IP address conflicts for classic connections to a direct link, avoid IP address ranges in the 10.0.0.0/14, 10.200.0.0/14, 10.198.0.0/15, and 10.254.0.0/16 blocks for on-prem networks. On-prem routes that overlap are dropped.**
 
 ### Direct Link Dedicated
+{: #direc-link-dedicated}
 
 Direct Link Dedicated is ideal for:
 
@@ -108,6 +112,7 @@ Direct Link Dedicated use cases include:
 Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locations#dedicated-locations).
 
 ### Direct Link Connect
+{: #direct-link-connect}
 
 Direct Link Connect is ideal for:
 
@@ -126,8 +131,10 @@ Direct Link Connect use cases include:
 Review available Direct Link Connect location and providers [here](/docs/dl?topic=dl-locations#connect-locations).
 
 ## Load Balancing
+{: #load-balancing}
 
 ### Local Load balancing
+{: #local-load-balancing}
 
 Load balancing is the process of distributing network traffic efficiently among multiple servers within a single region to optimize and ensure application availability to meet specific service level requirements.
 
@@ -150,10 +157,12 @@ Learn more about IBM Cloud Load Balancer [here](/docs/loadbalancer-service?topic
 Learn more about Citrix NetScaler VPX Load Balancer [here](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-about-citrix-netscaler-vpx)
 
 ### Third party Load Balancer Appliance
+{: #third-party-load-balancer}
 
 If there is a specific need or function not offered by any of the load balancer options within the IBM Cloud Catalog, or an existing relationship is established with a third-party vendor, such as F5, you can deploy it within IBM Cloud as a bring your own appliance.
 
 ## Global Load Balancing
+{: #global-load-balancing}
 
 Global Server Load Balancing (GSLB) is a technique for distributing internet traffic across geographically dispersed servers. It aims to optimize user experience and application performance by directing users to the nearest or most appropriate server based on various factors like latency, server load, and user location and is a valuable component of a disaster recovery strategy.
 
@@ -171,6 +180,7 @@ When a user tries to access a website or application, the request goes to the GS
 Explore Global Server Load Balancing and other features of IBM Cloud Internet Service [here](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 
 ## Private Service Endpoints & Proxy Server
+{: #service-endpoints}
 
 With IBM Cloud service endpoints, you can connect to IBM Cloud services over the IBM Cloud private network instead of the default public network.
 
@@ -196,12 +206,14 @@ Verify cloud services are VPE enabled [here](/docs/vpc?topic=vpc-vpe-supported-s
 ![illustrates the details of SE vs VPE for a non-TGW solution architecture](SE-vs-VPE.svg){: caption="Figure 4. non-TGW Service Endpoint access" caption-side="bottom"}
 
 ## Cloud Internet Services (CIS)
+{: #cloud-internet-services}
 
 Cloud Internet Services (CIS) provides global server load balancing, public domain name services, and public network security features.
 
 Learn more about CIS [here](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)
 
 ## Domain Name Services (DNS)
+{: #DNS}
 
 Domain Name Services provides access to your systems and services via user-friendly domain names rather than IP addresses.
 
