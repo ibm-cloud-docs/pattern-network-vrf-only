@@ -16,6 +16,7 @@ keywords:
 {: #security-design}
 
 ## Identity and Access Management (IAM)
+{: #IAM}
 
 Identity and Access Management provides role-based access controls (RBAC) and is part of the zero-trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. IBM Security Verify can be added to support multi-factor authentication.
 
@@ -23,9 +24,10 @@ Click to learn more about [Identity and Access Management (IAM)](/docs/account?t
 
 Click to learn more about [IAM Roles](/docs/account?topic=account-userroles).
 
-Click to learn more about [IBM Security Verify](https://www.ibm.com/verify).
+Click to learn more about [IBM Security Verify](/verify).
 
 ## Cloud Internet Services (CIS)
+{: #CIS}
 
 In addition to providing Global Server Load balancing and Domain name services, Cloud Internet Services (CIS) provides many security features to help meet compliance requirements in a pay as you go or bundled package.
 
@@ -43,6 +45,7 @@ Explore Cloud Internet Services [DDoS](/docs/cis?topic=cis-distributed-denial-of
 Explore Cloud Internet Services [WAF](/docs/cis?topic=cis-waf-q-and-a).
 
 ## Gateway Appliance – Firewall
+{: #gateway-appliance}
 
 IBM Cloud Classic Firewalls offer a variety of security functions to protect your cloud resources. Specific features and capabilities of IBM Cloud Classic firewalls vary depending on the vendor, hardware, software, licenses, add-on bundle, and configuration options selected.
 
@@ -72,7 +75,7 @@ Tier 5: Ultra-Secure Enterprise
 
 | **Security Function**                                                    | **Tier 1** | **Tier 2** | **Tier 3** | **Tier 4** | **Tier 5** |
 |--------------------------------------------------------------------------|------------|------------|------------|------------|------------|
-| Network Firewall                                                         | ü          | ü          | ü          | ü          | ü          |
+| Network Firewall                                                         | "ü"          | ü          | ü          | ü          | ü          |
 | Web Application Firewall (WAF)                                           | ü          | ü          | ü          | ü          | ü          |
 | Intrusion Detection System (IDS)                                         | ü          | ü          | ü          | ü          | ü          |
 | Antivirus/Antimalware Software                                           | ü          | ü          | ü          | ü          | ü          |
@@ -134,4 +137,4 @@ The table below will help determine if a bastion or jumper server is needed:
 | Purpose        | Manage internal systems                                               | Grant controlled access to specific internal systems for external users |
 | Security Focus | Centralized access control, simplified administration                 | Secure entry point, isolation of internal systems                       |
 | Attack Surface | Higher (internal systems directly exposed if jump server compromised) | Lower (internal systems protected even if bastion host compromised)     |
-{: caption= "Table 5. non-TGW Jump Server vs Bastion Host Matrix"}
+{: caption="Table 5. non-TGW Jump Server vs Bastion Host Matrix"}
