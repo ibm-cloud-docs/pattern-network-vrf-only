@@ -56,6 +56,7 @@ non-TGW solution architecture](classic-VRF.svg){: caption="Figure 1. non-TGW sol
 13. Compute Instance in PowerVS and Classic
 
 ## Design scope
+{: #design-scope}
 
 Following the [Architecture Framework](/docs/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
 
@@ -71,6 +72,7 @@ non-TGW solution architecture](heat_map.svg){: caption="Figure 2. non-TGW design
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
 ## Requirements
+{: #requirements}
 
 The following represents a baseline set of requirements that are applicable to most clients and critical to successful non-TGW network deployment. The pattern assumes the client will have a requirement of geolocation, data residency, or low latency that requires resource deployment in a data center that does not have transit gateway technology.
 
@@ -90,6 +92,7 @@ The following represents a baseline set of requirements that are applicable to m
 {: caption="Table 1. non-TGW requirements" caption-side="bottom"}
 
 ## Components
+{: #components}
 
 | **Aspect**             | **Component**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **How the component is used**                                                                                                                                            |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
