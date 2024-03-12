@@ -48,7 +48,7 @@ Consider the cost implications when ordering Direct Link. The secondary path and
 
 Considerations for resilience should also include gateway and firewall appliances and GRE tunnel configurations to eliminate as many single points of failure as possible.
 
-Learn more about Direct Link diversity [here](https://cloud.ibm.com/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
+Learn more about Direct Link diversity [here](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
 ## Multi-Region Deployment
 {: #multiregion-deployment}

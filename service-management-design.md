@@ -13,8 +13,10 @@ keywords:
 {{site.data.keyword.attribute-definition-list}}
 
 # Service management design
+{: #service-mgmt}
 
 ## Monitoring
+{: #monitoring}
 
 Evaluate the level of monitoring required by considering the workload criticality and the metrics that need to be observed.
 
@@ -27,6 +29,7 @@ Alternatively, third party monitoring software can be deployed within IBM Cloud 
 Learn more about IBM Cloud Monitoring [here](/docs/monitoring?topic=monitoring-getting-started#getting-started)
 
 ## Log Analysis
+{: #log-analysis}
 
 Examine what logs are required for troubleshooting and auditing, as well as the retention policy necessary to meet the audit and compliance requirements.
 
@@ -37,6 +40,7 @@ Alternatively, IBM Log Analysis (complementary VPC Service) can be used to manag
 Learn more about IBM Log Analysis [here](/docs/log-analysis?topic=log-analysis-getting-started#getting-started)
 
 ## Activity Tracking
+{: #activity-tracking}
 
 Consider the need to record and monitor the activities and changes made inside the IBM Cloud account to assist in investigating abnormal activity, critical actions, and to meet regulatory audit requirements.
 
