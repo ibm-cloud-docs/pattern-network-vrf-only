@@ -46,13 +46,13 @@ An average Jump server with 8 CPU and 16GB of RAM, can support 25 concurrent ses
 
 Infrastructure requirements for Ubuntu LTS, CentOS, or Debian Bastion Hosts can be viewed below.
 
-Table 3 contains general jump server sizing guidelines:
+Table 3 contains general jump server and Bastion Host sizing guidelines:
 
 | **Traffic** | **Concurrent Users** | **Server Size**               |
 |-------------|----------------------|-------------------------------|
 | Low         | 10-20                | 1-2 Cores CPU; 2-4 GB Memory  |
 | Moderate    | 30-50                | 2-4 Cores CPU; 4-8 GB Memory  |
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
-{: caption= "Table 3. non-TGW Bastion Server Sizing"}
+{: caption="Table 3. non-TGW Bastion Server Sizing"}
 
 The Jump server or Bastion Host can be deployed on either a bare metal server or Virtual Server Instance (VSI) within the Classic environment.
