@@ -12,7 +12,7 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Compute design <!-- H1 -->
+# Compute design
 {: #compute-design}
 
 ## Workload Hosts (Classic and Power)
