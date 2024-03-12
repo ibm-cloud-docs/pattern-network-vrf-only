@@ -16,6 +16,7 @@ keywords:
 {: #compute-design}
 
 ## Workload Hosts (Classic and Power)
+{: #workload-hosts}
 
 Selecting the appropriate workload host in this architecture includes but is not limited to the following considerations regarding:
 
@@ -37,6 +38,7 @@ Explore [VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-s
 Explore [Power Virtual Servers](/docs/power-iaas?topic=power-iaas-getting-started).
 
 ## Jump Server and Bastion Hosts
+{: #jump-bastion}
 
 Infrastructure requirements for Linux and Windows jump servers and Bastion host can vary based on factors such as the number of concurrent users, the specific use case, and the applications or services running on the server. Here are some general guidelines:
 
