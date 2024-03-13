@@ -35,7 +35,7 @@ Examine what logs are required for troubleshooting and auditing, as well as the 
 
 Third party software can be implemented within IBM Cloud Classic to enable log analysis within IBM Cloud Classic.
 
-Alternatively, IBM Log Analysis (complementary VPC Service) can be used to manage operating system logs, application logs, and platform logs in the IBM Cloud. IBM Log Analysis offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs.
+Alternatively, {{site.data.keyword.loganalysislong_notm}} (complementary VPC Service) can be used to manage operating system logs, application logs, and platform logs in the IBM Cloud. IBM Log Analysis offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs.
 
 Learn more about IBM Log Analysis [here](/docs/log-analysis?topic=log-analysis-getting-started#getting-started)
 
