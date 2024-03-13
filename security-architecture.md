@@ -10,6 +10,8 @@ keywords:
 
 ---
 
+{{site.data.keyword.attribute-definition-list}}
+
 # Architecture decisions for security
 {: #security-architecture}
 

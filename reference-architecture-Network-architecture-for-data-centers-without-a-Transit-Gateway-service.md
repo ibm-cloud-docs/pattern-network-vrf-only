@@ -19,6 +19,7 @@ docs: https://cloud.ibm.com/docs/pattern-network-vrf-only
 
 content-type: reference-architecture
 ---
+
 {{site.data.keyword.attribute-definition-list}}
 
 # Network architecture
