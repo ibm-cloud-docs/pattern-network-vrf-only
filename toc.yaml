@@ -51,10 +51,5 @@ toc:
             navtitle: Security
           - topic: resiliency-architecture.md
             navtitle: Resiliency
-          - topic: service-management-architecture.md
+          - topic: service-architecture.md
             navtitle: Service management
-
-  - navgroup:
-      id: reference
-      topics:
-      - references.md
