@@ -5,9 +5,7 @@
 toc:
   properties:
     subcollection: pattern-network-vrf-only
-    # industry: industry-value
     use-case: Network
-    # compliance: compliance-value
     audience: solution
     content-type: deployment
     href: /docs/pattern-network-vrf-only
