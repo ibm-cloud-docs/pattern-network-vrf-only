@@ -12,7 +12,7 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-## Architecture decisions for service management
+# Architecture decisions for service management
 {: #ad-service-management}
 
 The following are service management architecture decisions for the Network architecture for data centers without a Transit Gateway service pattern.
