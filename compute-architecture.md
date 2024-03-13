@@ -15,7 +15,7 @@ keywords:
 # Architecture decisions for compute
 {: #compute-decisions}
 
-The following are compute architecture decisions for the Network architecture for data centers without a Transit Gateway service pattern.
+The following are compute architecture decisions for the Network architecture for data centers without a {{site.data.keyword.tg_full_notm}} service pattern.
 
 | **Architecture decision**        | **Requirement**                                                            | **Options**                                 | **Decision**   | **Rationale**                                    |
 |----------------------------------|----------------------------------------------------------------------------|---------------------------------------------|----------------|--------------------------------------------------|

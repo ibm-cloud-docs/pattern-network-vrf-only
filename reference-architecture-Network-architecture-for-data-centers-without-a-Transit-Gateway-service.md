@@ -27,9 +27,9 @@ content-type: reference-architecture
 {: toc-content-type="reference-architecture"}
 {: toc-version="1.0"}
 
-This reference architecture is leveraged in data centers that currently do not have VPC and Transit Gateway (TGW) services available, as of Q12023, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
+This reference architecture is leveraged in data centers that currently do not have {{site.data.keyword.vpc_short}} and {{site.data.keyword.tg_short}} (TGW) services available, as of Q12023, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
 
-For an updated list of those DCs which have TGW, see [transit gateway locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
+For an updated list of those DCs which have TGW, see [{{site.data.keyword.tg_short}} locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
 
 We will refer to this approach from now on as “non-TGW” since there is no VPC and TGW connectivity utilized.
 
@@ -38,23 +38,23 @@ Please note that it is a common approach to complement classic environments in t
 ## Architecture diagram
 {: #architecture-diagram}
 
-This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and Power Virtual Server using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
+This architecture will describe on-premises data center(s) connectivity into IBM Cloud Classic, with firewall services and {{site.data.keyword.powerSys_notm}} using a non-TGW model. The diagram includes examples to show where workload compute instances, proxy servers and jump servers would reside. Within the diagram, there are identifying numbers indicating key components in the description below.
 
 ![illustrates a detailed network and component architecture for a
 non-TGW solution architecture](classic-VRF.svg){: caption="Figure 1. non-TGW solution architecture" caption-side="bottom"}
 1.  Client network connectivity from on-premises using redundant Direct Links.
 2.  Gateway provides routing and security functions.
 3.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
-4.  Power Virtual Server workspace, subnets, and resources
+4.  {{site.data.keyword.powerSys_notm}} workspace, subnets, and resources
 5.  GREa tunnel allows BYOIP to be advertised between Classic and on-premises.
 6.  GREb tunnel allows BYOIP to be advertised between Classic environments in separate regions.
-7.  GREc tunnel allows BYOIP to be advertised between Classic and PowerVS.
+7.  GREc tunnel allows BYOIP to be advertised between Classic and {{site.data.keyword.powerSys_notm}}.
 8.  Virtual jump server for remote administrative access.
 9.  Custom DNS services virtual server
 10. Proxy Server as an intermediary between on-prem and cloud services.
 11. Private Service Endpoints (SE) allow access to cloud services over the private network.
 12. Cloud Internet Services (CIS) to enhance the security, performance, and reliability of internet-facing applications and websites.
-13. Compute Instance in PowerVS and Classic
+13. Compute Instance in {{site.data.keyword.powerSys_notm}} and Classic
 
 ## Design scope
 {: #design-scope}

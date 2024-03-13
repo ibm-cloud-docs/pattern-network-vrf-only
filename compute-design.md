@@ -27,15 +27,15 @@ Selecting the appropriate workload host in this architecture includes but is not
 
 Based on workload and specific requirements, select from a range of Virtual Servers, Bare Metal servers, containers and VMware based solutions.
 
-Explore [Bare Metal Server](/docs/bare-metal?topic=bare-metal-about-bm)s for Classic.
+Explore [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm) for Classic.
 
-Explore [Virtual Servers](/docs/virtual-servers?topic=virtual-servers-about-virtual-servers) for Classic.
+Explore [{{site.data.keyword.virtualmachinesshort}}](/docs/virtual-servers?topic=virtual-servers-about-virtual-servers) for Classic.
 
-Explore [Kubernetes](/docs/containers?topic=containers-cluster-create-classic&interface=ui) and [Openshift](/docs/openshift?topic=openshift-getting-started) for classic environments.
+Explore [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-cluster-create-classic&interface=ui) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-getting-started) for classic environments.
 
-Explore [VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started).
+Explore [{{site.data.keyword.vmwaresolutions_full_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started).
 
-Explore [Power Virtual Servers](/docs/power-iaas?topic=power-iaas-getting-started).
+Explore [{{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-getting-started).
 
 ## Jump Server and Bastion Hosts
 {: #jump-bastion}
@@ -55,4 +55,4 @@ Table 3 contains general jump server and Bastion Host sizing guidelines:
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
 {: caption="Table 3. non-TGW Bastion Server Sizing"}
 
-The Jump server or Bastion Host can be deployed on either a bare metal server or Virtual Server Instance (VSI) within the Classic environment.
+The Jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or Virtual Server Instance (VSI) within the Classic environment.
