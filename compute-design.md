@@ -55,4 +55,4 @@ Table 3 contains general jump server and Bastion Host sizing guidelines:
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
 {: caption="Table 3. non-TGW Bastion Server Sizing"}
 
-The Jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or Virtual Server Instance (VSI) within the Classic environment.
+The Jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short} Instance (VSI) within the Classic environment.
