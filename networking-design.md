@@ -53,7 +53,7 @@ Choosing the right firewall is crucial for safeguarding your network. Here are s
 -   **Virtual Appliance vs. Hardware Firewalls:** Evaluate cloud-based options for flexibility and scalability but consider throughput and port sizes for latency and bottlenecks.
 -   **Single vs. High Availability:** Consider single points of failure and service level requirements.
 
-Explore and compare [gateway options](/docs/vsrx?topic=vsrx-exploring-firewalls) available in IBM Cloud.
+Explore and compare [gateway options](/docs/vsrx?topic=vsrx-exploring-firewalls) available in  {{site.data.keyword.Bluemix_notm}}.
 
 ## Generic Routing Encapsulation (GRE) tunnels
 {: #gre}
@@ -66,15 +66,15 @@ GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 3.  GRE tunnel is created between the Gateway and a customer router.
 4.  192.168.xx.xx (BYOIP) packets are encapsulated by 10.1.x.x (IBM assigned IP) which is routed through the BCR over the GRE and un-encapsulated on the other side.
 
-{{site.data.keyword.BluDirectLink}} does not offer BYOIP on the private network. The IBM Cloud backbone advertises the customer’s available routes assigned by IBM to their remote networks. Traffic with a destination IP address that is not assigned by IBM Cloud (10.0.0.0/8) is dropped by IBM Cloud. Traffic can be encapsulated between the remote client network and the IBM Cloud network for non-assigned IBM Cloud addresses by establishing GRE Tunnels between the gateway and a customer router to allow non-IBM assigned IP addresses to be passed back to the on-premises environment.
+{{site.data.keyword.BluDirectLink}} does not offer BYOIP on the private network. The  {{site.data.keyword.Bluemix_notm}} backbone advertises the customer’s available routes assigned by IBM to their remote networks. Traffic with a destination IP address that is not assigned by  {{site.data.keyword.Bluemix_notm}} (10.0.0.0/8) is dropped by  {{site.data.keyword.Bluemix_notm}}. Traffic can be encapsulated between the remote client network and the  {{site.data.keyword.Bluemix_notm}} network for non-assigned  {{site.data.keyword.Bluemix_notm}} addresses by establishing GRE Tunnels between the gateway and a customer router to allow non-IBM assigned IP addresses to be passed back to the on-premises environment.
 
-A second GRE is required between the Classic Gateway and {{site.data.keyword.powerSys_notm}} when non-assigned IBM Cloud addresses are used in the {{site.data.keyword.powerSys_notm}} environment.
+A second GRE is required between the Classic Gateway and {{site.data.keyword.powerSys_notm}} when non-assigned  {{site.data.keyword.Bluemix_notm}} addresses are used in the {{site.data.keyword.powerSys_notm}} environment.
 
-For Gateways in separate regions, a third GRE is used to share non-assigned IBM Cloud addresses between Classic Gateways.
+For Gateways in separate regions, a third GRE is used to share non-assigned  {{site.data.keyword.Bluemix_notm}} addresses between Classic Gateways.
 
 **When resiliency is required, GREs can be configured on two devices in an HA pair to eliminate single points of failure.**
 
-Explore IBM Cloud public & private IP ranges [here](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
+Explore  {{site.data.keyword.Bluemix_notm}} public & private IP ranges [here](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
 ## Enterprise Connectivity
 {: #entrerprise-connectivity}
@@ -96,7 +96,7 @@ Enterprise connectivity considerations include:
 
 {{site.data.keyword.dl_short}} Dedicated is ideal for:
 
--   Organizations with colocation facilities near IBM Cloud PoPs or data centers.
+-   Organizations with colocation facilities near  {{site.data.keyword.Bluemix_notm}} PoPs or data centers.
 -   Network service providers delivering circuits to customers or other data centers.
 -   Highly sensitive data or mission-critical applications requiring maximum security and performance.
 -   Organizations that need fine-grained control over routing and traffic management. Direct link dedicated is ideal for moderate bandwidth needs, multi-cloud or hybrid cloud solution strategies.
@@ -117,16 +117,16 @@ Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locati
 {{site.data.keyword.dl_short}} Connect is ideal for:
 
 -   Organizations with diverse connectivity requirements (multi-cloud, hybrid cloud).
--   Organizations not located near IBM Cloud PoPs or need lower bandwidth.
+-   Organizations not located near  {{site.data.keyword.Bluemix_notm}} PoPs or need lower bandwidth.
 -   Organizations seeking a more affordable private connection compared to Dedicated.
 -   Simple and quick deployment due to pre-established connections in data centers.
 
 {{site.data.keyword.dl_short}} Connect use cases include:
 
--   Hybrid cloud architectures: Connecting on-premises infrastructure to IBM Cloud resources for seamless workload distribution and data sharing.
--   Multi-cloud deployments: Linking IBM Cloud with other cloud providers for workload flexibility and disaster recovery.
--   Remote branch offices: Connecting geographically dispersed offices to IBM Cloud for centralized applications and data access.
--   Software-as-a-Service (SaaS) applications: Accessing SaaS applications hosted on IBM Cloud with improved performance and security.
+-   Hybrid cloud architectures: Connecting on-premises infrastructure to  {{site.data.keyword.Bluemix_notm}} resources for seamless workload distribution and data sharing.
+-   Multi-cloud deployments: Linking  {{site.data.keyword.Bluemix_notm}} with other cloud providers for workload flexibility and disaster recovery.
+-   Remote branch offices: Connecting geographically dispersed offices to  {{site.data.keyword.Bluemix_notm}} for centralized applications and data access.
+-   Software-as-a-Service (SaaS) applications: Accessing SaaS applications hosted on  {{site.data.keyword.Bluemix_notm}} with improved performance and security.
 
 Review available Direct Link Connect location and providers [here](/docs/dl?topic=dl-locations#connect-locations).
 
@@ -148,7 +148,7 @@ Considerations Include:
 -   **Public to Public (Internet-facing) Load Balancing:** Distributes traffic among multiple public-facing servers for high availability and scalability of websites or services.
 -   **Private (Internal) Load Balancing:** Distributes traffic among internal servers on a private network. Improves performance and scalability for internal applications without internet exposure.
 
-IBM Cloud offers two Load balancer options for classic which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance.
+ {{site.data.keyword.Bluemix_notm}} offers two Load balancer options for classic which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance.
 
 Explore load balancer feature options [here](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-explore).
 
@@ -159,14 +159,14 @@ Learn more about {{site.data.keyword.vpx_full}} Load Balancer [here](/docs/citri
 ### Third party Load Balancer Appliance
 {: #third-party-load-balancer}
 
-If there is a specific need or function not offered by any of the load balancer options within the IBM Cloud Catalog, or an existing relationship is established with a third-party vendor, such as F5, you can deploy it within IBM Cloud as a bring your own appliance.
+If there is a specific need or function not offered by any of the load balancer options within the  {{site.data.keyword.Bluemix_notm}} Catalog, or an existing relationship is established with a third-party vendor, such as F5, you can deploy it within  {{site.data.keyword.Bluemix_notm}} as a bring your own appliance.
 
 ## Global Load Balancing
 {: #global-load-balancing}
 
 Global Server Load Balancing (GSLB) is a technique for distributing internet traffic across geographically dispersed servers. It aims to optimize user experience and application performance by directing users to the nearest or most appropriate server based on various factors like latency, server load, and user location and is a valuable component of a disaster recovery strategy.
 
-If Global Server Load Balancing (GSLB) is required, IBM Cloud offers a Global load balancer service through {{site.data.keyword.cis_full_notm}} which routes traffic to servers across multiple geographic locations to ensure application availability.
+If Global Server Load Balancing (GSLB) is required,  {{site.data.keyword.Bluemix_notm}} offers a Global load balancer service through {{site.data.keyword.cis_full_notm}} which routes traffic to servers across multiple geographic locations to ensure application availability.
 
 Other third-party connectivity providers such as Akamai, network appliances from vendors like F5 and Citrix, as well as Domain Name Service can also be leveraged to meet the requirement for GSLB.
 
@@ -182,16 +182,16 @@ Explore Global Server Load Balancing and other features of {{site.data.keyword.c
 ## Private Service Endpoints & Proxy Server
 {: #service-endpoints}
 
-With IBM Cloud service endpoints, you can connect to IBM Cloud services over the IBM Cloud private network instead of the default public network.
+With  {{site.data.keyword.Bluemix_notm}} service endpoints, you can connect to  {{site.data.keyword.Bluemix_notm}} services over the  {{site.data.keyword.Bluemix_notm}} private network instead of the default public network.
 
 Moving these workloads from the public network to the private network offers two advantages:
 
 -   Enhanced Security - Cloud Services are no longer served on an internet routable IP address.
 -   Cost effective - There are no billable or metered bandwidth charges on the private network.
 
-In IBM Cloud Classic, Virtual route forwarding (VRF) must be enabled on the account to move routing to a dedicated routing table. With VRF enabled, Private Service Endpoints can be enabled, and Cloud service resources can be provisioned and accessible to the IBM Cloud private network from an IBM assigned IP address in the Classic Account.
+In  {{site.data.keyword.Bluemix_notm}} Classic, Virtual route forwarding (VRF) must be enabled on the account to move routing to a dedicated routing table. With VRF enabled, Private Service Endpoints can be enabled, and Cloud service resources can be provisioned and accessible to the  {{site.data.keyword.Bluemix_notm}} private network from an IBM assigned IP address in the Classic Account.
 
-Click to learn more on [IBM Cloud VRF](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+Click to learn more on [{{site.data.keyword.Bluemix_notm}} VRF](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
 When the source address is not an IBM assigned IP address a proxy server in classic is used as an intermediary allowing access to cloud services over the Direct Link.
 
@@ -199,7 +199,7 @@ Verify Private Service endpoints are available for your cloud services [here](/d
 
 Getting started with Service Endpoints [here](/docs/account?topic=account-vrf-service-endpoint&interface=ui).
 
-In a multi-region deployment, which is described later in this document, for non-transit gateway locations, often a secondary region which does have transit gateway enabled may be chosen. In these situations, as an alternative to Private Service Endpoints and a proxy server in Classic, configuring a {{site.data.keyword.vpe_full}} (complementary {{site.data.keyword.vpc_short}} Service in the 2nd region) can provide access to IBM Cloud Services over the private network.
+In a multi-region deployment, which is described later in this document, for non-transit gateway locations, often a secondary region which does have transit gateway enabled may be chosen. In these situations, as an alternative to Private Service Endpoints and a proxy server in Classic, configuring a {{site.data.keyword.vpe_full}} (complementary {{site.data.keyword.vpc_short}} Service in the 2nd region) can provide access to  {{site.data.keyword.Bluemix_notm}} Services over the private network.
 
 Verify cloud services are {{site.data.keyword.vpe_short}} enabled [here](/docs/vpc?topic=vpc-vpe-supported-services).
 
@@ -222,10 +222,10 @@ Key considerations are:
 -   **Public vs private DNS name resolution:** ability to provide DNS based access to users on the public Internet vs internal DNS-based communication within your private environment.
 -   **Integration with other existing DNS systems:** integrating your on-premises DNS service with your cloud environment.
 
-IBM Cloud provides a flexible approach to DNS name resolution for systems hosted in classic environments.
+ {{site.data.keyword.Bluemix_notm}} provides a flexible approach to DNS name resolution for systems hosted in classic environments.
 
 -   **Public DNS name resolution**: translates human-friendly names into computer-readable addresses.
-    -   Use the [DNS interface](/docs/dns?topic=dns-how-to-use-the-dns-interface) in the IBM Cloud Portal to manage your zones and records. The domain can be hosted by any 3rd party provider. Set the Nameserver (NS) record to the provided IBM Name servers.
+    -   Use the [DNS interface](/docs/dns?topic=dns-how-to-use-the-dns-interface) in the  {{site.data.keyword.Bluemix_notm}} Portal to manage your zones and records. The domain can be hosted by any 3rd party provider. Set the Nameserver (NS) record to the provided IBM Name servers.
     -   Use the DNS function provided with {{site.data.keyword.cis_short}}. Domain name control must be delegated to {{site.data.keyword.cis_short}}.
 -   **Private DNS name resolution**: allows integration with your on-premises DNS server over private connectivity.
     -   Configure your own DNS services in the classic environment, typical options are:

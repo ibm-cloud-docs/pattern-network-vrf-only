@@ -15,7 +15,7 @@ keywords:
 # Compute design
 {: #compute-design}
 
-## Workload Hosts (Classic and Power)
+## Workload Hosts (Classic and {{site.data.keyword.powerSys_notm}})
 {: #workload-hosts}
 
 Selecting the appropriate workload host in this architecture includes but is not limited to the following considerations regarding:
