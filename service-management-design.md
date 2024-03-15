@@ -1,0 +1,53 @@
+---
+
+copyright:
+  years: 2024
+lastupdated: "2024-03-11"
+
+subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+
+keywords:
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Service management design
+{: #service-mgmt}
+
+## Monitoring
+{: #monitoring}
+
+Evaluate the level of monitoring required by considering the workload criticality and the metrics that need to be observed.
+
+Basic instance monitoring deployed in IBM Cloud Classic environments can be viewed from the cloud portal Health Dashboard (Health Dashboard, Device \> Usage).
+
+More advanced monitoring capabilities such as troubleshooting, events and alerts, and custom dashboards can be leveraged by integrating the cloud resources with {{site.data.keyword.monitoringlong_notm}} (complementary VPC service). The agent or the Windows Prometheus Bundle are installed on the devices.
+
+Alternatively, third party monitoring software can be deployed within IBM Cloud Classic for more detailed monitoring.
+
+Learn more about {{site.data.keyword.monitoringlong_notm}} [here](/docs/monitoring?topic=monitoring-getting-started#getting-started)
+
+## Log Analysis
+{: #log-analysis}
+
+Examine what logs are required for troubleshooting and auditing, as well as the retention policy necessary to meet the audit and compliance requirements.
+
+Third party software can be implemented within IBM Cloud Classic to enable log analysis within IBM Cloud Classic.
+
+Alternatively, {{site.data.keyword.loganalysislong_notm}} (complementary VPC Service) can be used to manage operating system logs, application logs, and platform logs in the IBM Cloud. {{site.data.keyword.loganalysislong_notm}} offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs.
+
+Learn more about {{site.data.keyword.loganalysislong_notm}} [here](/docs/log-analysis?topic=log-analysis-getting-started#getting-started)
+
+## Activity Tracking
+{: #activity-tracking}
+
+Consider the need to record and monitor the activities and changes made inside the IBM Cloud account to assist in investigating abnormal activity, critical actions, and to meet regulatory audit requirements.
+
+Third party software such as Splunk and Datadog can be integrated with IBM Cloud Classic to provide security monitoring, compliance reporting, and operational intelligence.
+
+Alternatively, {{site.data.keyword.cloudaccesstraillong_notm}} (complementary VPC Service) monitors and manages activities in the IBM Cloud. It provides a dashboard and notification for real-time monitoring.
+
+Learn more about {{site.data.keyword.cloudaccesstraillong_notm}} [here](/docs/activity-tracker?topic=activity-tracker-getting-started)
+
+Explore details on activity tracker events for virtual servers in Classic [here](/docs/virtual-servers?topic=virtual-servers-at_events) and for bare metal in Classic [here](/docs/bare-metal?topic=bare-metal-bm-at-events)
