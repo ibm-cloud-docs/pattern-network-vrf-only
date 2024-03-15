@@ -18,9 +18,9 @@ keywords:
 ## Identity and Access Management (IAM)
 {: #IAM}
 
-Identity and Access Management provides role-based access controls (RBAC) and is part of the zero-trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. IBM Security Verify can be added to support multi-factor authentication.
+{{site.data.keyword.iamshort}} provides role-based access controls (RBAC) and is part of the zero-trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. IBM Security Verify can be added to support multi-factor authentication.
 
-Click to learn more about [Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview).
+Click to learn more about [{{site.data.keyword.iamshort}} (IAM)](/docs/account?topic=account-iamoverview).
 
 Click to learn more about [IAM Roles](/docs/account?topic=account-userroles).
 
@@ -29,9 +29,9 @@ Click to learn more about [IBM Security Verify](/verify).
 ## Cloud Internet Services (CIS)
 {: #CIS}
 
-In addition to providing Global Server Load balancing and Domain name services, Cloud Internet Services (CIS) provides many security features to help meet compliance requirements in a pay as you go or bundled package.
+In addition to providing Global Server Load balancing and Domain name services, {{site.data.keyword.cis_full_notm}} (CIS) provides many security features to help meet compliance requirements in a pay as you go or bundled package.
 
-Consider leveraging Cloud Internet Services or other third-party products such as Akamai, Cloudflare, Imperva, Barracuda, or F5 to meet security requirements such as:
+Consider leveraging {{site.data.keyword.cis_full_notm}} or other third-party products such as Akamai, Cloudflare, Imperva, Barracuda, or F5 to meet security requirements such as:
 
 -   **DDoS Protection:** Shields your website from malicious attacks that flood it with traffic.
 -   **Web Application Firewall (WAF):** Acts as a security guard for your website, filtering out suspicious traffic and blocking known threats like SQL injections and code injection attempts.
@@ -40,9 +40,9 @@ Consider leveraging Cloud Internet Services or other third-party products such a
 
 Learn more about Cloud Internet Service feature [here](/docs-draft/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 
-Explore Cloud Internet Services [DDoS](/docs/cis?topic=cis-distributed-denial-of-service-ddos-attack-concepts).
+Explore {{site.data.keyword.cis_full_notm}} [DDoS](/docs/cis?topic=cis-distributed-denial-of-service-ddos-attack-concepts).
 
-Explore Cloud Internet Services [WAF](/docs/cis?topic=cis-waf-q-and-a).
+Explore {{site.data.keyword.cis_full_notm}} [WAF](/docs/cis?topic=cis-waf-q-and-a).
 
 ## Gateway Appliance – Firewall
 {: #gateway-appliance}
@@ -96,9 +96,9 @@ Tier 5: Ultra-Secure Enterprise
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 {: caption="Table 4: Non-TGW Security features"}
 
-Explore Virtual Router Appliance (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
+Explore {{site.data.keyword.vra}} (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
-Explore Juniper vSRX license features [here](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
+Explore {{site.data.keyword.vsrx_full}} license features [here](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
 
 Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Fortinet, and Palo Alto [here](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 

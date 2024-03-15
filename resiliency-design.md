@@ -19,36 +19,36 @@ keywords:
 ## Direct Link
 {: #direct-link}
 
-Direct Link resiliency can be designed into a deployment to ensure availability. Most network resiliency is enhanced by multiple paths and dynamic routing.
+{{site.data.keyword.dl_short}} resiliency can be designed into a deployment to ensure availability. Most network resiliency is enhanced by multiple paths and dynamic routing.
 
-The primary consideration is the level of risk a company is willing to take vs the financial cost budgeted for the deployment. Resiliency increases as you layer on services in a single point of presence (PoP) from a Direct Link Dedicated connection to two Direct link Connect connections.
+The primary consideration is the level of risk a company is willing to take vs the financial cost budgeted for the deployment. Resiliency increases as you layer on services in a single point of presence (PoP) from a {{site.data.keyword.dl_short}} Dedicated connection to two {{site.data.keyword.dl_short}} Connect connections.
 
-1.  Direct Link Dedicated – is a single physical cross connect, port, and switch.
-2.  Direct Link Connect – is a single virtual SDN connection that rides on top of redundant physical hardware.
-3.  (2) Direct Link Dedicated – provides 2 physical cross connects, ports, and switches.
-4.  (2) Direct Link Connects – provides 2 virtual SDN connections that ride on top of redundant physical hardware.
+1.  {{site.data.keyword.dl_short}} Dedicated – is a single physical cross connect, port, and switch.
+2.  {{site.data.keyword.dl_short}} Connect – is a single virtual SDN connection that rides on top of redundant physical hardware.
+3.  (2) {{site.data.keyword.dl_short}} Dedicated – provides 2 physical cross connects, ports, and switches.
+4.  (2) {{site.data.keyword.dl_short}} Connects – provides 2 virtual SDN connections that ride on top of redundant physical hardware.
 
 Additionally, consider if there is an existing relationship with a telecommunication or cloud exchange provider that can be leveraged.
 
-Direct Link Connect considerations include:
+{{site.data.keyword.dl_short}} Connect considerations include:
 
 -   Provided by a network cloud exchange provider.
 -   Provides SDN over physical hardware – allows for physical hardware to be removed for maintenance, repair, or failure, while traffic continues to flow over a virtual connection on top of the remaining hardware.
--   A second path can be provisioned by ordering a port from the exchange provider with a second direct link adding an additional layer of resiliency.
+-   A second path can be provisioned by ordering a port from the exchange provider with a second {{site.data.keyword.dl_short}} adding an additional layer of resiliency.
 
-Direct Link Dedicated considerations include:
+{{site.data.keyword.dl_short}} Dedicated considerations include:
 
 -   Provided by a telecommunication provider.
 -   Physical hardware – allows for a single circuit to a meet-me room with a physical cross connect cable into a designated port. Traffic will not continue over the physical cable if the cable, hardware, or port becomes unavailable.
 -   A second path can be provisioned leveraging the same or different telecommunications provider with a higher BGP prepend allowing for dynamic routing in the event of a physical failure or scheduled maintenance activity.
 
-Bidirectional Forwarding Detection (BFD) can be enabled on both Direct Link Dedicated and Direct Link Connect to detect network failures quicker, effectively reducing the time it takes to failover to a secondary path.
+Bidirectional Forwarding Detection (BFD) can be enabled on both {{site.data.keyword.dl_short}} Dedicated and {{site.data.keyword.dl_short}} Connect to detect network failures quicker, effectively reducing the time it takes to failover to a secondary path.
 
-Consider the cost implications when ordering Direct Link. The secondary path and the connection to a second region can be ordered as metered instead of unmetered if the primary connection is going to be used for most of the user traffic saving on the monthly fee and still allowing for traffic diversity in the event of a primary circuit failure.
+Consider the cost implications when ordering {{site.data.keyword.dl_short}}. The secondary path and the connection to a second region can be ordered as metered instead of unmetered if the primary connection is going to be used for most of the user traffic saving on the monthly fee and still allowing for traffic diversity in the event of a primary circuit failure.
 
 Considerations for resilience should also include gateway and firewall appliances and GRE tunnel configurations to eliminate as many single points of failure as possible.
 
-Learn more about Direct Link diversity [here](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
+Learn more about {{site.data.keyword.dl_short}} diversity [here](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
 ## Multi-Region Deployment
 {: #multiregion-deployment}
@@ -58,12 +58,12 @@ In the multi-region deployment pattern, a second region should be chosen that ha
 The multi-region deployment:
 
 -   Provides a second location in a separate geographical region that is used as a disaster recovery location providing even more resiliency in the event of a regional failure.
--   Choosing a region that has transit gateway and VPC services available also enables the use of additional “complimentary VPC services” such as Cloud DNS services, VPC Virtual Private Endpoint (VPE), IBM Cloud Monitoring, IBM Log Analysis, and IBM Activity Tracker to further enhance the cloud environment.
+-   Choosing a region that has transit gateway and VPC services available also enables the use of additional “complimentary VPC services” such as Cloud DNS services, {{site.data.keyword.vpe_full}} (VPE), {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.loganalysislong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} to further enhance the cloud environment.
 
 ![illustrates a detailed network and component architecture for a
 multi-region non-TGW solution architecture](cross-region-view.svg){: caption="Figure 5. Multi Region View" caption-side="bottom"}
 1.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
-2.  Client network connectivity from on-premises using Direct Link.
+2.  Client network connectivity from on-premises using {{site.data.keyword.dl_short}}.
 3.  Gateway provides routing and security functions.
 4.  Virtual jump server for remote administrative access.
 5.  GREa tunnel allows BYOIP to be advertised between Classic and on-premises.
@@ -72,7 +72,7 @@ multi-region non-TGW solution architecture](cross-region-view.svg){: caption="Fi
 8.  Private Service Endpoints (SE) allow access to cloud services over the private network.
 9.  Proxy Server as an intermediary between on-prem and cloud services.
 10. Cloud Internet Services (CIS) to enhance the security, performance, and reliability of internet-facing applications and websites.
-11. Virtual Private Endpoint (VPE for VPC) as an alternative to SE & Proxy server allow access to cloud services over the private network.
+11. {{site.data.keyword.vpe_full}} as an alternative to SE & Proxy server allow access to cloud services over the private network.
 12. Custom DNS resolver in Classic.
 13. DNS services on VPC as an alternative to custom DNS in classic.
 14. In region 2 - TGW1 advertises & routes local traffic between Classic, VPC, and PowerVS
