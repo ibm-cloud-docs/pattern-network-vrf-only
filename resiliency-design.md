@@ -58,7 +58,7 @@ In the multi-region deployment pattern, a second region should be chosen that ha
 The multi-region deployment:
 
 -   Provides a second location in a separate geographical region that is used as a disaster recovery location providing even more resiliency in the event of a regional failure.
--   Choosing a region that has transit gateway and VPC services available also enables the use of additional “complimentary VPC services” such as Cloud DNS services, {{site.data.keyword.vpe_full}} (VPE), {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.loganalysislong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} to further enhance the cloud environment.
+-   Choosing a region that has transit gateway and VPC services available also enables the use of additional “complimentary VPC services” such as Cloud DNS services, {{site.data.keyword.vpe_full}}, {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.loganalysislong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} to further enhance the cloud environment.
 
 ![illustrates a detailed network and component architecture for a
 multi-region non-TGW solution architecture](cross-region-view.svg){: caption="Figure 5. Multi Region View" caption-side="bottom"}
