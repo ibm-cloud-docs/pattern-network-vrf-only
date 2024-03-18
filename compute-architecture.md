@@ -19,6 +19,6 @@ The following are compute architecture decisions for the Network architecture fo
 
 | **Architecture decision**        | **Requirement**                                                            | **Options**                                 | **Decision**   | **Rationale**                                    |
 |----------------------------------|----------------------------------------------------------------------------|---------------------------------------------|----------------|--------------------------------------------------|
-| Compute (Jump Host)              | Secure connection to manage internal systems and centralize access control | - Bare Metal  \n - Virtual Server | Virtual Server | flexible compute resources to meet compute needs |
-| Compute (Proxy or Baston Server) | Provide access to Service Endpoints from non- {{site.data.keyword.cloud_notm}} IPs                 | - Bare Metal  \n - Virtual Server | Virtual Server | flexible compute resources to meet compute needs |
+| Compute (Jump Host)              | Secure connection to manage internal systems and centralized access control | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
+| Compute (Proxy or Baston Server) | Provide access to Service Endpoints from IPs not assigned by {{site.data.keyword.cloud_notm}}                 | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
 {: caption="Table 6. non-TGW Compute architecture decisions"}
