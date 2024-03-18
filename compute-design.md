@@ -18,14 +18,14 @@ keywords:
 ## Workload Hosts (Classic and {{site.data.keyword.powerSys_notm}})
 {: #workload-hosts}
 
-Selecting the appropriate workload host in this architecture includes but is not limited to the following considerations regarding:
+Selecting the appropriate workload host in this architecture includes but is not limited to the following considerations:
 
 -   Performance (CPU, Memory, storage options and network speed)
 -   Virtualization & Tenancy (container, virtual or bare metal, multitenant or dedicated)
 -   Security, availability, and cost considerations
--   Application-specific requirements regarding certification or optimization
+-   Application-specific certification or optimization requirements
 
-Based on workload and specific requirements, select from a range of Virtual Servers, Bare Metal servers, containers and VMware based solutions.
+Based on workload and specific requirements, select from a range of Virtual Servers, Bare Metal servers, containers, and VMware-based solutions.
 
 Explore [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm) for Classic.
 
@@ -37,16 +37,14 @@ Explore [{{site.data.keyword.vmwaresolutions_full_notm}}](/docs/vmwaresolutions?
 
 Explore [{{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-getting-started).
 
-## Jump Server and Bastion Hosts
+## Jump server and Bastion Hosts
 {: #jump-bastion}
 
-Infrastructure requirements for Linux and Windows jump servers and Bastion host can vary based on factors such as the number of concurrent users, the specific use case, and the applications or services running on the server. Here are some general guidelines:
+Infrastructure requirements for Linux and Windows jump servers and Bastion hosts can vary based on factors such as the number of concurrent users, the specific use case, and the applications or services that run on the server. Following are general guidelines:
 
-An average Jump server with 8 CPU and 16GB of RAM, can support 25 concurrent sessions of any type (100 serial-over-LAN sessions, 200 Telnet or SSH sessions). Additional sessions are supported depending on the session types or by higher server specifications.
+An average jump server with 8 CPU and 16 GB of RAM, can support 25 concurrent sessions of any type (100 serial-over-LAN sessions, 200 Telnet, or SSH sessions). More sessions can be supported depending on the session type or larger server specifications.
 
-Infrastructure requirements for Ubuntu LTS, CentOS, or Debian Bastion Hosts can be viewed below.
-
-Table 3 contains general jump server and Bastion Host sizing guidelines:
+Table 3 contains general jump server and Bastion Host sizing guidelines for Ubuntu LTS, CentOS, or Debian Bastion Hosts:
 
 | **Traffic** | **Concurrent Users** | **Server Size**               |
 |-------------|----------------------|-------------------------------|
@@ -55,4 +53,4 @@ Table 3 contains general jump server and Bastion Host sizing guidelines:
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
 {: caption="Table 3. non-TGW Bastion Server Sizing"}
 
-The Jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short} Instance (VSI) within the Classic environment.
+The jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short} Instance (VSI) within the Classic environment.
