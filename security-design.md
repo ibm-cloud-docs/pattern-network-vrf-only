@@ -45,7 +45,7 @@ Explore {{site.data.keyword.cis_full_notm}} [DDoS](/docs/cis?topic=cis-distribut
 Explore {{site.data.keyword.cis_full_notm}} [WAF](/docs/cis?topic=cis-waf-q-and-a).
 
 ## Gateway Appliance – Firewall
-{: #gateway-appliance}
+{: #security-gateway-appliance}
 
 IBM Cloud Classic Firewalls offer a variety of security functions to protect your cloud resources. Specific features and capabilities of IBM Cloud Classic firewalls vary depending on the vendor, hardware, software, licenses, add-on bundle, and configuration options selected.
 
@@ -103,7 +103,7 @@ Explore {{site.data.keyword.vsrx_full}} license features [here](/docs/vsrx?topic
 Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Fortinet, and Palo Alto [here](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 
 ## VPN Security
-{: #vpn}
+{: #vpn-security}
 
 VPN offers a valuable layer of security for public internet activities.
 
@@ -116,12 +116,12 @@ Key VPN Security Considerations include:
 -   **Security of Endpoints:** Ensure all connected devices comply with security policies and are kept up-to-date with patches.
 
 ## Service Endpoints
-{: #service-endpoints}
+{: #security-service-endpoints}
 
 With IBM Cloud service endpoints, you can connect to IBM Cloud services over the IBM Cloud private network instead of the default public network. Moving these workloads from the public network to the private network offers enhanced security as Cloud Services are no longer served on an internet routable IP address.
 
 ## Jump Server or Bastion Host
-{: #jump-bastion}
+{: #security-jump-bastion}
 
 Jump Servers or Bastion hosts can offer additional levels of security and control and can be deployed on bare metal or virtual server instances within IBM Cloud Classic.
 
