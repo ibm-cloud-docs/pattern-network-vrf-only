@@ -4,7 +4,7 @@ copyright:
   years: 2024
 lastupdated: "2024-03-11"
 
-subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+subcollection: ppattern-network-vrf-only
 
 keywords:
 
