@@ -60,7 +60,7 @@ Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-ex
 
 GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 
-![Illustrates the details of GRE for a non-TGW solution architecture](GRE.svg){: caption="Figure 3. non-TGW GRE Encapsulation" caption-side="bottom"}
+![Illustrates the details of GRE for a Classic Data Center solution architecture](GRE.svg){: caption="Figure 3. Classic Data Center GRE Encapsulation" caption-side="bottom"}
 1.  Client network connectivity from on-premises is accomplished through {{site.data.keyword.dl_short}} access.
 2.  A gateway is deployed in Classic, which provides routing and security functions.
 3.  A GRE tunnel is created between the Gateway and a customer router.
@@ -203,7 +203,7 @@ In a multi-region deployment, which is described later in this document, for non
 
 Verify that cloud services are {{site.data.keyword.vpe_short}} enabled [here](/docs/vpc?topic=vpc-vpe-supported-services).
 
-![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a non-TGW solution architecture](SE-vs-VPE.svg){: caption="Figure 4. non-TGW Service Endpoint access" caption-side="bottom"}
+![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a Classic Data Center solution architecture](SE-vs-VPE.svg){: caption="Figure 4. Classic Data Center Service Endpoint access" caption-side="bottom"}
 
 ## Cloud Internet Services (CIS)
 {: #cloud-internet-services}

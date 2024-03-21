@@ -61,7 +61,7 @@ The multi-region deployment:
 -   Choosing a region that has transit gateway and VPC services available enables the use of “complimentary VPC services” such as {{site.data.keyword.dns_full_notm}}, {{site.data.keyword.vpe_full}}, {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.loganalysislong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} to further enhance the cloud environment.
 
 ![Illustrates a detailed network and component architecture for a
-multi-region non-TGW solution architecture](cross-region-view.svg){: caption="Figure 5. Multi-Region View" caption-side="bottom"}
+multi-region Classic Data Center solution architecture](cross-region-view.svg){: caption="Figure 5. Multi-Region View" caption-side="bottom"}
 1.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
 2.  Client network connectivity from on-premises using {{site.data.keyword.dl_short}}.
 3.  The gateway provides routing and security functions.

@@ -94,7 +94,7 @@ Tier 5: Ultra-Secure Enterprise
 | Continuous Monitoring and Auditing                                       |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 | Integration with Advanced Threat Detection and Response (ATDR) Systems   |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
-{: caption="Table 4: Non-TGW Security features"}
+{: caption="Table 4: Classic Data Center Security features"}
 
 Explore {{site.data.keyword.vra}} (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
@@ -140,4 +140,4 @@ The following table helps determine whether a bastion host or jumper server is n
 | Purpose        | Manage internal systems                                               | Grant controlled access to specific internal systems for external users |
 | Security Focus | Centralized access control, which simplifies administration                 | Secure entry point, isolation of internal systems                       |
 | Attack Surface | Higher (internal systems directly exposed if jump server compromised) | Lower (internal systems protected even if the bastion host is compromised)     |
-{: caption="Table 5. non-TGW Jump server vs Bastion Host Matrix"}
+{: caption="Table 5. Classic Data Center Jump server vs Bastion Host Matrix"}

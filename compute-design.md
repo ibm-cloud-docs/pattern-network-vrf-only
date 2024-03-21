@@ -51,6 +51,6 @@ Table 3 contains general jump server and Bastion Host sizing guidelines for Ubun
 | Low         | 10-20                | 1-2 Cores CPU; 2-4 GB Memory  |
 | Moderate    | 30-50                | 2-4 Cores CPU; 4-8 GB Memory  |
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
-{: caption="Table 3. non-TGW Bastion Server Sizing"}
+{: caption="Table 3. Classic Data Center Bastion Server Sizing"}
 
 The jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short} Instance (VSI) within the Classic environment.

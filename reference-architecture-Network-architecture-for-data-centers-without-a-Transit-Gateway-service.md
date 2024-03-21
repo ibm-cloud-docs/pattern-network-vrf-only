@@ -31,17 +31,17 @@ This reference architecture is leveraged in data centers that currently do not h
 
 For a current list of Classic Data Centers, see [{{site.data.keyword.tg_short}} locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
 
-This approach is refered to from now on as “non-TGW” because there is no VPC and TGW connectivity used.
+This approach is refered to from now on as “Classic Data Center” because there is no VPC and TGW connectivity used.
 
-Note that it is a common approach to complement classic environments in these non-TGW locations with VPC services hosted in another location. This approach allows additional functionality that is only available with VPC services. This document references this approach as “complementary VPC services” and it is highlighted in the multi-region deployment located in the Resiliency section.
+Note that it is a common approach to complement classic environments with VPC services hosted in another location. This approach allows additional functionality that is only available with VPC services. This document references this approach as “complementary VPC services” and it is highlighted in the multi-region deployment located in the Resiliency section.
 
 ## Architecture diagram
 {: #architecture-diagram}
 
-This architecture describes on-premises data centers connectivity into  {{site.data.keyword.cloud_notm}} Classic, with firewall services and {{site.data.keyword.powerSys_notm}} Workspace a non-TGW model approach. The diagram includes examples to show where workload compute instances, proxy servers, and jump servers would reside. The diagram contains identifying numbers indicating key components in the description.
+This architecture describes on-premises data center connectivity into {{site.data.keyword.cloud_notm}} Classic, with firewall services and a {{site.data.keyword.powerSys_notm}} Workspace. The diagram includes examples to show where workload compute instances, proxy servers, and jump servers would reside. The diagram contains identifying numbers indicating key components in the description.
 
 ![Illustrates a detailed network and component architecture for a
-non-TGW solution architecture](classic-VRF.svg){: caption="Figure 1. non-TGW solution architecture" caption-side="bottom"}
+Classic Data Center solution architecture](classic-VRF.svg){: caption="Figure 1. Classic Data Center solution architecture" caption-side="bottom"}
 1.  Client network connectivity from on-premises using redundant {{site.data.keyword.dl_short}}s.
 2.  The Gateway provides routing and security functions.
 3.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
@@ -59,7 +59,7 @@ non-TGW solution architecture](classic-VRF.svg){: caption="Figure 1. non-TGW sol
 ## Design scope
 {: #design-scope}
 
-Following the [Architecture Framework](/docs/architecture-framework?topic=architecture-framework-taxonomy), the non-TGW network pattern covers design considerations and architecture decisions for the following aspects and domains:
+Following the [Architecture Framework](/docs/architecture-framework?topic=architecture-framework-taxonomy), the Classic Data Center network pattern covers design considerations and architecture decisions for the following aspects and domains:
 
 -   **Compute:** Virtual Servers, Bare Metal Servers
 -   **Networking:** Enterprise Connectivity, BYOIP/Edge Gateways, Network segmentation, Cloud Native Connectivity, Load Balancing, and DNS
@@ -68,14 +68,14 @@ Following the [Architecture Framework](/docs/architecture-framework?topic=archit
 -   **Service management:** Monitoring, Logging, Auditing, Alerting, Event Management
 
 ![Illustrates a detailed network and component architecture for a
-non-TGW solution architecture](heat_map.svg){: caption="Figure 2. non-TGW design scope" caption-side="bottom"}
+Classic Data Center solution architecture](heat_map.svg){: caption="Figure 2. Classic Data Center design scope" caption-side="bottom"}
 
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of "aspects" and "domains", which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
 ## Requirements
 {: #requirements}
 
-The following table represents a baseline set of requirements that are applicable to most clients and critical to successful non-TGW network deployment. The pattern assumes the client has a requirement of geolocation, data residency, or low latency that requires resource deployment in a data center that does not have transit gateway technology.
+The following table represents a baseline set of requirements that are applicable to most clients and critical to successful Classic Data Center network deployment. The pattern assumes the client has a requirement of geolocation, data residency, or low latency that requires resource deployment in a data center that does not have transit gateway technology.
 
 | **Aspect**         | **Requirement**                                                                                                                                                                                                                                                                                                    |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -90,7 +90,7 @@ The following table represents a baseline set of requirements that are applicabl
 | Resiliency         | Multi-Region capability to support a disaster recovery strategy and solution that allows all production applications to be included by using cloud infrastructure DR strategies.                                                                                                                                   |
 | Service management | Provide health and system monitoring with ability to monitor and correlate performance metrics and events and provide alerting across applications and infrastructure                                                                                                                                              |
 |                    | Ability to diagnose issues and exceptions and identify error source                                                                                                                                                                                                                                                |
-{: caption="Table 1. non-TGW requirements" caption-side="bottom"}
+{: caption="Table 1. Classic Data Center requirements" caption-side="bottom"}
 
 ## Components
 {: #components}
@@ -114,4 +114,4 @@ The following table represents a baseline set of requirements that are applicabl
 | **Resiliency**         | Multi-Region Deployment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Allows for disaster recovery in secondary region                                                                                                                         |
 |                        | Multiple {{site.data.keyword.dl_short}} connections                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Allows for network resiliency for failover and recovery                                                                                                                    |
 | **Service management** | Health Dashboard                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Apps and operational monitoring                                                                                                                                          |
-{: caption="Table 2. non-TGW solution components"}
+{: caption="Table 2. Classic Data Center solution components"}

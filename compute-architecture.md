@@ -4,7 +4,7 @@ copyright:
   years: 2024
 lastupdated: "2024-03-11"
 
-subcollection: pattern-network-vrf-only
+subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
 keywords:
 
@@ -21,4 +21,4 @@ The following are compute architecture decisions for the Network architecture fo
 |----------------------------------|----------------------------------------------------------------------------|---------------------------------------------|----------------|--------------------------------------------------|
 | Compute (Jump Host)              | Secure connection to manage internal systems and centralized access control | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
 | Compute (Proxy or Baston Server) | Provide access to Service Endpoints from IPs not assigned by {{site.data.keyword.cloud_notm}}                 | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
-{: caption="Table 6. non-TGW Compute architecture decisions"}
+{: caption="Table 6. Classic Data Center Compute architecture decisions"}
