@@ -74,6 +74,8 @@ For Gateways in separate regions, a third GRE is used to share nonassigned  {{si
 
 **When resiliency is required, GREs can be configured on two devices in an HA pair to eliminate single points of failure.**
 
+See more on GRE resiliency [here](/docs/transit-gateway?topic=transit-gateway-ha-dr#high-availability).
+
 Explore  {{site.data.keyword.cloud_notm}} public and private IP ranges [here](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
 ## Enterprise Connectivity

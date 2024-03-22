@@ -139,5 +139,5 @@ The following table helps determine whether a bastion host or jumper server is n
 | Location       | Internal Network                                                      | Network perimeter (DMZ and public subnet)                               |
 | Purpose        | Manage internal systems                                               | Grant controlled access to specific internal systems for external users |
 | Security Focus | Centralized access control, which simplifies administration                 | Secure entry point, isolation of internal systems                       |
-| Attack Surface | Higher (internal systems directly exposed if jump server compromised) | Lower (internal systems protected even if the bastion host is compromised)     |
+| Attack Surface | Higher (internal systems directly exposed if the jump server is compromised) | Lower (internal systems protected even if the bastion host is compromised)     |
 {: caption="Table 5. Classic Data Center Jump server vs Bastion Host Matrix"}
