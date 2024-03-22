@@ -15,7 +15,7 @@ keywords:
 # Overview
 {: #Overview-id}
 
- {{site.data.keyword.Bluemix}} contains three main environments that are known as Classic, {{site.data.keyword.vpc_full}}, and {{site.data.keyword.powerSysFull}}. The Classic environment is connected by a layer 2 network and can deploy resources that are not limited to {{site.data.keyword.BluVirtServers}}, {{site.data.keyword.BluBareMetServers}}, and dedicated {{site.data.keyword.vmwaresolutions_full_notm}}. {{site.data.keyword.vpc_full}}  is a secure, isolated virtual network that combines the security of a private cloud with the availability and scalability of IBM's public cloud and supports x86 and VMware workloads. {{site.data.keyword.powerSys_notm}} is an IaaS offering where IBM i, AIX, and Linux workloads are deployed in a hybrid cloud environment, without refactoring. The objective of this pattern is to:
+ This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
 
 -   Illustrate network connectivity to {{site.data.keyword.powerSysShort}} Workspace and Classic infrastructure resources.
 -   Provide an IBM Solution Design for the Network elements that are required when deploying in Classic Data Centers or a data center that does not contain availability zones.

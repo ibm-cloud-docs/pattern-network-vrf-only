@@ -41,21 +41,23 @@ Note that it is a common approach to complement classic environments with VPC se
 This architecture describes on-premises data center connectivity into {{site.data.keyword.cloud_notm}} Classic, with firewall services and a {{site.data.keyword.powerSys_notm}} Workspace. The diagram includes examples to show where workload compute instances, proxy servers, and jump servers would reside. The diagram contains identifying numbers indicating key components in the description.
 
 ![Illustrates a detailed network and component architecture for a
-Classic Data Center solution architecture](classic-VRF.svg){: caption="Figure 1. Classic Data Center solution architecture" caption-side="bottom"}
-1.  Client network connectivity from on-premises using redundant {{site.data.keyword.dl_short}}s.
-2.  The Gateway provides routing and security functions.
-3.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
-4.  {{site.data.keyword.powerSys_notm}} Workspace, subnets, and resources
+multi-region Classic Data Center solution architecture](cross-region-view.svg){: caption="Figure 5. Multi-Region View" caption-side="bottom"}
+1.  Optional network path is accomplished through site-to-site VPN terminated on Classic Gateway.
+2.  Client network connectivity from on-premises using {{site.data.keyword.dl_short}}.
+3.  The gateway provides routing and security functions.
+4.  Virtual jump server for remote administrative access.
 5.  GREa tunnel allows BYOIP to be advertised between Classic and on-premises.
 6.  GREb tunnel allows BYOIP to be advertised between Classic environments in separate regions.
-7.  GREc tunnel allows BYOIP to be advertised between Classic and {{site.data.keyword.powerSys_notm}} Workspace.
-8.  Virtual jump server for remote administrative access.
-9.  Custom DNS virtual server
-10. Proxy Server as an intermediary between on-prem and cloud services.
-11. Private Cloud Service Endpoints (CSE) allow access to cloud services over the private network.
-12. {{site.data.keyword.cis_short}} to enhance the security, performance, and reliability of internet-facing applications and websites.
-13. Workloads deployed in {{site.data.keyword.powerSys_notm}} Workspace and Classic infrastructure.
-14. {{site.data.keyword.loadbalancer_full}} provides local application load balancing.
+7.  GREc tunnel allows BYOIP to be advertised between Classic and PowerVS
+8.  Private Service Endpoints (SE) allow access to cloud services over the private network.
+9.  Proxy Server as an intermediary between on-prem and cloud services.
+10. Cloud Internet Services (CIS) to enhance the security, performance, and reliability of internet-facing applications and websites.
+11. {{site.data.keyword.vpe_full}} as an alternative to SE and Proxy server allow access to cloud services over the private network.
+12. Custom DNS resolver in Classic.
+13. DNS services on VPC as an alternative to custom DNS in classic.
+14. In region 2 - TGW1 advertises and routes local traffic between Classic, VPC, and PowerVS.
+15. In region 2 - TGW2 advertises and routes Global traffic between regions for VPC and PowerVS.
+16. {{site.data.keyword.loadbalancer_full}} provides local application load balancing.
 
 ## Design scope
 {: #design-scope}
