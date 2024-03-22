@@ -75,8 +75,9 @@ multi-region Classic Data Center solution architecture](cross-region-view.svg){:
 11. {{site.data.keyword.vpe_full}} as an alternative to SE and Proxy server allow access to cloud services over the private network.
 12. Custom DNS resolver in Classic.
 13. DNS services on VPC as an alternative to custom DNS in classic.
-14. In region 2 - TGW1 advertises and routes local traffic between Classic, VPC, and PowerVS
-15. In region 2 - TGW2 advertises and routes Global traffic between regions for VPC and PowerVS
+14. In region 2 - TGW1 advertises and routes local traffic between Classic, VPC, and PowerVS.
+15. In region 2 - TGW2 advertises and routes Global traffic between regions for VPC and PowerVS.
+16. {{site.data.keyword.loadbalancer_full}} provides local application load balancing.
 
 While deploying the application or infrastructure across multiple regions offers several advantages, including increased fault tolerance, improved latency for geographically distributed users, and potential cost optimization it also introduces extra complexities that need careful consideration.
 
