@@ -29,7 +29,7 @@ content-type: reference-architecture
 
 This reference architecture is leveraged in data centers that currently do not have {{site.data.keyword.vpc_short}} and {{site.data.keyword.tg_short}} (TGW) services available, as of 1Q2024, currently centers such as Montreal 01, San Jose 03, San Jose 04, Chennai 01, and Hong Kong 02.
 
-For a current list of Classic Data Centers, see [{{site.data.keyword.tg_short}} locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
+For a current list of Classic Data Centers, see [Classic Data Center locations](/docs/transit-gateway?topic=transit-gateway-tg-locations#szr-table).
 
 This approach is refered to from now on as “Classic Data Center” because there is no VPC and TGW connectivity used.
 
