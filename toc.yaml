@@ -10,7 +10,7 @@ toc:
     content-type: deployment
     href: /docs/pattern-network-vrf-only
     path: pattern-network-vrf-only
-    description: Network architecture for data centers without a Transit Gateway service
+    description: Network architecture for Classic Data Centers
     label: Network architecture for data centers without a Transit Gateway service
 
   entries:
