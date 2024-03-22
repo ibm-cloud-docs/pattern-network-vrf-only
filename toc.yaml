@@ -11,7 +11,7 @@ toc:
     href: /docs/pattern-network-vrf-only
     path: pattern-network-vrf-only
     description: Network architecture for Classic Data Centers
-    label: Network architecture for data centers without a Transit Gateway service
+    label: Network architecture for Classic Data Centers
 
   entries:
   - navgroup:
