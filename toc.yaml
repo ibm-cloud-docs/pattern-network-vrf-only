@@ -10,8 +10,8 @@ toc:
     content-type: deployment
     href: /docs/pattern-network-vrf-only
     path: pattern-network-vrf-only
-    description: Network architecture for Classic Data Centers
-    label: Network architecture for Classic Data Centers
+    description: Hybrid Cloud Network for Classic Infrastructure Disaster Recovery
+    label: Hybrid Cloud Network for Classic Infrastructure Disaster Recovery
 
   entries:
   - navgroup:
