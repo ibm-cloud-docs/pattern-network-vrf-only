@@ -4,7 +4,7 @@ copyright:
   years: 2024
 lastupdated: "2024-03-11"
 
-subcollection: Pattern-network-vrf-only
+subcollection: pattern-network-vrf-only
 
 keywords:
 
