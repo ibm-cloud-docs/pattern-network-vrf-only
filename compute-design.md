@@ -62,27 +62,27 @@ The proxy server acts as an intermediary between the on-premise network and the 
 
 Some key design considerations for a proxy server include:
 
--	Proxy Type: Choose between a forward proxy (clients access internet through it) or a reverse proxy (sits in front of web servers for load balancing or security).
--	Protocol Support: Ensure the proxy supports the protocols used by your clients and the servers it communicates with (HTTP, HTTPS, FTP, etc.).
--	Content Transformation: Decide if the proxy needs to modify content (e.g., compression, encryption) before sending it to clients.
--	Caching: Determine how aggressively the proxy will cache content to improve performance and reduce bandwidth usage.
--	Security: Consider features like access control, encryption (SSL/TLS), and content filtering to protect your network.
--	Logging and Monitoring: Decide what data to log for troubleshooting, security audits, and usage analysis.
--	Hardware: Select hardware with sufficient processing power, memory, and network bandwidth to handle expected traffic.
--	Scalability: Design the architecture to accommodate future growth in users and traffic volume.
--	High Availability: Consider redundancy measures to ensure the proxy remains operational in case of failures.
+-	**Proxy Type:** Choose between a forward proxy (clients access internet through it) or a reverse proxy (sits in front of web servers for load balancing or security).
+-	**Protocol Support:** Ensure the proxy supports the protocols used by your clients and the servers it communicates with (HTTP, HTTPS, FTP, etc.).
+-	**Content Transformation:** Decide if the proxy needs to modify content (e.g., compression, encryption) before sending it to clients.
+-	**Caching:** Determine how aggressively the proxy will cache content to improve performance and reduce bandwidth usage.
+-	**Security:** Consider features like access control, encryption (SSL/TLS), and content filtering to protect your network.
+-	**Logging and Monitoring:** Decide what data to log for troubleshooting, security audits, and usage analysis.
+-	**Hardware:** Select hardware with sufficient processing power, memory, and network bandwidth to handle expected traffic.
+-	**Scalability:** Design the architecture to accommodate future growth in users and traffic volume.
+-	**High Availability:** Consider redundancy measures to ensure the proxy remains operational in case of failures.
 
 Sizing considerations include:
 
--	Number of Users: More users will require a more powerful processor and more memory to handle concurrent connections.
--	Traffic Volume: Higher traffic volume demands faster processors, more RAM, and potentially higher network bandwidth.
--	Proxy Functionality: Features like caching, security (encryption), and content filtering can increase resource consumption.
+-	**Number of Users:** More users will require a more powerful processor and more memory to handle concurrent connections.
+-	**Traffic Volume:** Higher traffic volume demands faster processors, more RAM, and potentially higher network bandwidth.
+-	**Proxy Functionality:** Features like caching, security (encryption), and content filtering can increase resource consumption.
 
 General sizing guidelines include:
 
--	CPU: A multi-core processor (4 or more cores) is recommended for efficient handling of multiple connections.
--	RAM: 4GB or more is a good starting point, more memory may be needed for very demanding scenarios. A rule of thumb is 32MB of RAM for every 1GB of disk space for caching purposes.
--	Disk Space: Enough space to store the operating system, proxy server software, and potentially cached data. The amount of cache storage depends on your caching strategy.
--	Network Interface: A high-bandwidth network interface card (NIC) is crucial for handling incoming and outgoing traffic efficiently.
+-	**CPU:** A multi-core processor (4 or more cores) is recommended for efficient handling of multiple connections.
+-	**Memory:** 4GB or more is a good starting point, more memory may be needed for very demanding scenarios. A rule of thumb is 32MB of RAM for every 1GB of disk space for caching purposes.
+-	**Disk Space:** Enough space to store the operating system, proxy server software, and potentially cached data. The amount of cache storage depends on your caching strategy.
+-	**Network Interface:** A high-bandwidth network interface card (NIC) is crucial for handling incoming and outgoing traffic efficiently.
 
 The proxy server can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. In this pattern we will use the VSI.
