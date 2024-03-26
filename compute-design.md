@@ -53,7 +53,7 @@ Table 3 contains general jump server and Bastion Host sizing guidelines for Ubun
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
 {: caption="Table 3. Classic Data Center Bastion Server Sizing"}
 
-The jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. In this pattern we will use the VSI.
+The jump server or Bastion Host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. This pattern will use a VSI to deploy a Bastion host.
 
 ## Proxy server
 {: #proxy}
@@ -85,4 +85,4 @@ General sizing guidelines include:
 -	**Disk Space:** Enough space to store the operating system, proxy server software, and potentially cached data. The amount of cache storage depends on your caching strategy.
 -	**Network Interface:** A high-bandwidth network interface card (NIC) is crucial for handling incoming and outgoing traffic efficiently.
 
-The proxy server can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. In this pattern we will use the VSI.
+The proxy server can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. This pattern will use a VSI to deploy a proxy server.

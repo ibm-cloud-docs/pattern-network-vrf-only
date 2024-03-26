@@ -18,7 +18,7 @@ keywords:
 ## Virtual Private Network (VPN)
 {: #vpn}
 
-Implementing a site-to-site VPN offers secure connectivity between your on-premises networks and remote locations but comes with important considerations before deployment.
+Implementing a site-to-site VPN offers secure connectivity between the on-premises networks and remote locations but comes with important considerations before deployment.
 
 -   **Bandwidth:** Analyze expected data transfer needs and choose a VPN solution with sufficient bandwidth capacity.
 -   **Bandwidth Consumption:** Depending on the service provider, data transfer through the VPN might incur usage charges.
@@ -30,6 +30,10 @@ Implementing a site-to-site VPN offers secure connectivity between your on-premi
 -   **Compliance:** If your organization operates under specific compliance regulations, ensure that the VPN solution meets those requirements.
 -   **Management:** Managing the VPN infrastructure can require dedicated personnel or managed services, adding to the cost.
 -   **Technical Expertise:** Implementing and maintaining a VPN might require technical expertise. Assess your internal IT capabilities or consider external support options.
+
+IBM Classic data centers offer three options for implementing a private virtual network connection from a remote site into IBM cloud, including SSL VPN, IPsec VPN, and VPN gateway appliance on Classic. This pattern supports VPN gateway appliance on Classic.
+
+Explore [Virtual Private Network options](/docs/iaas-vpn/set-up-ipsec-vpn.html?topic=iaas-vpn-getting-started) available in  {{site.data.keyword.cloud_notm}}.
 
 ## Gateway Appliance and Firewall
 {: #gateway-appliance}
@@ -70,7 +74,7 @@ GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 
 A second GRE is required between the Classic Gateway and {{site.data.keyword.powerSys_notm}} when nonassigned  {{site.data.keyword.cloud_notm}} addresses are used in the {{site.data.keyword.powerSys_notm}} environment.
 
-For Gateways in separate regions, a third GRE is used to share nonassigned  {{site.data.keyword.cloud_notm}} addresses between Classic Gateways.
+A third GRE is used to share nonassigned  {{site.data.keyword.cloud_notm}} addresses between Classic Gateways in separate regions.
 
 **When resiliency is required, GREs can be configured on two devices in an HA pair to eliminate single points of failure.**
 
@@ -150,7 +154,7 @@ Considerations Include:
 -   **Public to Public (Internet-facing) Load Balancing:** Distributes traffic among multiple public-facing servers for high availability and scalability of websites or services.
 -   **Private (Internal) Load Balancing:** Distributes traffic among internal servers on a private network. Improves performance and scalability for internal applications without internet exposure.
 
- {{site.data.keyword.cloud_notm}} offers two Load balancer options for classic, which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance.
+ {{site.data.keyword.cloud_notm}} offers two Load balancer options for classic, which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance. This pattern leverages {{site.data.keyword.loadbalancer_full}} to meet both public and private load balancer requirments.
 
 Explore load balancer feature options [here](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-explore).
 
@@ -235,3 +239,5 @@ Key considerations are:
         -   Configure DNS on your gateway device.
     -   Utilize {{site.data.keyword.dns_full_notm}} (complementary VPC Service).
         This Service provides versatile private name resolution between classic, on-premises, and {{site.data.keyword.vpc_short}} resources by deploying [Custom Resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver). Learn more about [{{site.data.keyword.dns_full_notm}}](/docs/dns-svcs?topic=dns-svcs-getting-started).
+
+This pattern leverages IBM cloud DNS for public FQDN resolution and deploys a custom DNS server on a Virtual server instance in classic for private FQDN resolution. **Note:** The custom DNS server in classic can support both public and private FQDN resolution.
