@@ -38,6 +38,8 @@ Consider leveraging {{site.data.keyword.cis_full_notm}} or other third-party pro
 -   **Transport Layer Security (TLS):** Encrypts communication between your website and visitors, protecting sensitive data like passwords and credit card information.
 -   **Range**: non-HTTP and HTTPS port protection Secures ports on your server beyond the standard web traffic ports (HTTP and HTTPS), protecting against attacks that target vulnerable services.
 
+In this pattern {{site.data.keyword.cis_full_notm}} DDos and WAF features are used to meet security requirments.
+
 Learn more about the Cloud Internet Service features [here](/docs-draft/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 
 Explore {{site.data.keyword.cis_full_notm}} [DDoS](/docs/cis?topic=cis-distributed-denial-of-service-ddos-attack-concepts).
@@ -96,6 +98,8 @@ Tier 5: Ultra-Secure Enterprise
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 {: caption="Table 4: Classic Data Center Security features"}
 
+IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate, and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, Palo Alto).  This pattern supports personal choice based on security requirements and operational expertise.
+
 Explore {{site.data.keyword.vra}} (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
 Explore {{site.data.keyword.vsrx_full}} license features [here](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
@@ -114,6 +118,8 @@ Key VPN Security Considerations include:
 -   **Authentication:** Consider strong authentication methods like multi-factor authentication for secure data transmission.
 -   **Access Control:** Granularly control access permissions to resources accessible through the VPN, limiting potential damage from breaches.
 -   **Security of Endpoints:** Ensure that all connected devices comply with security policies and are kept up-to-date with patches.
+
+IBM Classic data centers offer three options for implementing a virtual private network connection from a remote site into IBM cloud, including SSL VPN, IPsec VPN, and VPN gateway appliance on Classic. This pattern supports the VPN gateway appliance on Classic to meet the private administrative and management connectivity requirements.
 
 ## Service Endpoints
 {: #security-service-endpoints}
@@ -141,3 +147,5 @@ The following table helps determine whether a bastion host or jumper server is n
 | Security Focus | Centralized access control, which simplifies administration                 | Secure entry point, isolation of internal systems                       |
 | Attack Surface | Higher (internal systems directly exposed if the jump server is compromised) | Lower (internal systems protected even if the bastion host is compromised)     |
 {: caption="Table 5. Classic Data Center Jump server vs Bastion Host Matrix"}
+
+In this pattern, a Bastion host is deployed on a virtual server instance in a classic data center to control Secure remote administrative access of all devices within the IBM Cloud environment.

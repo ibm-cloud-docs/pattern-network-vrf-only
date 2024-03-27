@@ -31,7 +31,7 @@ Implementing a site-to-site VPN offers secure connectivity between the on-premis
 -   **Management:** Managing the VPN infrastructure can require dedicated personnel or managed services, adding to the cost.
 -   **Technical Expertise:** Implementing and maintaining a VPN might require technical expertise. Assess your internal IT capabilities or consider external support options.
 
-IBM Classic data centers offer three options for implementing a private virtual network connection from a remote site into IBM cloud, including SSL VPN, IPsec VPN, and VPN gateway appliance on Classic. This pattern supports VPN gateway appliance on Classic.
+IBM Classic data centers offer three options for implementing a virtual private network connection from a remote site into IBM cloud, including SSL VPN, IPsec VPN, and VPN gateway appliance on Classic. This pattern supports VPN gateway appliance on Classic.
 
 Explore [Virtual Private Network options](/docs/iaas-vpn/set-up-ipsec-vpn.html?topic=iaas-vpn-getting-started#use-case-scenarios) available in  {{site.data.keyword.cloud_notm}}.
 
