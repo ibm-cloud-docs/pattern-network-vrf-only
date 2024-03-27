@@ -57,6 +57,8 @@ Choosing the right firewall is crucial for safeguarding your network. Review the
 -   **Virtual Appliance versus Hardware Firewalls:** Evaluate cloud-based options for flexibility and scalability but consider throughput and port sizes for latency and bottlenecks.
 -   **Single versus High Availability:** Consider single points of failure and service level requirements.
 
+IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate, and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, Palo Alto).  This pattern supports personal choice based on appliance functional requirements and operational expertise.
+
 Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-exploring-firewalls&_ga=2.226674782.2123413376.1603312051-1873021910.1602082701) available in  {{site.data.keyword.cloud_notm}}.
 
 ## Generic Routing Encapsulation (GRE) tunnels
@@ -109,11 +111,11 @@ Enterprise connectivity considerations include:
 
 {{site.data.keyword.dl_short}} Dedicated use cases include:
 
--   Banking and finance: Transferring sensitive financial data or running critical trading applications with maximum security and performance.
--   Healthcare: Managing protected health information (PHI) with strict compliance requirements.
--   Government and defense: Handling classified data or mission-critical systems that demand the highest security levels.
--   Research and development: Transferring large data sets for research or running high-performance computing (HPC) workloads.
--   Media and entertainment: Streaming high-quality video content or managing large media files with low latency and high bandwidth.
+-   **Banking and finance:** Transferring sensitive financial data or running critical trading applications with maximum security and performance.
+-   **Healthcare:** Managing protected health information (PHI) with strict compliance requirements.
+-   **Government and defense:** Handling classified data or mission-critical systems that demand the highest security levels.
+-   **Research and development:** Transferring large data sets for research or running high-performance computing (HPC) workloads.
+-   **Media and entertainment:** Streaming high-quality video content or managing large media files with low latency and high bandwidth.
 
 Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locations#dedicated-locations).
 
@@ -129,12 +131,14 @@ Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locati
 
 {{site.data.keyword.dl_short}} Connect use cases include:
 
--   Hybrid cloud architectures: Connecting on-premises infrastructure to  {{site.data.keyword.cloud_notm}} resources for seamless workload distribution and data sharing.
--   Multi-cloud deployments: Linking  {{site.data.keyword.cloud_notm}} with other cloud providers for workload flexibility and disaster recovery.
--   Remote branch offices: Connecting geographically dispersed offices to  {{site.data.keyword.cloud_notm}} for centralized applications and data access.
--   Software-as-a-Service (SaaS) applications: Accessing SaaS applications that are hosted on  {{site.data.keyword.cloud_notm}} with improved performance and security.
+-   **Hybrid cloud architectures:** Connecting on-premises infrastructure to  {{site.data.keyword.cloud_notm}} resources for seamless workload distribution and data sharing.
+-   **Multi-cloud deployments:** Linking  {{site.data.keyword.cloud_notm}} with other cloud providers for workload flexibility and disaster recovery.
+-   **Remote branch offices:** Connecting geographically dispersed offices to  {{site.data.keyword.cloud_notm}} for centralized applications and data access.
+-   **Software-as-a-Service (SaaS) applications:** Accessing SaaS applications that are hosted on  {{site.data.keyword.cloud_notm}} with improved performance and security.
 
 Review available Direct Link Connect locations and providers [here](/docs/dl?topic=dl-locations#connect-locations).
+
+In this pattern, {{site.data.keyword.dl_short}} Connect provides a cost effective solution with a short deployment timeframe.
 
 ## Load Balancing
 {: #load-balancing}
@@ -154,7 +158,7 @@ Considerations Include:
 -   **Public to Public (Internet-facing) Load Balancing:** Distributes traffic among multiple public-facing servers for high availability and scalability of websites or services.
 -   **Private (Internal) Load Balancing:** Distributes traffic among internal servers on a private network. Improves performance and scalability for internal applications without internet exposure.
 
- {{site.data.keyword.cloud_notm}} offers two Load balancer options for classic, which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance. This pattern leverages {{site.data.keyword.loadbalancer_full}} to meet both public and private load balancer requirments.
+ {{site.data.keyword.cloud_notm}} offers two Load balancer options for classic, which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance. This pattern leverages {{site.data.keyword.loadbalancer_full}} to meet both public and private load balancer requirments. Remember to use a portable or static IP subnet in classic when load balancing {{site.data.keyword.powerSys_notm}} with the {{site.data.keyword.loadbalancer_full}}.
 
 Explore load balancer feature options [here](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-explore).
 
