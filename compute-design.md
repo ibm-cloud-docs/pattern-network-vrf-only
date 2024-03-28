@@ -63,7 +63,7 @@ The proxy server acts as an intermediary between the on-premise network and the 
 Some key design considerations for a proxy server include:
 
 -	**Proxy Type:** Choose between a forward proxy (clients access internet through it) or a reverse proxy (sits in front of web servers for load balancing or security).
--	**Protocol Support:** Ensure the proxy supports the protocols used by your clients and the servers it communicates with (HTTP, HTTPS, FTP, etc.).
+-	**Protocol Support:** Ensure the proxy supports the protocols used by the clients and the servers it communicates with (HTTP, HTTPS, FTP, etc.).
 -	**Content Transformation:** Decide if the proxy needs to modify content (e.g., compression, encryption) before sending it to clients.
 -	**Caching:** Determine how aggressively the proxy will cache content to improve performance and reduce bandwidth usage.
 -	**Security:** Consider features like access control, encryption (SSL/TLS), and content filtering to protect your network.
@@ -85,4 +85,4 @@ General sizing guidelines include:
 -	**Disk Space:** Enough space to store the operating system, proxy server software, and potentially cached data. The amount of cache storage depends on your caching strategy.
 -	**Network Interface:** A high-bandwidth network interface card (NIC) is crucial for handling incoming and outgoing traffic efficiently.
 
-The proxy server can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. This pattern will use a VSI to deploy a proxy server.
+The proxy server can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the Classic environment. This pattern will use a VSI to deploy the proxy server.

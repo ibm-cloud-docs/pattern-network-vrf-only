@@ -57,7 +57,7 @@ Choosing the right firewall is crucial for safeguarding your network. Review the
 -   **Virtual Appliance versus Hardware Firewalls:** Evaluate cloud-based options for flexibility and scalability but consider throughput and port sizes for latency and bottlenecks.
 -   **Single versus High Availability:** Consider single points of failure and service level requirements.
 
-IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate, and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, Palo Alto).  This pattern supports personal choice based on appliance functional requirements and operational expertise.
+IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FAS 10Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, and Palo Alto).  This pattern supports personal choice based on appliance functional requirements and operational expertise.
 
 Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-exploring-firewalls&_ga=2.226674782.2123413376.1603312051-1873021910.1602082701) available in  {{site.data.keyword.cloud_notm}}.
 
@@ -107,7 +107,7 @@ Enterprise connectivity considerations include:
 -   Organizations with colocation facilities near  {{site.data.keyword.cloud_notm}} PoPs or data centers.
 -   Network service providers that deliver circuits to customers or other data centers.
 -   Highly sensitive data or mission-critical applications that require maximum security and performance.
--   Organizations that need fine-grained control over routing and traffic management. Direct link dedicated is ideal for moderate bandwidth needs, multi-cloud, or hybrid cloud solution strategies.
+-   Organizations that need fine-grained control over routing and traffic management. Direct link dedicated is ideal for moderate to high bandwidth needs.
 
 {{site.data.keyword.dl_short}} Dedicated use cases include:
 
@@ -126,7 +126,7 @@ Review available Direct Link Dedicated locations [here](/docs/dl?topic=dl-locati
 
 -   Organizations with diverse connectivity requirements (multi-cloud, hybrid cloud).
 -   Organizations that are not located near  {{site.data.keyword.cloud_notm}} PoPs or need smaller bandwidths.
--   Organizations seeking a more affordable private connection compared to Dedicated.
+-   Organizations seeking a more affordable private connection compared to Direct Link Dedicated.
 -   Simple and quick deployment due to pre-established connections in data centers.
 
 {{site.data.keyword.dl_short}} Connect use cases include:
@@ -178,7 +178,7 @@ Global Server Load Balancing (GSLB) is a technique for distributing internet tra
 
 If Global Server Load Balancing (GSLB) is required,  {{site.data.keyword.cloud_notm}} offers a Global load balancer service through {{site.data.keyword.cis_full_notm}}, which routes traffic to servers across multiple geographic locations to ensure application availability.
 
-Other third-party connectivity providers such as Akamai, network appliances from vendors like F5 and Citrix, as well as Domain Name Service can also be leveraged to meet the requirement for GSLB.
+Other third-party providers such as Akamai, network appliances from vendors like F5 and Citrix, and Domain Name Service can also be leveraged to meet the global load balancing requirement.
 
 When a user tries to access a website or application, the request goes to the GSLB device. The GSLB device uses various algorithms and real-time data to determine the best server to route the request to. Factors that are considered include:
 
@@ -203,7 +203,7 @@ In  {{site.data.keyword.cloud_notm}} Classic, Virtual route forwarding (VRF) mus
 
 Click to learn more on [{{site.data.keyword.cloud_notm}} VRF](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
-When the source address is not an IBM assigned IP address, a proxy server in classic is used as an intermediary allowing access to cloud services over the Direct Link.
+When the source address is not an IBM assigned IP address, a proxy server in classic is used as an intermediary allowing access to cloud services.
 
 Verify that Private Service endpoints are available for your cloud services [here](/docs/account?topic=account-vrf-service-endpoint&interface=ui).
 
@@ -225,7 +225,7 @@ Learn more about {{site.data.keyword.cis_short}} [here](/docs/cis?topic=cis-abou
 ## Domain Name Services (DNS)
 {: #DNS}
 
- {{site.data.keyword.dns_short}} provides access to your systems and services through user-friendly domain names rather than IP addresses.
+ {{site.data.keyword.dns_short}} provide access to your systems and applications through user-friendly domain names rather than IP addresses.
 
 Key considerations are:
 
@@ -244,4 +244,4 @@ Key considerations are:
     -   Utilize {{site.data.keyword.dns_full_notm}} (complementary VPC Service).
         This Service provides versatile private name resolution between classic, on-premises, and {{site.data.keyword.vpc_short}} resources by deploying [Custom Resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver). Learn more about [{{site.data.keyword.dns_full_notm}}](/docs/dns-svcs?topic=dns-svcs-getting-started).
 
-This pattern leverages IBM cloud DNS for public FQDN resolution and deploys a custom DNS server on a Virtual server instance in classic for private FQDN resolution. **Note:** The custom DNS server in classic can support both public and private FQDN resolution.
+This pattern leverages IBM cloud DNS for public FQDN resolution and deploys a custom DNS server on a virtual server instance in classic for private FQDN resolution. **Note:** The custom DNS server in classic can support both public and private FQDN resolution.

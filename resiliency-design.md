@@ -24,9 +24,9 @@ keywords:
 The primary consideration is the level of risk a company is willing to take vs the financial cost budgeted for the deployment. Resiliency increases as you layer on services in a single point of presence (PoP) from a {{site.data.keyword.dl_short}} Dedicated connection to two {{site.data.keyword.dl_short}} Connect connections.
 
 1.  {{site.data.keyword.dl_short}} Dedicated – is a single physical cross-connect, port, and switch.
-2.  {{site.data.keyword.dl_short}} Connect – is a single virtual SDN overlay connection from an exchange provider.
-3.  (2) {{site.data.keyword.dl_short}} Dedicated – provides 2 physical cross connects, ports, and switches, which can be deployed on separate switches to ensure resiliency.
-4.  (2) {{site.data.keyword.dl_short}} Connects – provides 2 virtual SDN overlay connections from an exchange provider, which can be provisioned on separate switches to ensure resiliency.
+2.  {{site.data.keyword.dl_short}} Connect – is a single virtual SDN connection from an exchange provider.
+3.  (2) {{site.data.keyword.dl_short}} Dedicated – provides 2 physical ports and cross connects, which can be deployed on separate switches to ensure resiliency.
+4.  (2) {{site.data.keyword.dl_short}} Connects – provides 2 virtual SDN connections from an exchange provider, which can be provisioned on separate switches to ensure resiliency.
 
 Additionally, consider whether there is an existing relationship with a telecommunication or cloud exchange provider that can be leveraged.
 
@@ -46,7 +46,7 @@ Bidirectional Forwarding Detection (BFD) can be enabled on both {{site.data.keyw
 
 Consider the cost implications when ordering a {{site.data.keyword.dl_short}}. The secondary path and the connection to a second region can be ordered as metered instead of unmetered if the primary connection is going to be used for most of the user traffic, which reduces the monthly fee and allows for traffic diversity if there is a primary circuit failure.
 
-Resilience considerations also include gateway and firewall appliances and GRE tunnel configurations to eliminate as many single points of failure as possible.
+Resilience considerations should include gateway or firewall appliances and GRE tunnel configurations to eliminate as many single points of failure as possible.
 
 This pattern includes two {{site.data.keyword.dl_short}} connect circuits to meet the resiliency requires with a cost effective, flexable, and quick deployable solution.
 

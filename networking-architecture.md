@@ -15,7 +15,7 @@ keywords:
 # Architecture decisions for networking
 {: #networking-architecture}
 
-The following are network architecture decisions for the Network architecture for data centers without a {{site.data.keyword.tg_full_notm}} service pattern.
+The following are network architecture decisions for the hybrid cloud network for classic infrastructure disaster recovery pattern.
 
 ## Architecture decisions for enterprise connectivity
 {: #ad-enterprise-connectivity}

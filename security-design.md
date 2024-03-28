@@ -18,18 +18,18 @@ keywords:
 ## Identity and Access Management (IAM)
 {: #IAM}
 
-{{site.data.keyword.iamshort}} provide role-based access controls (RBAC) and is part of the zero-trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. IBM Security Verify can be added to support multi-factor authentication.
+{{site.data.keyword.iamshort}} provides role-based access controls (RBAC) and is part of the zero-trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. IBM Security Verify can be added to support multi-factor authentication.
 
 Click to learn more about [{{site.data.keyword.iamshort}} (IAM)](/docs/account?topic=account-iamoverview).
 
 Click to learn more about [IAM Roles](/docs/account?topic=account-userroles).
 
-Click to learn more about [IBM Security Verify](/verify).
+Click to learn more about [IBM Security Verify](https://www.ibm.com/verify).
 
 ## Cloud Internet Services (CIS)
 {: #CIS}
 
-In addition to providing Global Server Load balancing and Domain name services, {{site.data.keyword.cis_full_notm}} (CIS) provides many security features to help meet compliance requirements as either a pay as you go or service bundled package option.
+In addition to providing Global Server Load balancing and Domain name services, {{site.data.keyword.cis_full_notm}} (CIS) provides many security features to help meet compliance requirements as either a pay as you go or bundled service package option.
 
 Consider leveraging {{site.data.keyword.cis_full_notm}} or other third-party products such as Akamai, Cloudflare, Imperva, Barracuda, or F5 to meet security requirements such as:
 
@@ -98,11 +98,15 @@ Tier 5: Ultra-Secure Enterprise
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 {: caption="Table 4: Classic Data Center Security features"}
 
-IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate, and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, Palo Alto).  This pattern supports personal choice based on security requirements and operational expertise.
+IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FSA 10 Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, and Palo Alto).  This pattern supports personal choice based on security requirements and operational expertise.
 
 Explore {{site.data.keyword.vra}} (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
 Explore {{site.data.keyword.vsrx_full}} license features [here](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
+
+Explore FortiGate FSA 10Gbps [here](/docs/fortigate-10g?topic=fortigate-10g-getting-started).
+
+Explore Virtual FortiGate Security Appliance (vFSA) [here](/docs/vfsa?topic=vfsa-getting-started)
 
 Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Fortinet, and Palo Alto [here](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 
@@ -148,4 +152,4 @@ The following table helps determine whether a bastion host or jumper server is n
 | Attack Surface | Higher (internal systems directly exposed if the jump server is compromised) | Lower (internal systems protected even if the bastion host is compromised)     |
 {: caption="Table 5. Classic Data Center Jump server vs Bastion Host Matrix"}
 
-In this pattern, a Bastion host is deployed on a virtual server instance in a classic data center to control Secure remote administrative access of all devices within the IBM Cloud environment.
+In this pattern, a Bastion host is deployed on a virtual server instance in a classic data center to control secure remote administrative access of all devices within the IBM Cloud environment.

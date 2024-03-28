@@ -15,7 +15,7 @@ keywords:
 # Architecture decisions for security
 {: #security-architecture}
 
-The following are security architecture decisions for the Network architecture for data centers without a Transit Gateway service pattern.
+The following are security architecture decisions for the hybrid cloud network for classic infrastructure disaster recovery pattern.
 
 ## Architecture decisions for identity and access management
 {: #ad-iam}
