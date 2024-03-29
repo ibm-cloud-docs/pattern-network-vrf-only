@@ -57,7 +57,7 @@ Choosing the right firewall is crucial for safeguarding your network. Review the
 -   **Virtual Appliance versus Hardware Firewalls:** Evaluate cloud-based options for flexibility and scalability but consider throughput and port sizes for latency and bottlenecks.
 -   **Single versus High Availability:** Consider single points of failure and service level requirements.
 
-IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FAS 10Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, and Palo Alto).  This pattern supports personal choice based on appliance functional requirements and operational expertise.
+IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FAS 10Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Cisco, and Palo Alto).  This pattern supports personal choice based on appliance functional requirements and operational expertise.
 
 Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-exploring-firewalls&_ga=2.226674782.2123413376.1603312051-1873021910.1602082701) available in  {{site.data.keyword.cloud_notm}}.
 

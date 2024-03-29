@@ -98,7 +98,7 @@ Tier 5: Ultra-Secure Enterprise
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 {: caption="Table 4: Classic Data Center Security features"}
 
-IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FSA 10 Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Fortinet, and Palo Alto).  This pattern supports personal choice based on security requirements and operational expertise.
+IBM Classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FSA 10 Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Cisco, and Palo Alto).  This pattern supports personal choice based on security requirements and operational expertise.
 
 Explore {{site.data.keyword.vra}} (vRA) [here](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 
@@ -108,7 +108,7 @@ Explore FortiGate FSA 10Gbps [here](/docs/fortigate-10g?topic=fortigate-10g-gett
 
 Explore Virtual FortiGate Security Appliance (vFSA) [here](/docs/vfsa?topic=vfsa-getting-started)
 
-Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Fortinet, and Palo Alto [here](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
+Explore Bring Your Own Gateway Appliance (BYOG) to support Checkpoint, Cisco, and Palo Alto [here](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 
 ## VPN Security
 {: #vpn-security}
