@@ -18,7 +18,7 @@ keywords:
  This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
 
 -   Illustrate network connectivity to {{site.data.keyword.powerSysShort}} Workspace and Classic infrastructure resources.
--   Provide an IBM Solution Design for the Network elements that are required when deploying in Classic Data Centers or a data center that does not contain availability zones.
+-   Provide an IBM Solution Design for the Network elements that are required for DR scenarios where either the primary or DR site is a Classic Data Center where VPC is not available.
 -   Securely connect your external locations to {{site.data.keyword.dl_full}}, enabling access to both Classic infrastructure and {{site.data.keyword.powerSys_notm}} resources.
 -   To focus on {{site.data.keyword.cloud_notm}} Network elements, while ensuring requirements can be met from a performance, system availability, and connectivity perspective.
 
