@@ -24,7 +24,7 @@ Click to learn more about [{{site.data.keyword.iamshort}} (IAM)](/docs/account?t
 
 Click to learn more about [IAM Roles](/docs/account?topic=account-userroles).
 
-Click to learn more about [IBM Security Verify](https://www.ibm.com/verify) {: external} .
+Click to learn more about [IBM Security Verify](https://www.ibm.com/verify){: external} .
 
 ## Cloud Internet Services (CIS)
 {: #CIS}
