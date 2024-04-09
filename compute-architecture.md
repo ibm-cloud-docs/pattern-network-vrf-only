@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-03-11"
+lastupdated: "2024-04-08"
 
 subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
 
@@ -17,8 +17,8 @@ keywords:
 
 The following are compute architecture decisions for the Network architecture for data centers without a {{site.data.keyword.tg_full_notm}} service pattern.
 
-| **Architecture decision**        | **Requirement**                                                            | **Options**                                 | **Decision**   | **Rationale**                                    |
+| Architecture decision        | Requirement                                                            | Options                                 | Decision   | Rationale                                    |
 |----------------------------------|----------------------------------------------------------------------------|---------------------------------------------|----------------|--------------------------------------------------|
-| Compute (Jump Host)              | Secure connection to manage internal systems and centralize access control | - Bare Metal  \n - Virtual Server | Virtual Server | flexible compute resources to meet compute needs |
-| Compute (Proxy or Baston Server) | Provide access to Service Endpoints from non- {{site.data.keyword.cloud_notm}} IPs                 | - Bare Metal  \n - Virtual Server | Virtual Server | flexible compute resources to meet compute needs |
-{: caption="Table 6. non-TGW Compute architecture decisions"}
+| Compute: Jump Host             | Secure connection to manage internal systems and centralize access control | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
+| Compute: Proxy or Baston Server | Provide access to Service Endpoints from non- {{site.data.keyword.cloud_notm}} IPs                 | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
+{: caption="Table 1. Non-TGW Compute architecture decisions"}
