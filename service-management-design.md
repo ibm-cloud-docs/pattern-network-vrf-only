@@ -29,7 +29,7 @@ Examine what logs are required for troubleshooting and auditing, as well as the 
 
 For more information, see [Getting started with log analysis](/docs/log-analysis?topic=log-analysis-getting-started#getting-started).
 
-{:attention: .attention} IBM Log Analysis is deprecated and will no longer be supported as of 30 March 2025. The replacement service, IBM Cloud Logs is planned to be generally available late second quarter 2024. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started).
+IBM Log Analysis is deprecated and will no longer be supported as of 30 March 2025. The replacement service, IBM Cloud Logs is planned to be generally available late second quarter 2024. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started). {: attention}
 
 ## Activity Tracking
 {: #activity-tracking}
@@ -38,4 +38,4 @@ Consider the need to record and monitor the activities and changes made inside t
 
 Explore details on [activity tracker events for virtual servers in Classic](/docs/virtual-servers?topic=virtual-servers-at_events) and for bare metal in Classic [here](/docs/bare-metal?topic=bare-metal-bm-at-events).
 
-{:attention: .attention} IBM Cloud Activity Tracker services are deprecated and will no longer be supported as of 30 March 2025. The replacement service, IBM Cloud Logs is planned to be generally available late second quarter 2024. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started).
+IBM Cloud Activity Tracker services are deprecated and will no longer be supported as of 30 March 2025. The replacement service, IBM Cloud Logs is planned to be generally available late second quarter 2024. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started). {: attention}
