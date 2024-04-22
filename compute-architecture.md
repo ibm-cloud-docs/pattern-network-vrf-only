@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-08"
+lastupdated: "2024-04-10"
 
-subcollection: pattern-Network-architecture-for-data-centers-without-a-Transit-Gateway-service
+subcollection: pattern-network-vrf-only
 
 keywords:
 
@@ -15,10 +15,10 @@ keywords:
 # Architecture decisions for compute
 {: #compute-decisions}
 
-The following are compute architecture decisions for the Network architecture for data centers without a {{site.data.keyword.tg_full_notm}} service pattern.
+The following are compute architecture decisions for the hybrid cloud network for classic infrastructure disaster recovery pattern.
 
 | Architecture decision        | Requirement                                                            | Options                                 | Decision   | Rationale                                    |
 |----------------------------------|----------------------------------------------------------------------------|---------------------------------------------|----------------|--------------------------------------------------|
-| Compute: Jump Host             | Secure connection to manage internal systems and centralize access control | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
-| Compute: Proxy or Baston Server | Provide access to Service Endpoints from non- {{site.data.keyword.cloud_notm}} IPs                 | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
-{: caption="Table 1. Non-TGW Compute architecture decisions"}
+| Compute: Bastion host              | Secure connection to manage internal systems and centralized access control | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
+| Compute: Proxy server | Provide access to service endpoints from IPs not assigned by {{site.data.keyword.cloud_notm}}                 | - Bare Metal  \n - Virtual Server | Virtual Server | Flexible compute resources to meet compute needs |
+{: caption="Table 1. Classic Data Center Compute architecture decisions"}
