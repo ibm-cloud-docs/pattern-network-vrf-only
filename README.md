@@ -1,2 +1,2 @@
-# pattern-network-vrf-only
-Documentation repository for pattern-network-vrf-only
+# pattern templates
+Accelerator patterns template files
