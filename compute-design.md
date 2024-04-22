@@ -76,7 +76,7 @@ General sizing guidelines include:
 
 - CPU: A multi-core processor (4 or more cores) is recommended for efficient handling of multiple connections.
 -	Memory: 4 GB or more is a good starting point, but more memory might be needed for very demanding scenarios. A rule of thumb is 32 MB of RAM for every 1 GB of disk space for caching purposes.
--Disk space: Enough space to store the operating system, proxy server software, and potentially cached data. The amount of cache storage depends on your caching strategy.
--Network interface: A high-bandwidth network interface card (NIC) is crucial for handling incoming and outgoing traffic efficiently.
+- Disk space: Enough space to store the operating system, proxy server software, and potentially cached data. The amount of cache storage depends on your caching strategy.
+- Network interface: A high-bandwidth network interface card (NIC) is crucial for handling incoming and outgoing traffic efficiently.
 
 The proxy server can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the classic environment. This pattern uses a VSI to deploy the proxy server.
