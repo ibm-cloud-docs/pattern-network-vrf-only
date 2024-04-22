@@ -15,6 +15,8 @@ keywords:
 # Network design
 {: #network-design}
 
+The following are network design considerations for the hybrid cloud network for classic infrastructure disaster recovery pattern.
+
 ## Virtual Private Network (VPN)
 {: #vpn}
 
@@ -140,7 +142,7 @@ In this pattern, {{site.data.keyword.dl_short}} Connect provides a cost-effectiv
 ## Load balancing
 {: #load-balancing}
 
-Review the three types of load balancing. 
+Review the three types of load balancing.
 
 ### Local load balancing
 {: #local-load-balancing}
@@ -168,7 +170,7 @@ Considerations Include:
 
 When there is a specific need or function that is not offered by any of the load balancer options within the {{site.data.keyword.cloud_notm}} catalog, or an existing relationship is established with a third-party vendor, such as F5, you can deploy a third-party solution within {{site.data.keyword.cloud_notm}} as a bring your own appliance.
 
-## Global load balancing
+### Global load balancing
 {: #global-load-balancing}
 
 Global Server Load Balancing (GSLB) is a technique for distributing internet traffic across geographically dispersed servers. It aims to optimize user experience and application performance by directing users to the nearest or most appropriate server based on various factors like latency, server load, and user location. GSLB is a valuable component of a disaster recovery strategy.

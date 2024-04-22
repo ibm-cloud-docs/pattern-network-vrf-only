@@ -15,6 +15,8 @@ keywords:
 # Security design
 {: #security-design}
 
+The following are security design considerations for the hybrid cloud network for classic infrastructure disaster recovery pattern.
+
 ## Identity and Access Management (IAM)
 {: #IAM}
 
@@ -85,8 +87,9 @@ Consider the security level required based on the business need:
 
 {{site.data.keyword.Bluemix_notm}} classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FSA 10 Gbps and vFSA), and bring your own gateway appliance (BYOG) for Checkpoint, Cisco, and Palo Alto.  This pattern supports personal choice based on security requirements and operational expertise.
 
-### Gateway references 
+### Gateway references
 {: #gateway-references}
+
 * Explore [{{site.data.keyword.vra}} (vRA)](/docs/virtual-router-appliance?topic=virtual-router-appliance-getting-started-vra).
 * Explore [{{site.data.keyword.vsrx_full}} license features](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
 * Explore [FortiGate FSA 10 Gbps](/docs/fortigate-10g?topic=fortigate-10g-getting-started).

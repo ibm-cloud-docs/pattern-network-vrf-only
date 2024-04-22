@@ -49,7 +49,7 @@ The following are network architecture decisions for the hybrid cloud network fo
 | Architecture decision                     | Requirement                             | Options                                                                      | Decision                    | Rationale                                                                                  |
 |-----------------------------------------------|---------------------------------------------|----------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------|
 | Cloud Native Connectivity to cloud services | Provide secure connection to cloud services | - Private Cloud service endpoints  \n - Public Cloud service endpoints | Private Cloud service endpoints | Provides private connectivity to cloud services, enhanced security, and cost efficiency |
-{: caption="Table 3. Classic Data Center network cloud native connectivity architecture decisions"}
+{: caption="Table 4. Classic Data Center network cloud native connectivity architecture decisions"}
 
 ## Architecture decisions for load balancing
 {: #ad-load-balancing}
@@ -59,7 +59,7 @@ The following are network architecture decisions for the hybrid cloud network fo
 | Global load balancing     | Load balancing over the public network across two regions if there's an outage (DR) for failover to the other region. | - {{site.data.keyword.cis_short}}   \n - {{site.data.keyword.vpx_full}} \n - DNS | {{site.data.keyword.cis_short}} | Provides a cost-effective solution and offers extra security features                                                                          |
 | Load balancing: Public   | Load-balancing workloads across multiple workload instances or zones over the public network.                              | - {{site.data.keyword.loadbalancer_full}}  \n - {{site.data.keyword.vpx_full}}                   | {{site.data.keyword.loadbalancer_full}}       | Provides a wide range of load-balancing functions for both public and private traffic cost effectively                                                     |
 | Load balancing: Private  | Load balancing workloads across multiple workload instances or zones over the private network.                             | - {{site.data.keyword.loadbalancer_full}}  \n - {{site.data.keyword.vpx_full}}                   | {{site.data.keyword.loadbalancer_full}}       | - {{site.data.keyword.loadbalancer_full}} meets small to midsize, low complexity requirement. \n - {{site.data.keyword.vpx_full}} meets large complex load balancer needs |
-{: caption="Table 4. Classic Data Center network load-balancing architecture decisions"}
+{: caption="Table 5. Classic Data Center network load-balancing architecture decisions"}
 
 ## Architecture decisions for domain name system
 {: #ad-dns}
@@ -68,4 +68,4 @@ The following are network architecture decisions for the hybrid cloud network fo
 |---------------------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Public DNS                | Provide DNS resolution to support the use of hostnames instead of IP addresses for applications | - DNS through the cloud portal  \n - {{site.data.keyword.cis_short}}  \n - Third-party provider  \n - Custom DNS on VSI | {{site.data.keyword.dns_short}} through the cloud portal | Cost-effective and reliable                                                                                                           |
 | Private DNS               | Provide DNS resolution within the {{site.data.keyword.cloud_notm}} private network                                       | - Custom DNS on VSI  \n - DNS on Gateway appliance  \n - {{site.data.keyword.dns_short}} in VPC                                  | Custom DNS on VSI    | - Custom DNS on VSI can handle the most complex DNS needs. \n - When VPC service is available, the preferred approach is {{site.data.keyword.dns_short}} in VPC. |
-{: caption="Table 5. Classic Data Center network Domain Name System architecture decisions"}
+{: caption="Table 6. Classic Data Center network Domain Name System architecture decisions"}

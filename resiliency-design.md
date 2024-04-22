@@ -15,6 +15,8 @@ keywords:
 # Resiliency design
 {: #resiliency-design}
 
+The following are resiliency design considerations for the hybrid cloud network for classic infrastructure disaster recovery pattern.
+
 ## Direct Link
 {: #direct-link}
 
