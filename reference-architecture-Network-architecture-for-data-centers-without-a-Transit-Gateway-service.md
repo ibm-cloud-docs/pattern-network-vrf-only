@@ -66,7 +66,7 @@ Following the [Architecture Framework](/docs/architecture-framework?topic=archit
 - Resiliency: High Availability, Disaster Recovery
 - Service management: Monitoring, Logging, Auditing, Alerting, Event Management
 
-![Illustrates a detailed network and component architecture for a non-TGW solution architecture](heat_map.svg){: caption="Figure 2: Hybrid cloud network for classic infrastructure disaster recovery design scope" caption-side="bottom"}
+![Illustrates a detailed network and component architecture for a non-TGW solution architecture](images/heat_map.svg){: caption="Figure 2: Hybrid cloud network for classic infrastructure disaster recovery design scope" caption-side="bottom"}
 
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of aspects and domains, which are technology-agnostic architectural areas that need to be considered for any enterprise solution. See [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
