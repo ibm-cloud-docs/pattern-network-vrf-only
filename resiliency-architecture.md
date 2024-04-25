@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-11"
+lastupdated: "2024-04-24"
 
 subcollection: pattern-network-vrf-only
 
@@ -23,7 +23,7 @@ The following are resiliency architecture decisions for the hybrid cloud network
 | Architecture decision           | Requirement                                                                                                       | Options                                                                                                                                   | Decision                                      | Rationale                                                                                                                   |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | High availability network path      | Ensure availability of resources if outages occur. Support SLA targets for availability                              | - Single {{site.data.keyword.dl_full_notm}} Dedicated  \n - Single {{site.data.keyword.dl_full_notm}} Connect   \n - Two {{site.data.keyword.dl_full_notm}} Dedicated  \n - Two {{site.data.keyword.dl_full_notm}} Connect | Two {{site.data.keyword.dl_full_notm}} Connect                           | Two {{site.data.keyword.dl_full_notm}} Connect provides a cost effective resilient solution with a short deployment interval and is flexible to meet both hybrid and multi-cloud strategies. |
-| High availability gateway appliance | Ensure availability of infrastructure resources if outages occur. Support SLA targets for infrastructure availability | Deploy Gateway Appliance of choice in HA pair                                                                                        | Deploy Gateway Appliance of choice in HA pair     | Ensures if one appliance is unavailable access is still available through remaining gateway appliance.                             |
+| High availability gateway appliance | Ensure availability of infrastructure resources if outages occur. Support SLA targets for infrastructure availability | Deploy Gateway Appliance of choice in high availability pair                                                                                        | Deploy Gateway Appliance of choice in high availability  pair     | Ensures if one appliance is unavailable access is still available through remaining gateway appliance.                             |
 | High availability path detection    | Ensure the quickest traffic path recovery                                                                             | Bidirectional Forwarding Detection (BFD)                                                                                             | Bidirectional Forwarding Detection (BFD) | Provides a much faster way of detecting link failures compared to the built-in mechanisms within routing protocols.              |
 {: caption="Table 1. Classic data center resiliency architecture decisions"}
 

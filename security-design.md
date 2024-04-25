@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-11"
+lastupdated: "2024-04-24"
 
 subcollection: pattern-network-vrf-only
 
@@ -20,12 +20,12 @@ The following are security design considerations for the hybrid cloud network fo
 ## Identity and Access Management (IAM)
 {: #IAM}
 
-{{site.data.keyword.iamshort}} provides role-based access controls (RBAC) and is part of the zero trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. {{site.data.keyword.IBM}} Security Verify can be added to support multi-factor authentication. For more information, see [{{site.data.keyword.iamshort}} (IAM)](/docs/account?topic=account-iamoverview) and [IBM Security Verify](https://www.ibm.com/verify){: external} .
+{{site.data.keyword.iamshort}} provides role-based access controls (RBAC) and is part of the zero trust strategy that allows for least privileged access to help support regulatory and compliancy requirements. {{site.data.keyword.IBM}} Security Verify can be added to support multi-factor authentication. For more information, see [{{site.data.keyword.iamshort}} (IAM)](/docs/account?topic=account-iamoverview) and [IBM Security Verify](https://www.ibm.com/verify){: external}.
 
 ## Cloud Internet Services (CIS)
 {: #CIS}
 
-In addition to providing Global Server load balancing and domain name services, {{site.data.keyword.cis_full_notm}} (CIS) provides many security features to help meet compliance requirements as either a Pay-As-You-Go or bundled service package option. For more information, see [Cloud Internet Services](/docs-draft/cis?topic=cis-about-ibm-cloud-internet-services-cis).
+In addition to providing Global Server load balancing and domain name services, {{site.data.keyword.cis_full_notm}} (CIS) provides many security features to help meet compliance requirements as either a Pay-As-You-Go or bundled service package option. For more information, see [Cloud Internet Services](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 
 Consider using {{site.data.keyword.cis_full_notm}} or other third-party products such as Akamai, Cloudflare, Imperva, Barracuda, or F5 to meet security requirements:
 
@@ -85,7 +85,7 @@ Consider the security level required based on the business need:
 | Integration with Real-Time Incident Response Capabilities                |            |            |            |            | ![Checkmark icon](../../icons/checkmark-icon.svg)          |
 {: caption="Table 1: Classic data center security features"}
 
-{{site.data.keyword.Bluemix_notm}} classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FSA 10 Gbps and vFSA), and bring your own gateway appliance (BYOG) for Checkpoint, Cisco, and Palo Alto.  This pattern supports personal choice based on security requirements and operational expertise.
+{{site.data.keyword.Bluemix_notm}} classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FSA 10 Gbps and vFSA), and bring your own gateway appliance (BYOG) for Checkpoint, Cisco, and Palo Alto. This pattern supports personal choice based on security requirements and operational expertise.
 
 ### Gateway references
 {: #gateway-references}
@@ -109,7 +109,7 @@ Key VPN Security Considerations include:
 - Access control: Granularly control access permissions to resources accessible through the VPN, limiting potential damage from breaches.
 - Security of endpoints: Ensure that all connected devices comply with security policies and are kept up to date with patches.
 
-{{site.data.keyword.IBM_notm}} classic data centers offer three options for implementing a virtual private network connection from a remote site into {{site.data.keyword.Bluemix_notm}}, including SSL VPN, IPsec VPN, and VPN gateway appliance on Classic. This pattern supports the VPN gateway appliance on Classic to meet the private administrative and management connectivity requirements.
+{{site.data.keyword.IBM_notm}} classic data centers offer three options for implementing a virtual private network connection from a remote site into {{site.data.keyword.Bluemix_notm}}, including SSL VPN, IPsec VPN, and VPN gateway appliance on classic. This pattern supports the VPN gateway appliance on classic to meet the private administrative and management connectivity requirements.
 
 ## Service Endpoints
 {: #security-service-endpoints}
@@ -123,7 +123,7 @@ Jump servers or bastion hosts can offer extra levels of security and control and
 
 Considerations include:
 
-* Enhanced security required - All access to internal systems funnels through the jump server or bastion host, making it easier to monitor and enforce security policies. Access can be granted or revoked to specific users and systems with granularity. By keeping internal systems directly inaccessible from the outside, it minimizes potential entry points for attackers. Hackers would need to compromise the jump server first, adding an extra layer of defense.
+* Enhanced security required - All access to internal systems funnels through the jump server or bastion host, making it easier to monitor and enforce security policies. Access can be granted or revoked to specific users and systems with granularity. By keeping internal systems directly inaccessible from the outside, it minimizes potential entry points for attackers. Hackers need to compromise the jump server first, adding an extra layer of defense.
 * Improved management and auditing - Manage access to all internal systems from a single point, streamlining the process and reduce errors. All activity on the jump server or Bastion host is logged, providing a centralized record of who accessed what and when. This helps with troubleshooting, security audits, and forensic investigations.
 * Secure access to legacy systems - Jump servers and Bastion hosts can act as a bridge between modern tools and legacy systems that might not support secure protocols like SSH. You can use the jump server to tunnel secure connections to older systems.
 * Multi-factor Authentication (MFA) - MFA can be implemented on the jump server or Bastion host itself, adding another layer of protection to internal system access.
