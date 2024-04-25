@@ -15,12 +15,14 @@ keywords:
 # Compute design
 {: #compute-design}
 
+The following are compute design considerations for the hybrid cloud network for classic infrastructure disaster recovery pattern.
+
 ## Workload Hosts for classic and {{site.data.keyword.powerSys_notm}}
 {: #workload-hosts}
 
 Selecting the appropriate workload host in this architecture includes but is not limited to the following considerations:
 
-- PerformanceL: CPU, Memory, storage options and network speed
+- Performance: CPU, Memory, storage options and network speed
 - Virtualization and tenancy: Container, virtual or bare metal, multitenant or dedicated
 - Security, availability, and cost considerations
 - Application-specific certification or optimization requirements
@@ -57,7 +59,7 @@ The proxy server acts as an intermediary between the on-premises network and the
 Some key design considerations for a proxy server include:
 
 -	Proxy type: Choose between a forward proxy where clients access the internet through it or a reverse proxy that sits in front of web servers for load balancing or security.
--	Protocol support: Ensure that the proxy supports the protocols that are used by the clients and the servers it communicates with (HTTP, HTTPS, FTP, and so on).
+-	Protocol support: Ensure that the proxy supports the protocols that are used by the clients and the servers it communicates with HTTP, HTTPS, FTP, and so on.
 -	Content transformation: Decide whether the proxy needs to modify content, for example, compression and encryption before sending it to clients.
 -	Caching: Determine how aggressively the proxy caches content to improve performance and reduce bandwidth usage.
 -	Security: Consider features like access control, encryption (SSL/TLS), and content filtering to protect your network.
