@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-11"
+lastupdated: "2024-04-24"
 
 subcollection: pattern-network-vrf-only
 
@@ -39,4 +39,4 @@ The following are service management architecture decisions for the Network arch
 | Architecture decision | Requirement                                                                                | Options                                                                | Decision            | Rationale                                                                                                                                                                                              |
 |---------------------------|------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Audit logging             | Monitor audit logs to track changes to cloud resources and detect potential security problems. | - Bring Your Own Activity Tracker software  \n - {{site.data.keyword.cloudaccesstraillong_notm}} (VPC) | Bring Your Own Activity Tracker software | - Bring Your Own Activity Tracker allows for the most flexibility in meeting activity tracking and auditing requirements. \n - When VPC is available, the preferred approach is {{site.data.keyword.cloudaccesstraillong_notm}} |
-{: caption="Table 3. Classic Data Center service management auditing architecture decisions"}
+{: caption="Table 3. Classic data center service management auditing architecture decisions"}

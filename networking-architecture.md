@@ -43,6 +43,7 @@ The following are network architecture decisions for the hybrid cloud network fo
 | Network segmentation and isolation | Ability to provide network isolation across workloads. | VLANs, subnets, and security groups | VLANs, subnets, and security groups | Allows for segmentation and network isolation |
 {: caption="Table 3. Classic data center network segmentation and isolation architecture decisions"}
 
+
 ### Architecture decisions for cloud native connectivity
 {: #ad-cloud-native}
 
@@ -50,6 +51,7 @@ The following are network architecture decisions for the hybrid cloud network fo
 |-----------------------------------------------|---------------------------------------------|----------------------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------|
 | Cloud Native Connectivity to cloud services | Provide secure connection to cloud services | - Private Cloud service endpoints  \n - Public Cloud service endpoints | Private Cloud service endpoints | Provides private connectivity to cloud services, enhanced security, and cost efficiency |
 {: caption="Table 4. Classic data center network cloud native connectivity architecture decisions"}
+
 
 ## Architecture decisions for load balancing
 {: #ad-load-balancing}
@@ -69,3 +71,4 @@ The following are network architecture decisions for the hybrid cloud network fo
 | Public DNS                | Provide DNS resolution to support the use of hostnames instead of IP addresses for applications | - DNS through the cloud portal  \n - {{site.data.keyword.cis_short}}  \n - Third-party provider  \n - Custom DNS on VSI | {{site.data.keyword.dns_short}} through the cloud portal | Cost-effective and reliable                                                                                                           |
 | Private DNS               | Provide DNS resolution within the {{site.data.keyword.cloud_notm}} private network                                       | - Custom DNS on VSI  \n - DNS on Gateway appliance  \n - {{site.data.keyword.dns_short}} in VPC                                  | Custom DNS on VSI    | - Custom DNS on VSI can handle the most complex DNS needs. \n - When VPC service is available, the preferred approach is {{site.data.keyword.dns_short}} in VPC. |
 {: caption="Table 6. Classic data center network Domain Name System architecture decisions"}
+
