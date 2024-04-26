@@ -37,7 +37,7 @@ It’s a common approach to complement classic environments with VPC services. T
 ## Architecture diagram
 {: #architecture-diagram}
 
-This architecture describes on-premises data center connectivity into {{site.data.keyword.cloud_notm}} classic, with firewall services and a {{site.data.keyword.powerSys_notm}} workspace. The diagram includes examples of where workload compute instances, proxy servers, and jump servers are located. The diagram contains identifying numbers indicating key components in the description.
+This architecture describes on-premises data center connectivity into {{site.data.keyword.cloud_notm}} classic, with firewall services and a {{site.data.keyword.powerSys_notm}} workspace. The diagram includes examples of where workload compute instances, proxy servers, and bastion hosts are located. The diagram contains identifying numbers indicating key components in the description.
 
 In this diagram, Region 1 represents a classic data center where {{site.data.keyword.vpc_short}} is not available and Region 2 illustrates a classic data center in a multi-zone region where {{site.data.keyword.vpc_short}} is available.
 
@@ -71,7 +71,7 @@ Following the [Architecture Framework](/docs/architecture-framework?topic=archit
 - Networking: Enterprise Connectivity, Bring Your Own IP and Edge Gateways, Network Segmentation, Cloud Native Connectivity, Load Balancing, and DNS
 - Security: Identity and Access Management (IAM)
 - Resiliency: High Availability, Disaster Recovery
-- Service management: Monitoring, Logging, Auditing, Alerting, Event Management
+- Service management: Monitoring, Logging, Auditing, and Alerting
 
 [Illustrates a detailed network and component architecture for a classic data center solution architecture](images/heat_map.svg){: caption="Figure 2. Classic data center design scope" caption-side="bottom"}
 
