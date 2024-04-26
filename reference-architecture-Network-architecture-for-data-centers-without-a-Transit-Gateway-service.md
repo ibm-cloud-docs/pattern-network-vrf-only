@@ -73,7 +73,8 @@ Following the [Architecture Framework](/docs/architecture-framework?topic=archit
 - Resiliency: High Availability, Disaster Recovery
 - Service management: Monitoring, Logging, Auditing, and Alerting
 
-[Illustrates a detailed network and component architecture for a classic data center solution architecture](images/heat_map.svg){: caption="Figure 2. Classic data center design scope" caption-side="bottom"}
+
+![Illustrates a detailed network and component architecture for a classic data center solution architecture](images/heat_map.svg){: caption="Figure 2. Classic data center design scope" caption-side="bottom"}
 
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of aspects and domains, which are technology-agnostic architectural areas that need to be considered for any enterprise solution. For more information, see [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
