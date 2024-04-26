@@ -42,7 +42,7 @@ This architecture describes on-premises data center connectivity into {{site.dat
 In this diagram, Region 1 represents a classic data center where {{site.data.keyword.vpc_short}} is not available and Region 2 illustrates a classic data center in a multi-zone region where {{site.data.keyword.vpc_short}} is available.
 
 ![Illustrates a detailed network and component architecture for a
-multi-region Classic Data Center solution architecture](cross-region-view.svg){: caption="Figure 5. Multi-Region View" caption-side="bottom"}
+multi-region Classic Data Center solution architecture](images/cross-region-view.svg){: caption="Figure 5. Multi-Region View" caption-side="bottom"}
 
 1.  The optional network path is accomplished through site-to-site VPN terminated on a classic gateway.
 2.  The client network connectivity from on-premises using {{site.data.keyword.dl_short}}.
@@ -73,7 +73,7 @@ Following the [Architecture Framework](/docs/architecture-framework?topic=archit
 - Resiliency: High Availability, Disaster Recovery
 - Service management: Monitoring, Logging, Auditing, Alerting, Event Management
 
-[Illustrates a detailed network and component architecture for a classic data center solution architecture](heat_map.svg){: caption="Figure 2. Classic data center design scope" caption-side="bottom"}
+[Illustrates a detailed network and component architecture for a classic data center solution architecture](images/heat_map.svg){: caption="Figure 2. Classic data center design scope" caption-side="bottom"}
 
 The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of aspects and domains, which are technology-agnostic architectural areas that need to be considered for any enterprise solution. For more information, see [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
