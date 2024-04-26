@@ -54,7 +54,7 @@ Choosing the right firewall is crucial for safeguarding your network. Review the
 - Updates and support: Opt for a firewall with regular software updates and reliable technical support from the vendor.
 - Budget: Firewalls range in price based on features and capabilities. Determine a budget and prioritize.
 - Compatibility: Ensure that the firewall is compatible with existing network hardware and software.
-- Security certifications: Look for firewalls that comply with recognized security standards like NSS labs or common criteria.
+- Security certifications: Look for firewalls that comply with recognized security standards like NSS labs or Common Criteria.
 - Brand reputation: Choose a reputable brand with a proven track record and positive customer reviews.
 - Virtual appliance versus hardware firewalls: Evaluate cloud-based options for flexibility and scalability but consider throughput and port sizes for latency and bottlenecks.
 - Single versus High Availability: Consider single points of failure and service level requirements.
@@ -162,7 +162,8 @@ Considerations Include:
 - Public to public internet-facing load balancing: Distributes traffic among multiple public-facing servers for high availability and scalability of websites or services.
 - Private internal load balancing: Distributes traffic among internal servers on a private network. Improves performance and scalability for internal applications without internet exposure.
 
- {{site.data.keyword.cloud_notm}} offers two load balancer options for classic, which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance. This pattern uses {{site.data.keyword.loadbalancer_full}} to meet both public and private load balancer requirements. Remember to use a portable or static IP subnet in classic when load balancing {{site.data.keyword.powerSys_notm}} with the {{site.data.keyword.loadbalancer_full}}.
+{{site.data.keyword.cloud_notm}} offers two load balancer options for classic, which include: {{site.data.keyword.loadbalancer_full}} and {{site.data.keyword.vpx_full}} appliance. This pattern uses {{site.data.keyword.loadbalancer_full}} to meet both public and private load balancer requirements. Remember to use a portable or static IP subnet in classic when load balancing {{site.data.keyword.powerSys_notm}} with the {{site.data.keyword.loadbalancer_full}}.
+{: tip}
 
 * Explore [load balancer feature options](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-explore).
 * Learn more about [{{site.data.keyword.loadbalancer_full}}](/docs/loadbalancer-service?topic=loadbalancer-service-about-ibm-cloud-load-balancer)
@@ -205,7 +206,7 @@ In {{site.data.keyword.cloud_notm}} classic, virtual route forwarding (VRF) must
 
 When the source address is not an IBM assigned IP address, a proxy server in classic is used as an intermediary allowing access to cloud services. Verify that [Private Service endpoints are available for your cloud services](/docs/account?topic=account-vrf-service-endpoint&interface=ui).
 
-In a multi-region deployment, for nontransit gateway locations, often a secondary region that has transit gateway services that are enabled can be chosen. In these situations, as an alternative to private service endpoints and a proxy server in classic, configuring a {{site.data.keyword.vpe_full}} complementary {{site.data.keyword.vpc_short}} Service in the 2nd region can provide access to {{site.data.keyword.cloud_notm}} Services over the private network. Make sure that you verify that cloud services are {{site.data.keyword.vpe_short}} [enabled](/docs/vpc?topic=vpc-vpe-supported-services).
+In a multi-region deployment, for nontransit gateway locations, often a secondary region that has transit gateway services that are enabled can be chosen. In these situations, as an alternative to private service endpoints and a proxy server in classic, configuring a Virtual Private Endpoint (VPE) for VPC as a complementary {{site.data.keyword.cloud_notm}} Services over the private network. Make sure that you verify that cloud services are {{site.data.keyword.vpe_short}} [enabled](/docs/vpc?topic=vpc-vpe-supported-services).
 
 ![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a classic data center solution architecture](images/SE-vs-VPE.svg){: caption="Figure 2. Classic data center Service Endpoint access" caption-side="bottom"}
 
@@ -222,9 +223,9 @@ In a multi-region deployment, for nontransit gateway locations, often a secondar
 Key considerations are:
 
 - Public versus private DNS name resolution: Ability to provide DNS-based access to users on the public internet versus internal DNS-based communication within your private environment.
-- Integration with other existing DNS systems:** integrating your on-premises DNS service with your cloud environment. {{site.data.keyword.cloud_notm}} provides a flexible approach to DNS name resolution for systems hosted in classic environments.
+- Integration with other existing DNS systems: Integrating your on-premises DNS service with your cloud environment. {{site.data.keyword.cloud_notm}} provides a flexible approach to DNS name resolution for systems hosted in classic environments.
 
-- Public DNS name resolution*: Translates human-friendly names into computer-readable addresses.
+- Public DNS name resolution: Translates human-friendly names into computer-readable addresses.
     - Use the [DNS interface](/docs/dns?topic=dns-how-to-use-the-dns-interface) in the {{site.data.keyword.cloud_notm}} Portal to manage your zones and records. The domain can be hosted by any third-party provider. Set the name server (NS) record to the provided IBM name servers.
     - Use the DNS function provided with {{site.data.keyword.cis_short}}. Domain name control must be delegated to {{site.data.keyword.cis_short}}.
 - Private DNS name resolution: allows integration with your on-premises DNS server over private connectivity.
@@ -232,6 +233,6 @@ Key considerations are:
         - Install your own custom DNS service on a virtual server.
         - Configure DNS on your gateway device.
     - Use {{site.data.keyword.dns_full_notm}} the complementary VPC Service.
-        This Service provides versatile private name resolution between classic, on-premises, and {{site.data.keyword.vpc_short}} resources by deploying [Custom Resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver). For more information, see [{{site.data.keyword.dns_full_notm}}](/docs/dns-svcs?topic=dns-svcs-getting-started).
+        This service provides versatile private name resolution between classic, on-premises, and {{site.data.keyword.vpc_short}} resources by deploying [Custom Resolvers](/docs/dns-svcs?topic=dns-svcs-custom-resolver). For more information, see [{{site.data.keyword.dns_full_notm}}](/docs/dns-svcs?topic=dns-svcs-getting-started).
 
 This pattern uses {{site.data.keyword.Bluemix_notm}} DNS for public FQDN resolution and deploys a custom DNS server on a virtual server instance in classic for private FQDN resolution. The custom DNS server in classic can support both public and private FQDN resolution.
