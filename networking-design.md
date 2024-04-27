@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-24"
 
 subcollection: pattern-network-vrf-only
 
@@ -61,7 +61,7 @@ Choosing the right firewall is crucial for safeguarding your network. Review the
 
 {{site.data.keyword.IBM_notm}} classic data centers support four gateway appliance and firewall options including Juniper vSRX, Virtual Router Appliance, FortiGate (FAS 10 Gbps and vFSA), and bring your own gateway appliance (BYOG - Checkpoint, Cisco, and Palo Alto). This pattern supports personal choice based on appliance functional requirements and operational expertise.
 
-Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-exploring-firewalls&_ga=2.226674782.2123413376.1603312051-1873021910.1602082701) available in {{site.data.keyword.cloud_notm}}.
+Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-exploring-firewalls) available in {{site.data.keyword.cloud_notm}}.
 
 ## Generic Routing Encapsulation (GRE) tunnels
 {: #gre}

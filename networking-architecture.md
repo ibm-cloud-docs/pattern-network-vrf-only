@@ -33,7 +33,7 @@ The following are network architecture decisions for the hybrid cloud network fo
 |---------------------------|------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | Bring Your Own IP (BYOIP) approach            | Provide capability for BYOIP to {{site.data.keyword.cloud_notm}}.                           | Generic Routing Encapsulation (GRE) tunnel                                                                                  | GRE tunnel                                                                                 | Allows BYOIP routes to be advertised |
 | Edge gateways             | Capability to provide edge routing services, firewall, and tunnel (VPN, GRE) termination. | Gateway Appliance in classic  \n - {{site.data.keyword.vsrx_full}}  \n - {{site.data.keyword.vra}}  \n - FortiGate  \n - BYOG (Checkpoint, Cisco, Palo Alto) | Select based on required [features](/docs/fortigate-10g?topic=fortigate-10g-exploring-firewalls&_ga=2.226674782.2123413376.1603312051-1873021910.1602082701) and client preferences | Client preference                    |
-{: caption="Table 2. Classic Data Center network BYOIP and edge gateway architecture decisions"}
+{: caption="Table 2. Classic data center network BYOIP and edge gateway architecture decisions"}
 
 ## Architecture decisions for network segmentation and isolation
 {: #ad-network-segmentation}
