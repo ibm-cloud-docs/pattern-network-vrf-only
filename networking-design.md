@@ -68,7 +68,7 @@ Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-ex
 
 GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 
-![Illustrates the details of GRE for a Classic Data Center solution architecture](GRE.svg){: caption="Figure 1. Classic Data Center GRE Encapsulation" caption-side="bottom"}
+![Illustrates the details of GRE for a Classic Data Center solution architecture](images/GRE.svg){: caption="Figure 1. Classic Data Center GRE Encapsulation" caption-side="bottom"}
 
 1.  Client network connectivity from on-premises is accomplished through {{site.data.keyword.dl_short}} access.
 2.  A gateway is deployed in classic, which provides routing and security functions.
@@ -204,7 +204,7 @@ When the source address is not an IBM assigned IP address, a proxy server in cla
 
 In a multi-region deployment, which is described later in this document, for nontransit gateway locations, often a secondary region that has transit gateway services that are enabled can be chosen. In these situations, as an alternative to private service endpoints and a proxy server in classic, configuring a {{site.data.keyword.vpe_full}} complementary {{site.data.keyword.vpc_short}} Service in the 2nd region can provide access to {{site.data.keyword.cloud_notm}} Services over the private network. Make sure that you verify that cloud services are {{site.data.keyword.vpe_short}} [enabled](/docs/vpc?topic=vpc-vpe-supported-services).
 
-![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a classic data center solution architecture](SE-vs-VPE.svg){: caption="Figure 2. Classic Data Center Service Endpoint access" caption-side="bottom"}
+![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a classic data center solution architecture](images/SE-vs-VPE.svg){: caption="Figure 2. Classic Data Center Service Endpoint access" caption-side="bottom"}
 
 ## Cloud Internet Services (CIS)
 {: #cloud-internet-services}
