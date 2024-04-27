@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-10"
+lastupdated: "2024-04-24"
 
 subcollection: pattern-network-vrf-only
 
@@ -15,12 +15,14 @@ keywords:
 # Compute design
 {: #compute-design}
 
+The following are compute design considerations for the hybrid cloud network for classic infrastructure disaster recovery pattern.
+
 ## Workload Hosts for classic and {{site.data.keyword.powerSys_notm}}
 {: #workload-hosts}
 
 Selecting the appropriate workload host in this architecture includes but is not limited to the following considerations:
 
-- PerformanceL: CPU, Memory, storage options and network speed
+- Performance: CPU, Memory, storage options and network speed
 - Virtualization and tenancy: Container, virtual or bare metal, multitenant or dedicated
 - Security, availability, and cost considerations
 - Application-specific certification or optimization requirements
@@ -45,7 +47,7 @@ Table 1 contains general jump server and bastion host sizing guidelines for Ubun
 | Low         | 10-20                | 1-2 Cores CPU; 2-4 GB Memory  |
 | Moderate    | 30-50                | 2-4 Cores CPU; 4-8 GB Memory  |
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
-{: caption="Table 1. Classic Data Center Bastion Server Sizing"}
+{: caption="Table 1. Classic data center bastion server sizing"}
 
 The jump server or bastion host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the classic environment. This pattern uses a VSI to deploy a bastion host.
 
@@ -57,7 +59,7 @@ The proxy server acts as an intermediary between the on-premises network and the
 Some key design considerations for a proxy server include:
 
 -	Proxy type: Choose between a forward proxy where clients access the internet through it or a reverse proxy that sits in front of web servers for load balancing or security.
--	Protocol support: Ensure that the proxy supports the protocols that are used by the clients and the servers it communicates with (HTTP, HTTPS, FTP, and so on).
+-	Protocol support: Ensure that the proxy supports the protocols that are used by the clients and the servers it communicates with HTTP, HTTPS, FTP, and so on.
 -	Content transformation: Decide whether the proxy needs to modify content, for example, compression and encryption before sending it to clients.
 -	Caching: Determine how aggressively the proxy caches content to improve performance and reduce bandwidth usage.
 -	Security: Consider features like access control, encryption (SSL/TLS), and content filtering to protect your network.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-11"
+lastupdated: "2024-04-25"
 
 subcollection: pattern-network-vrf-only
 
@@ -44,6 +44,7 @@ Also, consider whether there is an existing relationship with a telecommunicatio
 - A second path can be provisioned using the same or different telecommunications provider with a higher BGP prepend allowing for dynamic routing if there is a physical failure or scheduled maintenance activity.
 
 Bidirectional Forwarding Detection (BFD) can be enabled on both {{site.data.keyword.dl_short}} Dedicated and {{site.data.keyword.dl_short}} Connect to detect network failures quicker, effectively reducing the time that it takes to fail over to a secondary path. Consider the cost implications when ordering a {{site.data.keyword.dl_short}}. The secondary path and the connection to a second region can be ordered as metered instead of unmetered if the primary connection is going to be used for most of the user traffic, which reduces the monthly fee and allows for traffic diversity if there is a primary circuit failure. Resilience considerations should include gateway or firewall appliances and GRE tunnel configurations to eliminate as many single points of failure as possible.
+
 This pattern includes two {{site.data.keyword.dl_short}} connect circuits to meet the resiliency requires with a cost effective, flexible, and quick deployable solution. For more information, see [Models for diversity in Direct Link](/docs/dl?topic=dl-models-for-diversity-and-redundancy-in-direct-link).
 
 ## Multi-region deployment
