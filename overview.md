@@ -25,5 +25,5 @@ keywords:
 
 This pattern is intended to:
 
-- Accelerate and simplify solution design by providing a standard {{site.data.keyword.cloud_notm}} deployment architecture reference by following the [IBM Architecture Framework](/docs/architecture-framework).
+- Accelerate and simplify solution design by providing a standard {{site.data.keyword.cloud_notm}} deployment architecture reference by following the [IBM {{site.data.keyword.arch_framework}}](/docs/architecture-framework).
 - Provide a prescriptive, end-to-end enterprise-class solution design with diagrams, component architecture decisions, and rationale for cloud component selection to meet enterprise requirements.

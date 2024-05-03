@@ -65,7 +65,7 @@ multi-region Classic Data Center solution architecture](images/cross-region-view
 ## Design scope
 {: #design-scope}
 
-Following the [Architecture Framework](/docs/architecture-framework?topic=architecture-framework-taxonomy), the classic data center network pattern covers design considerations and architecture decisions for the following aspects and domains:
+Following the [{{site.data.keyword.arch_framework}}](/docs/architecture-framework?topic=architecture-framework-taxonomy), the classic data center network pattern covers design considerations and architecture decisions for the following aspects and domains:
 
 - Compute: Virtual Servers, Bare Metal Servers
 - Networking: Enterprise Connectivity, Bring Your Own IP and Edge Gateways, Network Segmentation, Cloud Native Connectivity, Load Balancing, and DNS
@@ -75,7 +75,7 @@ Following the [Architecture Framework](/docs/architecture-framework?topic=archit
 
 [Illustrates a detailed network and component architecture for a classic data center solution architecture](images/heat_map.svg){: caption="Figure 2. Classic data center design scope" caption-side="bottom"}
 
-The Architecture Framework provides a consistent approach to design cloud solutions by addressing requirements across a set of aspects and domains, which are technology-agnostic architectural areas that need to be considered for any enterprise solution. For more information, see [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
+The {{site.data.keyword.arch_framework}} provides a consistent approach to design cloud solutions by addressing requirements across a set of aspects and domains, which are technology-agnostic architectural areas that need to be considered for any enterprise solution. For more information, see [Introduction to the architecture framework](/docs/architecture-framework?topic=architecture-framework-intro) for more details.
 
 ## Requirements
 {: #requirements}
