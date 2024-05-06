@@ -17,6 +17,7 @@ deployment-url:
 
 docs: https://cloud.ibm.com/docs/pattern-network-vrf-only
 
+
 content-type: reference-architecture
 ---
 

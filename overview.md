@@ -16,9 +16,7 @@ keywords:
 # Overview
 {: #Overview-id}
 
- this test
-
- This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
+This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
 
 - Illustrate network connectivity to {{site.data.keyword.powerSysShort}} workspace and classic infrastructure resources.
 - Provide an {{site.data.keyword.IBM_notm}} solution design for the network elements that are required for DR scenarios where either the primary or DR site is a classic data venter where VPC is not available.
