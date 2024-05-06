@@ -16,7 +16,7 @@ keywords:
 # Overview
 {: #Overview-id}
 
- This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
+This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
 
 - Illustrate network connectivity to {{site.data.keyword.powerSysShort}} workspace and classic infrastructure resources.
 - Provide an {{site.data.keyword.IBM_notm}} solution design for the network elements that are required for DR scenarios where either the primary or DR site is a classic data center where VPC is not available.
@@ -25,5 +25,5 @@ keywords:
 
 This pattern is intended to:
 
-- Accelerate and simplify solution design by providing a standard {{site.data.keyword.cloud_notm}} deployment architecture reference by following the [IBM Architecture Framework](/docs/architecture-framework).
+- Accelerate and simplify solution design by providing a standard {{site.data.keyword.cloud_notm}} deployment architecture reference by following the [IBM {{site.data.keyword.arch_framework}}](/docs/architecture-framework).
 - Provide a prescriptive, end-to-end enterprise-class solution design with diagrams, component architecture decisions, and rationale for cloud component selection to meet enterprise requirements.
