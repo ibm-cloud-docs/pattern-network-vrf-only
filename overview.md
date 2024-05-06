@@ -13,7 +13,7 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Overview
+# Overview of Hybrid Cloud Network for Classic Infrastructure Disaster Recovery
 {: #Overview-id}
 
 This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
