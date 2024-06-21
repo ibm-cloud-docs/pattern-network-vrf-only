@@ -42,8 +42,7 @@ This architecture describes on-premises data center connectivity into {{site.dat
 
 In this diagram, Region 1 represents a classic data center where {{site.data.keyword.vpc_short}} is not available and Region 2 illustrates a classic data center in a multi-zone region where {{site.data.keyword.vpc_short}} is available.
 
-![Illustrates a detailed network and component architecture for a
-multi-region Classic Data Center solution architecture](images/cross-region-view.svg){: caption="Figure 5. Multi-Region View" caption-side="bottom"}
+![Illustrates a detailed network and component architecture for a multi-region Classic Data Center solution architecture](images/cross-region-view.svg){: caption="Figure 1. Multi-Region View" caption-side="bottom"}
 
 1.  The optional network path is accomplished through site-to-site VPN terminated on a classic gateway.
 2.  The client network connectivity from on-premises using {{site.data.keyword.dl_short}}.
