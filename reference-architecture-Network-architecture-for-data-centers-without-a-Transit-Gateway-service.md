@@ -23,7 +23,7 @@ content-type: reference-architecture
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Hybrid Cloud Network for Classic Infrastructure Disaster Recovery
+# Hybrid cloud network for classic infrastructure disaster recovery
 {: #network-vrf-only}
 {: toc-content-type="reference-architecture"}
 {: toc-version="1.0"}
