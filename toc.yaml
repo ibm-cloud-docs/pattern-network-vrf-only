@@ -50,3 +50,7 @@ toc:
             navtitle: Resiliency
           - topic: service-architecture.md
             navtitle: Service management
+  - navgroup:
+      id: deploy
+      topics:
+      - deployment-single.md
