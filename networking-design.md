@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-09-26"
 
 subcollection: pattern-network-vrf-only
 
@@ -81,7 +81,7 @@ A second GRE is required between the classic gateway and {{site.data.keyword.pow
 
 A third GRE is used to share nonassigned {{site.data.keyword.cloud_notm}} addresses between classic gateways in separate regions. When resiliency is required, GREs can be configured on two devices in a high availability pair to eliminate single points of failure. For more information, see [High availability and disaster recovery](/docs/transit-gateway?topic=transit-gateway-ha-dr#high-availability) and [{{site.data.keyword.cloud_notm}} public and private IP ranges](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
-When you configure a GRE connection on a transit gateway, you must specify the availability zone. For a robust high availability solution, configure multiple GRE connections that use different availability zones. 
+When you configure a GRE connection on a transit gateway, you must specify the availability zone. For a robust high availability solution, configure multiple GRE connections that use different availability zones.
 {: important}
 
 ## Enterprise Connectivity
