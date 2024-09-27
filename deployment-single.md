@@ -13,10 +13,8 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying a Hybrid Cloud Network for Classic Infrastructure Disaster Recovery architecture
+# Deploying a Hybrid Cloud Network for Classic Infrastructure Single Region
 {: #introduction}
-
-Region 1 Classic DC
 
 This guide outlines deploying a Classic edge gateway architecture in a single region configuration, the Classic Edge gateway pattern allows on-premise traffic to flow into a set of firewalls prior to routing traffic to IBM Cloud’s PowerVS and Virtual Private Cloud (VPC) environments. It is used to integrate on-premises access with classic infrastructure and Power Virtual Server workloads within the IBM Cloud. The deployment is based on existing deployable architecture modules, as well as a series of manual customizations to tailor the setup to the specific requirements for your environment.
 
