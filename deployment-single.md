@@ -13,7 +13,7 @@ keywords:
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying a Hybrid Cloud Network for Classic Infrastructure Single Region
+# Deploying Classic Infrastructure in a Single Region
 {: #introduction}
 
 This guide outlines deploying a Classic edge gateway architecture in a single region configuration, the Classic Edge gateway pattern allows on-premise traffic to flow into a set of firewalls prior to routing traffic to IBM Cloud’s PowerVS and Virtual Private Cloud (VPC) environments. It is used to integrate on-premises access with classic infrastructure and Power Virtual Server workloads within the IBM Cloud. The deployment is based on existing deployable architecture modules, as well as a series of manual customizations to tailor the setup to the specific requirements for your environment.
@@ -65,7 +65,7 @@ Alternative: Two [Direct Link Dedicated](/docs/dl?topic=dl-how-to-order-ibm-clou
 6.  Create Cloud service instances as required. Reference [Service Endpoints](/docs/account?topic=account-service-endpoints-overview) for additional details.
 7.  Create Virtual Server Instance for deploying the Bastion Host either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
    Alternative: Bare metal can be deployed using the [portal](/gen1/infrastructure/provision/bm){: external} or terraform [ibm_compute_bare_metal](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal){: external}.
-8.  Create Virtual Server Instance for deploying the proxy server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}
+8.  Create Virtual Server Instance for deploying the proxy server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
    Alternative: Bare metal can be deployed using the [portal](/gen1/infrastructure/provision/bm){: external} or terraform [ibm_compute_bare_metal](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal){: external}.
 9.  Create Virtual Server Instance for deploying the Custom Domain Name System (DNS) server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
    Alternative: Bare metal can be deployed using the [portal](/gen1/infrastructure/provision/bm){: external} or terraform [ibm_compute_bare_metal](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal){: external}.
