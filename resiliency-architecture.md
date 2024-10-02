@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-10-02"
 
 subcollection: pattern-network-vrf-only
 
@@ -33,4 +33,5 @@ The following are resiliency architecture decisions for the hybrid cloud network
 | Architecture decision | Requirement                                                                       | Options                                                                                                                                   | Decision               | Rationale                                                                                                       |
 |---------------------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Disaster recovery network | Network disaster recovery capability in secondary region to meet recovery time objective (RTO) recovery point objective (RPO) requirements | - Single {{site.data.keyword.dl_full_notm}} Dedicated  \n - Single {{site.data.keyword.dl_full_notm}} Connect  \n - Two {{site.data.keyword.dl_full_notm}} Dedicated  \n - Two {{site.data.keyword.dl_full_notm}} Connect | Single {{site.data.keyword.dl_full_notm}} Connect | Provides a cost effective and flexible connection into a second region, with metered and unmetered billing options. |
+| Global load balancing     | Load balancing over the public network across two regions if there's an outage (DR) for failover to the other region. | - {{site.data.keyword.cis_short}}   \n - {{site.data.keyword.vpx_full}} \n - DNS | {{site.data.keyword.cis_short}} | Provides a cost-effective solution and offers extra security features                                                                          |
 {: caption="Table 2. Classic data center disaster recovery architecture decisions"}
