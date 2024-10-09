@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-10-09"
 
 subcollection: pattern-network-vrf-only
 
@@ -136,6 +136,6 @@ The following table helps determine whether a bastion host or jumper server is n
 | Purpose        | Manage internal systems                                               | Grant controlled access to specific internal systems for external users |
 | Security Focus | Centralized access control, which simplifies administration                 | Secure entry point, isolation of internal systems                       |
 | Attack Surface | Higher (internal systems directly exposed if the jump server is compromised) | Lower (internal systems protected even if the bastion host is compromised)     |
-{: caption="Table 2. Classic data center jump server versus bastion host matrix"}
+{: caption="Classic data center jump server versus bastion host matrix"}
 
 In this pattern, a Bastion host is deployed on a virtual server instance in a classic data center to control secure remote administrative access of all devices within the {{site.data.keyword.Bluemix_notm}} environment.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-10-09"
 
 
 subcollection: pattern-network-vrf-only
@@ -22,7 +22,7 @@ This is designed for customers who need a scalable, single region infrastructure
 
 This deployment guide uses IBM Cloud catalog, Terraform IBM modules (TIM), and manual configuration to achieve deployment. It assumes that the landing zone prerequisites have been completed including IBM Cloud account setup, IAM permissions, access roles, and SSH keys. Please follow instructions for setting up your environment for [deployable architecture](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-plan).
 
-![Illustrates a detailed network and component architecture for a single Classic Data Center solution architecture](images/classic-VRF.svg){: caption="Figure 1. Single  Region View" caption-side="bottom"}
+![Illustrates a detailed network and component architecture for a single Classic Data Center solution architecture](images/classic-VRF.svg){: caption="Single  Region View" caption-side="bottom"}
 
 ## Before you begin
 {: #begin}
