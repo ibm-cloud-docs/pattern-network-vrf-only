@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 
 subcollection: pattern-network-vrf-only
@@ -61,6 +61,9 @@ Alternative: Two [Direct Link Dedicated](/docs/dl?topic=dl-how-to-order-ibm-clou
     4.  [FortiGate vFSA](/gen1/infrastructure/provision/gateway){: external}, select Fortinet for vendor.
     5.  Bring your own Gateway Appliance [(BYOG)](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: external}, and select other for vendor.
 4.  Establish a GRE tunnel (GREa) from the gateway of choice to the client on-premise device.
+
+Configure BGP to peer your IBM Cloud Classic Gateway with the on-premise device for route exchange over the GRE tunnel (use the GRE tunnel IP addresses as the BGP neighbours).{: tip}
+
 5.  Create VLANs and subnets for compute resources that need to be deployed in Classic using the portal [subnets](/networking/subnets){: external} and [VLANS](/networking/vlans){: external} or terraform [ibm_network_vlan](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_vlan){: external} and [ibm_network_vlan_spanning](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_vlan_spanning){: external}.
 6.  Create Cloud service instances as required. Reference [Service Endpoints](/docs/account?topic=account-service-endpoints-overview) for additional details.
 7.  Create Virtual Server Instance for deploying the Bastion Host either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
