@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-10-09"
 
 subcollection: pattern-network-vrf-only
 
@@ -47,7 +47,7 @@ Table 1 contains general jump server and bastion host sizing guidelines for Ubun
 | Low         | 10-20                | 1-2 Cores CPU; 2-4 GB Memory  |
 | Moderate    | 30-50                | 2-4 Cores CPU; 4-8 GB Memory  |
 | High        | 50+                  | 4-8 Cores CPU; 8-16 GB Memory |
-{: caption="Table 1. Classic data center bastion server sizing"}
+{: caption="Classic data center bastion server sizing"}
 
 The jump server or bastion host can be deployed on either a {{site.data.keyword.baremetal_short_sing}} or {{site.data.keyword.BluVirtServers_short}} Instance (VSI) within the classic environment. This pattern uses a VSI to deploy a bastion host.
 

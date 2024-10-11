@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-04-24"
+lastupdated: "2024-10-09"
 
 subcollection: pattern-network-vrf-only
 
@@ -68,7 +68,7 @@ Explore and compare [gateway options](/docs/fortigate-10g?topic=fortigate-10g-ex
 
 GRE tunnels support the Bring Your Own IP (BYOIP) requirement.
 
-![Illustrates the details of GRE for a Classic Data Center solution architecture](images/GRE.svg){: caption="Figure 1. Classic data center GRE encapsulation" caption-side="bottom"}
+![Illustrates the details of GRE for a Classic Data Center solution architecture](images/GRE.svg){: caption="Classic data center GRE encapsulation" caption-side="bottom"}
 
 1.  Client network connectivity from on-premises is accomplished through {{site.data.keyword.dl_short}} access.
 2.  A gateway is deployed in classic, which provides routing and security functions.
@@ -81,7 +81,7 @@ A second GRE is required between the classic gateway and {{site.data.keyword.pow
 
 A third GRE is used to share nonassigned {{site.data.keyword.cloud_notm}} addresses between classic gateways in separate regions. When resiliency is required, GREs can be configured on two devices in a high availability pair to eliminate single points of failure. For more information, see [High availability and disaster recovery](/docs/transit-gateway?topic=transit-gateway-ha-dr#high-availability) and [{{site.data.keyword.cloud_notm}} public and private IP ranges](/docs/cloud-infrastructure?topic=cloud-infrastructure-ibm-cloud-ip-ranges).
 
-When you configure a GRE connection on a transit gateway, you must specify the availability zone. For a robust high availability solution, configure multiple GRE connections that use different availability zones. 
+When you configure a GRE connection on a transit gateway, you must specify the availability zone. For a robust high availability solution, configure multiple GRE connections that use different availability zones.
 {: important}
 
 ## Enterprise Connectivity
@@ -208,7 +208,7 @@ When the source address is not an IBM assigned IP address, a proxy server in cla
 
 In a multi-region deployment, for nontransit gateway locations, often a secondary region that has transit gateway services that are enabled can be chosen. In these situations, as an alternative to private service endpoints and a proxy server in classic, configuring a Virtual Private Endpoint (VPE) for VPC as a complementary {{site.data.keyword.cloud_notm}} Services over the private network. Make sure that you verify that cloud services are {{site.data.keyword.vpe_short}} [enabled](/docs/vpc?topic=vpc-vpe-supported-services).
 
-![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a classic data center solution architecture](images/SE-vs-VPE.svg){: caption="Figure 2. Classic data center Service Endpoint access" caption-side="bottom"}
+![Illustrates the details of SE versus {{site.data.keyword.vpe_short}} for a classic data center solution architecture](images/SE-vs-VPE.svg){: caption="Classic data center Service Endpoint access" caption-side="bottom"}
 
 ## Cloud Internet Services (CIS)
 {: #cloud-internet-services}
