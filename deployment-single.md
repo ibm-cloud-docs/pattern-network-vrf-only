@@ -100,9 +100,9 @@ Configure BGP to peer your IBM Cloud Classic Gateway with the on-premise device 
 
 Specify a GRE subnet, example 192.168.10.0/29, which will be used for GRE communication between Power and Classic. The Cloud Connection automation will assign the first IP of the specified subnet to the Power Gateway IP and the first IP of the second half of the subnet as the local GRE Tunnel IP in Power.{: note}
 
- Assigning 192.168.10.0/29 as the GRE subnet allows 8 available IPs. Automation would assign the Power Gateway IP as 192.168.10.1 and the PowerVS GRE tunnel IP of that Gateway as 192.168.10.5 (first IP of the second half of the subnet). The next IP (192.168.10.6) is used as the local GRE tunnel IP on your Gateway device in the Classic infrastructure.{: example}
+Assigning 192.168.10.0/29 as the GRE subnet allows 8 available IPs. Automation would assign the Power Gateway IP as 192.168.10.1 and the PowerVS GRE tunnel IP of that Gateway as 192.168.10.5 (first IP of the second half of the subnet). The next IP (192.168.10.6) is used as the local GRE tunnel IP on your Gateway device in the Classic infrastructure.{: example}
 
- GRE “Keepalives” are enabled on the PowerVS side of the tunnel. The Classic Gateway must have this feature enabled to successfully establish the GRE tunnel.{: important}
+GRE “Keepalives” are enabled on the PowerVS side of the tunnel. The Classic Gateway must have this feature enabled to successfully establish the GRE tunnel.{: note}
 
 2.  Establish GREc from the classic gateway of choice to power virtual server workspace. View a GRE configuration [example](/docs/power-iaas?topic=power-iaas-cloud-connections#gre-configuration-example) for reference.
 
