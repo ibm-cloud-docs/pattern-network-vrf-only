@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-16"
 
 
 subcollection: pattern-network-vrf-only
@@ -52,8 +52,8 @@ Alternative: Two [Direct Link Dedicated](/docs/dl?topic=dl-how-to-order-ibm-clou
 ### Classic Infrastructure
 {: #classic}
 
-1.  Create [Security groups and rules](/docs/security-groups?topic=security-groups-creating-security-groups) either by the IBM cloud portal or by using the Terraform IBM Modules (TIMs module) [ibm_security_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/security_group){: external} and [ibm_security_group_rule](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/security_group_rule){: external}.
-2.  Create [SSH Keys](/docs/ssh-keys?topic=ssh-keys-getting-started-tutorial) in the IBM Cloud portal or by using the TIMs module [ibm_compute_ssh_key](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_ssh_key){: external}.
+1.  Create [Security groups and rules](/docs/security-groups?topic=security-groups-creating-security-groups) either by the IBM cloud portal or by using the IBM cloud terraform provider resource [ibm_security_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/security_group){: external} and [ibm_security_group_rule](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/security_group_rule){: external}.
+2.  Create [SSH Keys](/docs/ssh-keys?topic=ssh-keys-getting-started-tutorial) in the IBM Cloud portal or by using the IBM cloud terraform provider resource [ibm_compute_ssh_key](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_ssh_key){: external}.
 3.  Provision the gateway appliance of choice:
     1.  [Juniper vSRX](/catalog/infrastructure/gateway-appliance?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPWdhdGV3YXklMjUyMGFwcGxpYW5jZSNzZWFyY2hfcmVzdWx0cw%3D%3D){: external}.
     2.  [Virtual Router Appliance (vRA)](/gen1/infrastructure/provision/gateway){: external}, select ATT vRouter for vendor or TIMs module [ibm_network_gateway](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_gateway){: external}.
@@ -67,15 +67,15 @@ Alternative: Two [Direct Link Dedicated](/docs/dl?topic=dl-how-to-order-ibm-clou
 
 5.  Create VLANs and subnets for compute resources that need to be deployed in Classic using the portal [subnets](/networking/subnets){: external} and [VLANS](/networking/vlans){: external} or terraform [ibm_network_vlan](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_vlan){: external} and [ibm_network_vlan_spanning](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_vlan_spanning){: external}.
 6.  Create Cloud service instances as required. Reference [Service Endpoints](/docs/account?topic=account-service-endpoints-overview) for additional details.
-7.  Create Virtual Server Instance for deploying the Bastion Host either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
+7.  Create Virtual Server Instance to be used as the Bastion Host either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
 
     Alternative: Bare metal can be deployed using the [portal](/gen1/infrastructure/provision/bm){: external} or terraform [ibm_compute_bare_metal](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal){: external}.
 
-8.  Create Virtual Server Instance for deploying the proxy server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
+8.  Create Virtual Server Instance to be used as the proxy server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
 
     Alternative: Bare metal can be deployed using the [portal](/gen1/infrastructure/provision/bm){: external} or terraform [ibm_compute_bare_metal](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal){: external}.
 
-9.  Create Virtual Server Instance for deploying the Custom Domain Name System (DNS) server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
+9.  Create Virtual Server Instance to be used as the Custom Domain Name System (DNS) server either by the [portal](/gen1/infrastructure/provision/vs){: external} or terraform [ibm_compute_vm_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance){: external}.
 
     Alternative: Bare metal can be deployed using the [portal](/gen1/infrastructure/provision/bm){: external} or terraform [ibm_compute_bare_metal](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal){: external}.
 
