@@ -1,7 +1,7 @@
 {
   "version": 2,
   "title": "Hybrid cloud network for classic infrastructure disaster recovery",
-  "introduction":"This is a landing page for the reference architecture describing how to host SAP on IBM Power Virtual Server environment.",
+  "introduction":"This is a landing page for the reference architecture describing how to host a Hybrid cloud network with the IBM classic infrastructure environment. It includes disaster recovery and resiliency",
   "section_topics": {
   "links": [
     {
