@@ -14,7 +14,7 @@ keywords:
 {{site.data.keyword.attribute-definition-list}}
 
 # Overview
-{: #overview-id}
+{: #Overview-id}
 
 This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
 
