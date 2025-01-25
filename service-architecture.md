@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-10-09"
+  years: 2025
+lastupdated: "2025-01-25"
 
 subcollection: pattern-network-vrf-only
 
@@ -30,7 +30,7 @@ The following are service management architecture decisions for the Network arch
 
 | Architecture decision                           | Requirement                                                                                             | Options                                                | Decision     | Rationale                                                                                                                                                               |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Log monitoring of cloud infrastructure and services | Monitor operational logs to detect issues that might impact the availability of the system and application. | - Bring Your Own logging tool  \n - {{site.data.keyword.loganalysisfull_notm}} VPC | Bring Your Own logging tool | - Bring Your Own logging tool allows for the most flexibility in meeting log monitoring requirements. \n - When VPC is available, the preferred approach is {{site.data.keyword.loganalysisfull_notm}}. |
+| Log monitoring of cloud infrastructure and services | Monitor operational logs to detect issues that might impact the availability of the system and application. | - Bring Your Own logging tool  \n - {{site.data.keyword.logs_full_notm}} VPC | Bring Your Own logging tool | - Bring Your Own logging tool allows for the most flexibility in meeting log monitoring requirements. \n - When VPC is available, the preferred approach is {{site.data.keyword.logs_full_notm}}. |
 {: caption="Classic data center service management architecture decisions"}
 
 ## Architecture decisions for auditing
@@ -38,5 +38,5 @@ The following are service management architecture decisions for the Network arch
 
 | Architecture decision | Requirement                                                                                | Options                                                                | Decision            | Rationale                                                                                                                                                                                              |
 |---------------------------|------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Audit logging             | Monitor audit logs to track changes to cloud resources and detect potential security problems. | - Bring Your Own Activity Tracker software  \n - {{site.data.keyword.cloudaccesstraillong_notm}} (VPC) | Bring Your Own Activity Tracker software | - Bring Your Own Activity Tracker allows for the most flexibility in meeting activity tracking and auditing requirements. \n - When VPC is available, the preferred approach is {{site.data.keyword.cloudaccesstraillong_notm}} |
+| Audit logging             | Monitor audit logs to track changes to cloud resources and detect potential security problems. | - Bring Your Own Activity Tracker software  \n - {{site.data.keyword.logs_full_notm}} (VPC) | Bring Your Own Activity Tracker software | - Bring Your Own Activity Tracker allows for the most flexibility in meeting activity tracking and auditing requirements. \n - When VPC is available, the preferred approach is {{site.data.keyword.logs_full_notm}} |
 {: caption="Classic data center service management auditing architecture decisions"}
