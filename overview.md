@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-10-02"
+  years: 2025
+lastupdated: "2025-01-25"
 
 
 subcollection: pattern-network-vrf-only
@@ -14,7 +14,7 @@ keywords:
 {{site.data.keyword.attribute-definition-list}}
 
 # Overview
-{: #Overview-id}
+{: #overview-id}
 
 This is a hybrid cloud disaster recovery network solution for enterprise workloads in regions with data residency requirements. The objective of this pattern is to:
 
