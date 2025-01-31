@@ -16,7 +16,7 @@ keywords:
 # Deploying Classic Infrastructure in a Single Region
 {: #introduction}
 
-This architecture is deployable by a terraform automation created by the Cloud Complex Solutions (CCS team) and can be accessed via [github](https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone).{: external}
+This architecture is deployable by a terraform automation created by the Cloud Complex Solutions (CCS) team and can be accessed via [github](https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone).{: external}
 {: attention}
 
 This guide outlines deploying a Classic edge gateway architecture in a single region configuration, the Classic Edge gateway pattern allows on-premise traffic to flow into a set of firewalls prior to routing traffic to IBM Cloud’s PowerVS and Virtual Private Cloud (VPC) environments. It is used to integrate on-premises access with classic infrastructure and Power Virtual Server workloads within the IBM Cloud. The deployment is based on existing deployable architecture modules, as well as a series of manual customizations to tailor the setup to the specific requirements for your environment.
