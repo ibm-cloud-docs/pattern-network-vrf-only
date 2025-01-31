@@ -22,7 +22,7 @@ This is designed for customers who need a scalable, single region infrastructure
 
 This deployment guide uses IBM Cloud catalog, Terraform IBM modules (TIM), and manual configuration to achieve deployment. It assumes that the landing zone prerequisites have been completed including IBM Cloud account setup, IAM permissions, access roles, and SSH keys. Please follow instructions for setting up your environment for [deployable architecture](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-plan).
 
-This architecture is deployable by a terraform automation created by the Cloud Complex Solutions (CCS) team and can be accessed via [github](https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone){: external}.
+This architecture is deployable by a terraform automation created by the Cloud Complex Solutions (CCS) team and can be accessed via [Github](https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone){: external}.
 {: note}
 
 ![Illustrates a detailed network and component architecture for a single Classic Data Center solution architecture](images/classic-single-deploy.svg){: caption="Single  Region View" caption-side="bottom"}
