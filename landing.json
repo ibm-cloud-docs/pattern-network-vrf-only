@@ -26,7 +26,12 @@
     {
       "title": "Hybrid cloud network for classic infrastructure disaster recovery",
       "href": "/docs/pattern-network-vrf-only?topic=pattern-network-vrf-only-Overview-id",
-      "deployable": false
+      "deployable": true
+    },
+    {
+      "title": "Deploying Classic Infrastructure in a Single Region",
+      "href": "https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone",
+      "deployable": true
     }
   ]
  }
