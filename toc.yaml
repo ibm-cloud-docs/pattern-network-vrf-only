@@ -10,7 +10,7 @@ toc:
     content-type: deployment
     href: /docs/pattern-network-vrf-only
     path: pattern-network-vrf-only
-    deployable: true
+    deployable: false
     description: Hybrid cloud network for classic infrastructure disaster recovery
     label: Hybrid cloud network for classic infrastructure disaster recovery
   entries:

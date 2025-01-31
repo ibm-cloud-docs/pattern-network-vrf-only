@@ -26,12 +26,12 @@
     {
       "title": "Hybrid cloud network for classic infrastructure disaster recovery",
       "href": "/docs/pattern-network-vrf-only?topic=pattern-network-vrf-only-Overview-id",
-      "deployable": true
+      "deployable": false
     },
     {
       "title": "Deploying Classic Infrastructure in a Single Region",
       "href": "/docs/pattern-network-vrf-only?topic=pattern-network-vrf-only-introduction",
-      "deployable": true
+      "deployable": false
     }
   ]
  }

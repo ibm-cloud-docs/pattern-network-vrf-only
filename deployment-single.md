@@ -16,14 +16,14 @@ keywords:
 # Deploying Classic Infrastructure in a Single Region
 {: #introduction}
 
-This architecture is deployable by a terraform automation created by the Cloud Complex Solutions (CCS) team and can be accessed via [github](https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone).{: external}
-{: attention}
-
 This guide outlines deploying a Classic edge gateway architecture in a single region configuration, the Classic Edge gateway pattern allows on-premise traffic to flow into a set of firewalls prior to routing traffic to IBM Cloud’s PowerVS and Virtual Private Cloud (VPC) environments. It is used to integrate on-premises access with classic infrastructure and Power Virtual Server workloads within the IBM Cloud. The deployment is based on existing deployable architecture modules, as well as a series of manual customizations to tailor the setup to the specific requirements for your environment.
 
 This is designed for customers who need a scalable, single region infrastructure with the flexibility of manual customizations post initial deployment of the base Deployable Architecture. It allows for adapting various components, such as networking and security, to better suit individual business needs after the foundational architecture has been established.
 
 This deployment guide uses IBM Cloud catalog, Terraform IBM modules (TIM), and manual configuration to achieve deployment. It assumes that the landing zone prerequisites have been completed including IBM Cloud account setup, IAM permissions, access roles, and SSH keys. Please follow instructions for setting up your environment for [deployable architecture](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-plan).
+
+This architecture is deployable by a terraform automation created by the Cloud Complex Solutions (CCS) team and can be accessed via [github](https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone){: external}.
+{: note}
 
 ![Illustrates a detailed network and component architecture for a single Classic Data Center solution architecture](images/classic-single-deploy.svg){: caption="Single  Region View" caption-side="bottom"}
 
