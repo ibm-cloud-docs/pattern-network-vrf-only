@@ -30,7 +30,7 @@
     },
     {
       "title": "Deploying Classic Infrastructure in a Single Region",
-      "href": "https://github.com/IBM/ccs-patterns/tree/main/pattern-network-classic-single-zone",
+      "href": "/docs/pattern-network-vrf-only?topic=pattern-network-vrf-only-introduction",
       "deployable": true
     }
   ]
