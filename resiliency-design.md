@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-04-25"
+  years: 2025
+lastupdated: "2025-07-03"
 
 subcollection: pattern-network-vrf-only
 
@@ -55,7 +55,7 @@ In the multi-region deployment pattern, a second region is chosen that has Trans
 The multi-region deployment:
 
 - Provides for a second location in a separate geographical region that is used as a disaster recovery location, which provides more resiliency if there is a regional failure.
-- Choosing a region that has Transit Gateway and VPC services available enables the use of complimentary VPC services such as {{site.data.keyword.dns_full_notm}}, {{site.data.keyword.vpe_full}}, {{site.data.keyword.monitoringlong_notm}}, {{site.data.keyword.loganalysislong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} to further enhance the cloud environment.
+- Choosing a region that has Transit Gateway and VPC services available enables the use of complimentary VPC services such as {{site.data.keyword.dns_full_notm}}, {{site.data.keyword.vpe_full}}, and {{site.data.keyword.monitoringlong_notm}} to further enhance the cloud environment.
 
 While deploying the application or infrastructure across multiple regions offers several advantages, including increased fault tolerance, improved latency for geographically distributed users, and potential cost optimization, it also introduces extra complexities that need careful consideration.
 
